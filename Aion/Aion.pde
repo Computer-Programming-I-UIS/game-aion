@@ -57,7 +57,7 @@ class Carta
     {
       vidae=vidae-10;
       press=false;
-      delay(1000);
+      delay(500);
     }
   }
 }
