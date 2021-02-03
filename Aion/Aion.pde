@@ -4,7 +4,7 @@
 PImage acarta;
 PImage ccarta;
 boolean press;
-int vidae=100;
+int vidae=100,vidap=100;
 int xc1=200,xc2=400;
 Carta atk,heal;
 void setup()
@@ -24,7 +24,10 @@ void draw()
   image(ccarta,xc2,300);
   atk.mousePressed(); 
   atk.accion();
+  heal.mousePressed();
+  heal.curar();
   text(vidae,500,50);
+  text(vidap,50,500);
 }
 class Carta
 {
@@ -56,6 +59,15 @@ class Carta
     if(press==true)
     {
       vidae=vidae-10;
+      press=false;
+      delay(500);
+    }
+  }
+  void curar()
+  {
+    if(press==true)
+    {
+      vidap=vidap+20;
       press=false;
       delay(500);
     }
