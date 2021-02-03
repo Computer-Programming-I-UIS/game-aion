@@ -1,15 +1,18 @@
 class Barra
 {
-  int xi,yi,xf,yf;
-  Barra(int tempxi,int tempyi,int tempxf,int tempyf)
+  int xi,yi,alto;
+  Barra(int tempxi,int tempyi,int talto)
   {
     xi=tempxi;
     yi=tempyi;
-    xf=tempxf;
-    yf=tempyf;
+    alto=talto;
   }
-  void display()
+  void displaye()
  {
-   rect(xi,yi,xf,yf);
+   rect(xi,yi,vidae,alto);
+ }
+ void displayp()
+ {
+   rect(xi,yi,vidap,alto);
  }
 }
