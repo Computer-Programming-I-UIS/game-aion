@@ -31,6 +31,7 @@ void draw()
   heal.curar();
   vprota.displayp();
   venemigo.displaye();
-  text(vidae,500,50);
-  text(vidap,50,500);
+  fill(0);
+  text(vidae,ybp,50);
+  text(vidap,ybe,500);
 }
