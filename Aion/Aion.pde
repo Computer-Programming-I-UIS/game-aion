@@ -5,8 +5,9 @@ PImage acarta;
 PImage ccarta;
 boolean press;
 int vidae=100,vidap=100;
-int xc1=200,xc2=400;
+int xc1=200,xc2=400,xbe=500,xbp=100,ybe=50,ybp=300;
 Carta atk,heal;
+Barra venemigo,vprota;
 void setup()
 {
   size(800,600);
@@ -16,6 +17,8 @@ void setup()
   ccarta.resize(200,300);
   atk=new Carta(xc1,300,xc1+200,500);
   heal=new Carta(xc2,300,xc2+200,500);
+  venemigo=new Barra(xbe,ybe,vidae,20);
+  vprota=new Barra(xbp,ybp,vidap,20);
 }
 void draw()
 {
@@ -26,50 +29,8 @@ void draw()
   atk.accion();
   heal.mousePressed();
   heal.curar();
+  vprota.display();
+  venemigo.display();
   text(vidae,500,50);
   text(vidap,50,500);
-}
-class Carta
-{
-  int xi,yi,xf,yf;
-  Carta(int tempxi,int tempyi,int tempxf,int tempyf)
-  {
-    xi=tempxi;
-    yi=tempyi;
-    xf=tempxf;
-    yf=tempyf;
-  }
-  void mousePressed()
-  {
-    if(mousePressed)
-    {
-    if(mouseX>=xi && mouseX<=xf && mouseY>=yi && mouseY<=yf)
-    {
-      press=true;
-    }
-    }
-    if(mouseX<xi || mouseX>xf || mouseY<yi || mouseY>yf)
-    {
-      press=false;
-    }
-    
-  }
-  void accion()
-  {
-    if(press==true)
-    {
-      vidae=vidae-10;
-      press=false;
-      delay(500);
-    }
-  }
-  void curar()
-  {
-    if(press==true)
-    {
-      vidap=vidap+20;
-      press=false;
-      delay(500);
-    }
-  }
 }
