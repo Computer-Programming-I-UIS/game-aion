@@ -9,10 +9,17 @@ class Barra
   }
   void displaye()
  {
+   noFill();
+   rect(xi,yi,100,alto);
+   fill(#6A0507);
    rect(xi,yi,vidae,alto);
+   
  }
  void displayp()
  {
+   noFill();
+   rect(xi,yi,100,alto);
+   fill(#6A0507);
    rect(xi,yi,vidap,alto);
  }
 }
