@@ -17,8 +17,8 @@ void setup()
   ccarta.resize(200,300);
   atk=new Carta(xc1,300,xc1+200,500);
   heal=new Carta(xc2,300,xc2+200,500);
-  venemigo=new Barra(xbe,ybe,vidae,20);
-  vprota=new Barra(xbp,ybp,vidap,20);
+  venemigo=new Barra(xbe,ybe,20);
+  vprota=new Barra(xbp,ybp,20);
 }
 void draw()
 {
@@ -29,8 +29,8 @@ void draw()
   atk.accion();
   heal.mousePressed();
   heal.curar();
-  vprota.display();
-  venemigo.display();
+  vprota.displayp();
+  venemigo.displaye();
   text(vidae,500,50);
   text(vidap,50,500);
 }
