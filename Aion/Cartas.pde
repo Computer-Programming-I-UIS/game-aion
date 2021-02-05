@@ -42,4 +42,13 @@ class Carta
       delay(500);
     }
   }
+  void soult()
+  {
+    if(press==true && vidap<100 && vidap>=0)
+    {
+      vidap=100;
+     press=false;
+     delay(500);
+    }
+  }
 }
