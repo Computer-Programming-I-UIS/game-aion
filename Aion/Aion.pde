@@ -10,7 +10,7 @@ Carta atk,heal;
 Barra venemigo,vprota;
 void setup()
 {
-  size(800,600);
+  size(1000,700);
   acarta=loadImage("KOSMOS.jpg");
   ccarta=loadImage("RELOJ.jpg");
   acarta.resize(200,300);
