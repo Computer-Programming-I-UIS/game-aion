@@ -5,7 +5,7 @@ PImage acarta;
 PImage ccarta;
 boolean press;
 int vidae=100,vidap=100;
-int xc1=300,xc2=500,ycs=450,xbe=800,xbp=100,ybe=50,ybp=400;
+int xc1=300,xc2=500,ycs=450,xbe=750,xbp=100,ybe=50,ybp=400;
 int larcar=250,anccar=175;
 Carta atk,heal;
 Barra venemigo,vprota;
