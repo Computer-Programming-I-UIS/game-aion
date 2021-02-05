@@ -25,12 +25,13 @@ class Carta
   }
   void accion()
   {
-    if(press==true)
+    if(press==true && vidae>0 && vidae<=100)
     {
       vidae=vidae-10;
       press=false;
       delay(500);
     }
+    
   }
   void curar()
   {
