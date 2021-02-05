@@ -35,7 +35,7 @@ class Carta
   }
   void curar()
   {
-    if(press==true)
+    if(press==true && vidap<100 && vidap>=0)
     {
       vidap=vidap+20;
       press=false;
