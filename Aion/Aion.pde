@@ -12,6 +12,7 @@ int xc1=200,xc2=400,xc3=600,ycs=450,xbe=750,xbp=100,ybe=50,ybp=400;
 int dano1=10,cura1=10;
 int larcar=250,anccar=175;
 
+
 SoundFile song1;
 
 Carta atk,heal,tiamat;
@@ -34,6 +35,7 @@ void setup()
   vprota=new Barra(xbp,ybp,20);
   ero=new Enemigo(dano1,cura1);
   song1=new SoundFile(this,"Argonne - Zachariah Hickman.mp3");
+  song1.play();
 }
 void draw()
 {
@@ -51,10 +53,9 @@ void draw()
   tiamat.soult();
   vprota.displayp();
   venemigo.displaye();
-  song1.play();
+  
   fill(0);
   text(vidae,ybp,50);
   text(vidap,ybe,500);
-  
   
 }
