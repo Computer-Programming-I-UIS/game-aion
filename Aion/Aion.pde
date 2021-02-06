@@ -1,5 +1,5 @@
 //Aión
-//Autores: 2200515-Daniel Jeshua Morelos Villamizar y 
+//Autores: 2200515-Daniel Jeshua Morelos Villamizar y 2200520-Santiago Enrique Monsalve Durán.
 //Descripción:
 import processing.sound.*;
 PImage acarta;
