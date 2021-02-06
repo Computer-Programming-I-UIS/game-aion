@@ -11,7 +11,7 @@ int vidae=100,vidap=50;
 int xc1=200,xc2=400,xc3=600,ycs=450,xbe=750,xbp=100,ybe=50,ybp=400;
 int dano1=10,cura1=10;
 int larcar=250,anccar=175;
-
+int mana=0;
 
 SoundFile song1;
 
@@ -21,6 +21,8 @@ Enemigo ero;
 void setup()
 {
   size(1000,700);
+  
+  textAlign(CENTER);
   acarta=loadImage("ESPADA DEL TIEMPO.jpg");
   ccarta=loadImage("RELOJ.jpg");
   stcarta=loadImage("SOUL TIAMAT.jpg");
@@ -53,9 +55,9 @@ void draw()
   tiamat.soult();
   vprota.displayp();
   venemigo.displaye();
-  
+  textSize(22);
   fill(0);
-  text(vidae,ybp,50);
-  text(vidap,ybe,500);
+  text(vidae,850,ybe+18);
+  text(vidap,200,ybp+18);
   
 }
