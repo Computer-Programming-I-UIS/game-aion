@@ -6,14 +6,15 @@ PImage Fondo1;
 PImage Fondo2;
 PImage acarta;
 PImage ccarta;
+PImage espcarta;
 PImage stcarta;
 PFont letra;
 boolean press,jugar;
 int vidae=100,vidap=50;
-int xc1=200,xc2=400,xc3=600,ycs=450,xbe=750,xbp=100,ybe=50,ybp=400;
+int xc1=100,xc2=300,xc3=500,xc4=700,ycs=450,xbe=750,xbp=100,ybe=50,ybp=400;
 int dano1=10,cura1=10;
 int larcar=250,anccar=175;
-int espiritu=5;
+int espiritu=50;
 int xesp=100,yesp=200;
 int fondox=0;
 int fondoy=0;
@@ -21,7 +22,7 @@ int fondo2x=5000;
 
 //SoundFile song1;
 
-Carta atk,heal,tiamat;
+Carta atk,heal,spirit,tiamat;
 Barra venemigo,vprota,besp;
 Enemigo ero;
 void setup()
@@ -31,6 +32,7 @@ void setup()
   textAlign(CENTER);
   acarta=loadImage("ESPADA DEL TIEMPO.jpg");
   ccarta=loadImage("RELOJ.jpg");
+  espcarta=loadImage("MEDITACION.jpg");
   stcarta=loadImage("SOUL TIAMAT.jpg");
   Fondo1=loadImage("FONDO.jpg");
   Fondo2=loadImage("SELVA.jpg");
@@ -42,7 +44,8 @@ void setup()
   Fondo2.resize(1000,700);
   atk=new Carta(xc1,ycs,xc1+anccar,ycs+larcar);
   heal=new Carta(xc2,ycs,xc2+anccar,ycs+larcar);
-  tiamat=new Carta(xc3,ycs,xc3+anccar,ycs+larcar);
+  spirit=new Carta(xc3,ycs,xc3+anccar,ycs+larcar);
+  tiamat=new Carta(xc4,ycs,xc4+anccar,ycs+larcar);
   venemigo=new Barra(xbe,ybe,20);
   vprota=new Barra(xbp,ybp,20);
   besp=new Barra(xesp,yesp,20);
@@ -67,12 +70,15 @@ void draw()
   {
     image(acarta,xc1,ycs);
   image(ccarta,xc2,ycs);
-  image(stcarta,xc3,ycs);
+  image(espcarta,xc3,ycs);
+  image(stcarta,xc4,ycs);
   //ero.turnoe();
   atk.mousePressed(); 
   atk.accion();
   heal.mousePressed();
   heal.curar();
+  spirit.mousePressed();
+  spirit.recharge();
   tiamat.mousePressed();
   tiamat.soult();
   besp.displayesp();
