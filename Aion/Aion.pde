@@ -3,6 +3,7 @@
 //Descripción:
 import processing.sound.*;
 PImage Fondo1;
+PImage Fondo2;
 PImage acarta;
 PImage ccarta;
 PImage stcarta;
@@ -15,6 +16,7 @@ int larcar=250,anccar=175;
 int mana=0;
 int fondox=0;
 int fondoy=0;
+int fondo2x=5000;
 
 SoundFile song1;
 
@@ -30,11 +32,13 @@ void setup()
   ccarta=loadImage("RELOJ.jpg");
   stcarta=loadImage("SOUL TIAMAT.jpg");
   Fondo1=loadImage("FONDO.jpg");
+  Fondo2=loadImage("SELVA.jpg");
   letra= createFont("Norse.otf",15);
   acarta.resize(anccar,larcar);
   ccarta.resize(anccar,larcar);
   stcarta.resize(anccar,larcar);
   Fondo1.resize(1000,700);
+  Fondo2.resize(1000,700);
   atk=new Carta(xc1,ycs,xc1+anccar,ycs+larcar);
   heal=new Carta(xc2,ycs,xc2+anccar,ycs+larcar);
   tiamat=new Carta(xc3,ycs,xc3+anccar,ycs+larcar);
@@ -48,13 +52,16 @@ void draw()
 {
   background(100);
   textFont(letra);
+   image(Fondo2,fondo2x,0);
   image(acarta,xc1,ycs);
   image(ccarta,xc2,ycs);
   image(stcarta,xc3,ycs);
   image(Fondo1,fondox,fondoy);
+ 
   if(mousePressed){
   if(mouseX<700 && mouseX>300 && mouseY>270 && mouseY<370){
     fondox= 5000;
+    fondo2x=0;
   }}
   //ero.turnoe();
   atk.mousePressed(); 
