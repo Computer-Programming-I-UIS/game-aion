@@ -8,7 +8,7 @@ PImage acarta;
 PImage ccarta;
 PImage stcarta;
 PFont letra;
-boolean press;
+boolean press,jugar;
 int vidae=100,vidap=50;
 int xc1=200,xc2=400,xc3=600,ycs=450,xbe=750,xbp=100,ybe=50,ybp=400;
 int dano1=10,cura1=10;
@@ -55,16 +55,19 @@ void draw()
   background(100);
   textFont(letra);
    image(Fondo2,fondo2x,0);
-  image(acarta,xc1,ycs);
-  image(ccarta,xc2,ycs);
-  image(stcarta,xc3,ycs);
   image(Fondo1,fondox,fondoy);
  
   if(mousePressed){
   if(mouseX<700 && mouseX>300 && mouseY>270 && mouseY<370){
     fondox= 5000;
     fondo2x=0;
+    jugar=true;
   }}
+  if(jugar==true)
+  {
+    image(acarta,xc1,ycs);
+  image(ccarta,xc2,ycs);
+  image(stcarta,xc3,ycs);
   //ero.turnoe();
   atk.mousePressed(); 
   atk.accion();
@@ -81,4 +84,5 @@ void draw()
   text(vidae,850,ybe+18);
   text(vidap,200,ybp+18);
   text(espiritu,xesp+100,yesp+18);
+  }
 }
