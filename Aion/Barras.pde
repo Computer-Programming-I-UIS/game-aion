@@ -23,4 +23,11 @@ class Barra
    rect(xi,yi,vidap*2,alto);
   
  }
+ void displayesp()
+ {
+   noFill();
+   rect(xi,yi,200,alto);
+   fill(#00FFDB);
+   rect(xi,yi,espiritu*20,alto);
+ }
 }
