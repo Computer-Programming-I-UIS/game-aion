@@ -25,10 +25,10 @@ class Carta
   }
   void accion()
   {
-    if(press==true && vidae>0 && vidae<=100 && espiritu>=1)
+    if(press==true && vidae>0 && vidae<=100 && espiritu>=5)
     {
       vidae=vidae-10;
-      espiritu=espiritu-1;
+      espiritu=espiritu-5;
       press=false;
       delay(500);
     }
@@ -36,10 +36,10 @@ class Carta
   }
   void curar()
   {
-    if(press==true && vidap<100 && vidap>=0 && espiritu>=2)
+    if(press==true && vidap<100 && vidap>=0 && espiritu>=20)
     {
       vidap=vidap+20;
-      espiritu=espiritu-2;
+      espiritu=espiritu-20;
       press=false;
       delay(500);
     }
@@ -55,10 +55,10 @@ class Carta
   }
   void soult()
   {
-    if(press==true && vidap<100 && vidap>=0 && espiritu>=5)
+    if(press==true && vidap<100 && vidap>=0 && espiritu>=50)
     {
      vidap=100;
-     espiritu=espiritu-5;
+     espiritu=espiritu-50;
      press=false;
      delay(500);
     }
