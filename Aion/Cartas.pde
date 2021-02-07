@@ -44,6 +44,15 @@ class Carta
       delay(500);
     }
   }
+  void recharge()
+  {
+    if(press==true && vidap<=100 && vidap>=0 && espiritu<100)
+    {
+      espiritu=espiritu+15;
+      press=false;
+      delay(500);
+    }
+  }
   void soult()
   {
     if(press==true && vidap<100 && vidap>=0 && espiritu>=5)
@@ -54,4 +63,5 @@ class Carta
      delay(500);
     }
   }
+  
 }
