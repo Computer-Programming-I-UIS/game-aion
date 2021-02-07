@@ -13,15 +13,16 @@ int vidae=100,vidap=50;
 int xc1=200,xc2=400,xc3=600,ycs=450,xbe=750,xbp=100,ybe=50,ybp=400;
 int dano1=10,cura1=10;
 int larcar=250,anccar=175;
-int mana=0;
+int espiritu=5;
+int xesp=100,yesp=200;
 int fondox=0;
 int fondoy=0;
 int fondo2x=5000;
 
-SoundFile song1;
+//SoundFile song1;
 
 Carta atk,heal,tiamat;
-Barra venemigo,vprota;
+Barra venemigo,vprota,besp;
 Enemigo ero;
 void setup()
 {
@@ -44,9 +45,10 @@ void setup()
   tiamat=new Carta(xc3,ycs,xc3+anccar,ycs+larcar);
   venemigo=new Barra(xbe,ybe,20);
   vprota=new Barra(xbp,ybp,20);
+  besp=new Barra(xesp,yesp,20);
   ero=new Enemigo(dano1,cura1);
-  song1=new SoundFile(this,"Argonne - Zachariah Hickman.mp3");
-  song1.play();
+  //song1=new SoundFile(this,"Argonne - Zachariah Hickman.mp3");
+  //song1.play();
 }
 void draw()
 {
@@ -70,11 +72,13 @@ void draw()
   heal.curar();
   tiamat.mousePressed();
   tiamat.soult();
+  besp.displayesp();
   vprota.displayp();
   venemigo.displaye();
+  
   textSize(22);
   fill(0);
   text(vidae,850,ybe+18);
   text(vidap,200,ybp+18);
-  
+  text(espiritu,xesp+100,yesp+18);
 }
