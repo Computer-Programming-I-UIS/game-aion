@@ -13,7 +13,7 @@ class Barra
    rect(xi,yi,200,alto);
    fill(#6A0507);
    rect(xi,yi,vidae*2,alto);
-   
+   image(Fondo1,fondox,fondoy);
  }
  void displayp()
  {
@@ -21,5 +21,6 @@ class Barra
    rect(xi,yi,200,alto);
    fill(#6A0507);
    rect(xi,yi,vidap*2,alto);
+  
  }
 }
