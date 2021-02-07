@@ -28,6 +28,6 @@ class Barra
    noFill();
    rect(xi,yi,200,alto);
    fill(#00FFDB);
-   rect(xi,yi,espiritu*20,alto);
+   rect(xi,yi,espiritu*2,alto);
  }
 }
