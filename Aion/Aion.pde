@@ -32,13 +32,14 @@ void setup()
   textAlign(CENTER);
   acarta=loadImage("ESPADA DEL TIEMPO.jpg");
   ccarta=loadImage("RELOJ.jpg");
-  espcarta=loadImage("MEDITACION.jpg");
+  espcarta=loadImage("MEDITACIÓN.jpg");
   stcarta=loadImage("SOUL TIAMAT.jpg");
   Fondo1=loadImage("FONDO.jpg");
   Fondo2=loadImage("SELVA.jpg");
   letra= createFont("Norse.otf",15);
   acarta.resize(anccar,larcar);
   ccarta.resize(anccar,larcar);
+  espcarta.resize(anccar,larcar);
   stcarta.resize(anccar,larcar);
   Fondo1.resize(1000,700);
   Fondo2.resize(1000,700);
