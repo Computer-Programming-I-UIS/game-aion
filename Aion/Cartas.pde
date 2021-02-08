@@ -15,6 +15,7 @@ class Carta
     if(mouseX>=xi && mouseX<=xf && mouseY>=yi && mouseY<=yf)
     {
       press=true;
+      
     }
     }
     if(mouseX<xi || mouseX>xf || mouseY<yi || mouseY>yf)
@@ -30,7 +31,13 @@ class Carta
       vidae=vidae-10;
       espiritu=espiritu-5;
       press=false;
+      if(vidae>0){
+      ser6x=800;
+      ser7x=5000;
+    }
       delay(500);
+      
+      
     }
     
   }

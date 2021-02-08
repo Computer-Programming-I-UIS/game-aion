@@ -8,6 +8,18 @@ PImage acarta;
 PImage ccarta;
 PImage espcarta;
 PImage stcarta;
+PImage Heroe1;
+PImage Heroe2;
+PImage Heroe3;
+PImage Heroe4;
+PImage BossSerp1;
+PImage BossSerp2;
+PImage BossSerp3;
+PImage BossSerp4;
+PImage BossSerp5;
+PImage BossSerp6;
+PImage BossSerp7;
+PImage BossSerp8;
 PFont letra;
 boolean press,jugar;
 int vidae=100,vidap=50;
@@ -19,6 +31,9 @@ int xesp=100,yesp=200;
 int fondox=0;
 int fondoy=0;
 int fondo2x=5000;
+int ser6x=5000;
+int ser7x=800;
+int ser8x=5000;
 
 //SoundFile song1;
 
@@ -36,7 +51,27 @@ void setup()
   stcarta=loadImage("SOUL TIAMAT.jpg");
   Fondo1=loadImage("FONDO.jpg");
   Fondo2=loadImage("SELVA.jpg");
+  Heroe1=loadImage("HEROE1.png");
+  Heroe2=loadImage("HEROE2.png");
+  Heroe3=loadImage("HEROE3.png");
+  Heroe4=loadImage("HEROE4.png");
+  BossSerp1=loadImage("SERPIENTEATK1.png");
+  BossSerp2=loadImage("SERPIENTEATK2.png");
+  BossSerp3=loadImage("SERPIENTEATK3.png");
+  BossSerp4=loadImage("SERPIENTEATK4.png");
+  BossSerp5=loadImage("SERPIENTEATK5.png");
+  BossSerp6=loadImage("SERPIENTEDAÑO.png");
+  BossSerp7=loadImage("SERPIENTEFF.png");
+  BossSerp8=loadImage("SERPIENTEMUERTA.png");
   letra= createFont("Norse.otf",15);
+  BossSerp1.resize(100,100);
+  BossSerp2.resize(100,100);
+  BossSerp3.resize(100,100);
+  BossSerp4.resize(100,100);
+  BossSerp5.resize(100,100);
+  BossSerp6.resize(100,100);
+  BossSerp7.resize(100,100);
+  BossSerp8.resize(100,100);
   acarta.resize(anccar,larcar);
   ccarta.resize(anccar,larcar);
   espcarta.resize(anccar,larcar);
@@ -69,7 +104,10 @@ void draw()
   }}
   if(jugar==true)
   {
-    image(acarta,xc1,ycs);
+  image(BossSerp8,ser8x,100); 
+  image(BossSerp7,ser7x,100);
+  image(BossSerp6,ser6x,100);
+  image(acarta,xc1,ycs);
   image(ccarta,xc2,ycs);
   image(espcarta,xc3,ycs);
   image(stcarta,xc4,ycs);
