@@ -24,7 +24,8 @@ PFont letra;
 boolean press,jugar;
 int vidae=100,vidap=50;
 int xc1=100,xc2=300,xc3=500,xc4=700,ycs=450,xbe=750,xbp=100,ybe=50,ybp=400;
-int dano1=10,cura1=10;
+int dano1=10,cura1=15;
+float cdatk1=10,cdheal1=20;
 int larcar=250,anccar=175;
 int espiritu=50;
 int xesp=100,yesp=200;
@@ -85,7 +86,7 @@ void setup()
   venemigo=new Barra(xbe,ybe,20);
   vprota=new Barra(xbp,ybp,20);
   besp=new Barra(xesp,yesp,20);
-  ero=new Enemigo(dano1,cura1);
+  ero=new Enemigo(dano1,cura1,cdatk1,cdheal1);
   //song1=new SoundFile(this,"Argonne - Zachariah Hickman.mp3");
   //song1.play();
 }
@@ -111,7 +112,10 @@ void draw()
   image(ccarta,xc2,ycs);
   image(espcarta,xc3,ycs);
   image(stcarta,xc4,ycs);
-  //ero.turnoe();
+  ero.turnoe();
+  ero.ataque();
+  ero.display();
+  ero.cura();
   atk.mousePressed(); 
   atk.accion();
   heal.mousePressed();
@@ -123,7 +127,31 @@ void draw()
   besp.displayesp();
   vprota.displayp();
   venemigo.displaye();
+  if(vidap>=100)
+  {
+    vidap=100;
+  }
+  if(vidap<=0)
+  {
+    vidap=0;
+  }
+  if(vidae>=100)
+  {
+    vidae=100;
+  }
+  if(vidae<=0)
+  {
+    vidae=0;
+  }
   
+  if(espiritu>=100)
+  {
+    espiritu=100;
+  }
+  if(espiritu<=0)
+  {
+    espiritu=0;
+  }
   textSize(22);
   fill(0);
   text(vidae,850,ybe+18);
