@@ -29,6 +29,10 @@ class Carta
     if(press==true && vidae>0 && vidae<=100 && espiritu>=5)
     {
       vidae=vidae-10;
+      if (vidae<=0);
+      {
+       
+      }
       espiritu=espiritu-5;
       press=false;
       if(vidae>0){
@@ -45,9 +49,14 @@ class Carta
   {
     if(press==true && vidap<100 && vidap>=0 && espiritu>=20)
     {
+      
       vidap=vidap+20;
       espiritu=espiritu-20;
       press=false;
+      if(vidap>=100)
+      {
+        vidap=100;
+      }
       delay(500);
     }
   }
@@ -57,7 +66,9 @@ class Carta
     {
       espiritu=espiritu+15;
       press=false;
+      
       delay(500);
+      
     }
   }
   void soult()
