@@ -66,10 +66,14 @@ class Carta
     {
       espiritu=espiritu+15;
       press=false;
-      
+      if(espiritu>=100)
+    {
+      espiritu=100;
+    }
       delay(500);
       
     }
+    
   }
   void soult()
   {
