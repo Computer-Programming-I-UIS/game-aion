@@ -29,19 +29,12 @@ class Carta
     if(press==true && vidae>0 && vidae<=100 && espiritu>=5)
     {
       vidae=vidae-10;
-      if (vidae<=0);
-      {
-       
-      }
       espiritu=espiritu-5;
       press=false;
       if(vidae>0){
       ser6x=800;
       ser7x=5000;
     }
-      delay(500);
-      
-      
     }
     
   }
@@ -53,11 +46,6 @@ class Carta
       vidap=vidap+20;
       espiritu=espiritu-20;
       press=false;
-      if(vidap>=100)
-      {
-        vidap=100;
-      }
-      delay(500);
     }
   }
   void recharge()
@@ -66,12 +54,6 @@ class Carta
     {
       espiritu=espiritu+15;
       press=false;
-      if(espiritu>=100)
-    {
-      espiritu=100;
-    }
-      delay(500);
-      
     }
     
   }
@@ -82,7 +64,6 @@ class Carta
      vidap=100;
      espiritu=espiritu-50;
      press=false;
-     delay(500);
     }
   }
   
