@@ -1,23 +1,53 @@
 class Enemigo
 {
   int dano,cura;
-  Enemigo(int td,int tc)
+  float tatk,theal;
+  Enemigo(int td,int tc,float tcda,float tcdh)
   {
     dano=td;
     cura=tc;
+    tatk=tcda;
+    theal=tcdh;
   }
   void turnoe()
-  {
-    if(vidap>0 && vidap<=100);
+  { 
+    if(tatk>0 && vidap>0)
     {
-      vidap=vidap-dano;
-      delay(2000);
+    tatk=tatk-0.1;
     }
-    if(vidae>=0 && vidae<100);
+    else if(tatk<=0)
+    { 
+     tatk=0;
+    }
+    if(theal>0 && vidae<100)
     {
-      vidae=vidae+cura;
-      delay(4000);
+    theal=theal-0.1;
     }
-    
-  }
+    else if(theal<=0)
+    { 
+     theal=0;
+    }
+ }
+ void ataque()
+ {
+   if(tatk==0 && vidap>0)
+   {
+     vidap=vidap-dano;
+     tatk=cdatk1;
+   }
+ }
+ void cura()
+ {
+   if(theal==0 && vidae<100 && vidae>0)
+   {
+     vidae=vidae+cura;
+     
+     theal=cdheal1;
+   }
+ }
+ void display()
+ {
+   text(tatk,800,100);
+   text(theal,850,100);
+ }
 }
