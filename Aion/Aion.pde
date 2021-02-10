@@ -159,8 +159,8 @@ void draw()
   text(vidap,200,ybp+18);
   text(espiritu,xesp+100,yesp+18);
   textSize(20);
-  text(cdap,xc1+120,ycs+240);
-  text(cdhp,xc2+120,ycs+240);
-  text(cdesp,xc3+120,ycs+240);
+  text(cdap,xc1+130,ycs+240);
+  text(cdhp,xc2+130,ycs+240);
+  text(cdesp,xc3+130,ycs+240);
   }
 }
