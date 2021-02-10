@@ -37,7 +37,7 @@ int ser6x=5000;
 int ser7x=800;
 int ser8x=5000;
 
-//SoundFile song1;
+SoundFile song1;
 
 Carta atk,heal,spirit,tiamat;
 Barra venemigo,vprota,besp;
@@ -88,8 +88,8 @@ void setup()
   vprota=new Barra(xbp,ybp,20);
   besp=new Barra(xesp,yesp,20);
   ero=new Enemigo(dano1,cura1,cdatk1,cdheal1);
-  //song1=new SoundFile(this,"Argonne - Zachariah Hickman.mp3");
-  //song1.play();
+  song1=new SoundFile(this,"Argonne - Zachariah Hickman.mp3");
+  song1.play();
 }
 void draw()
 {
