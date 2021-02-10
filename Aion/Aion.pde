@@ -25,7 +25,7 @@ boolean press,jugar;
 int vidae=100,vidap=50;
 int xc1=200,xc2=400,xc3=600,xc4=700,ycs=450,xbe=750,xbp=100,ybe=50,ybp=400;
 int dano1=10,cura1=10;
-float cdatk1=10,cdheal1=20;
+float cdatk1=10,cdheal1=25;
 float cdap=0,cdhp=10,cdesp=0;
 int larcar=250,anccar=175;
 int espiritu=50;
