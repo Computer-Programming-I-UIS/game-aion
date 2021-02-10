@@ -26,7 +26,16 @@ class Carta
   }
   void accion()
   {
-    if(press==true && vidae>0 && vidae<=100 && espiritu>=5)
+    if(cdap>0 && vidap>0)
+    {
+    cdap=cdap-0.1;
+    }
+    else if(cdap<=0)
+    { 
+     cdap=0;
+    }
+    
+    if(press==true && vidae>0 && vidae<=100 && espiritu>=5 && cdap==0)
     {
       vidae=vidae-10;
       espiritu=espiritu-5;
@@ -34,30 +43,49 @@ class Carta
       if(vidae>0){
       ser6x=800;
       ser7x=5000;
+      cdap=5;
     }
     }
     
   }
   void curar()
   {
-    if(press==true && vidap<100 && vidap>=0 && espiritu>=20)
+    if(cdhp>0 && vidae<100)
+    {
+    cdhp=cdhp-0.1;
+    }
+    else if(cdhp<=0)
+    { 
+     cdhp=0;
+    }
+    if(press==true && vidap<100 && vidap>=0 && espiritu>=20 && cdhp==0)
     {
       
       vidap=vidap+20;
       espiritu=espiritu-20;
       press=false;
+      cdhp=20;
     }
   }
   void recharge()
   {
-    if(press==true && vidap<=100 && vidap>=0 && espiritu<100)
+    if(cdesp>0 && vidae<100)
+    {
+    cdesp=cdesp-0.1;
+    }
+    else if(cdesp<=0)
+    { 
+     cdesp=0;
+    }
+    if(press==true && vidap<=100 && vidap>=0 && espiritu<100 && cdesp==0)
     {
       espiritu=espiritu+15;
       press=false;
+      cdesp=10;
     }
     
   }
-  void soult()
+  /*void soult()
   {
     if(press==true && vidap<100 && vidap>=0 && espiritu>=50)
     {
@@ -65,6 +93,6 @@ class Carta
      espiritu=espiritu-50;
      press=false;
     }
-  }
+  }*/
   
 }
