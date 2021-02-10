@@ -103,9 +103,13 @@ void draw()
     fondox= 5000;
     fondo2x=0;
     jugar=true;
+    vidap=100;
+    espiritu=50;
+    vidae=100;
   }}
   if(jugar==true)
   {
+  
   image(BossSerp8,ser8x,100); 
   image(BossSerp7,ser7x,100);
   image(BossSerp6,ser6x,100);
@@ -162,5 +166,11 @@ void draw()
   text(cdap,xc1+130,ycs+240);
   text(cdhp,xc2+130,ycs+240);
   text(cdesp,xc3+130,ycs+240);
+  if(vidap==0 || vidae==0)
+  {
+    jugar=false;
+    fondox= 0;
+    fondo2x=5000;
+  }
   }
 }
