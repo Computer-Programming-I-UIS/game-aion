@@ -47,6 +47,7 @@ class Enemigo
  }
  void display()
  {
+   textSize(22);
    text(tatk,800,100);
    text(theal,850,100);
  }
