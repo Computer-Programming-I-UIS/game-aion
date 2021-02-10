@@ -23,8 +23,8 @@ PImage BossSerp8;
 PFont letra;
 boolean press,jugar;
 int vidae=100,vidap=50;
-int xc1=100,xc2=300,xc3=500,xc4=700,ycs=450,xbe=750,xbp=100,ybe=50,ybp=400;
-int dano1=10,cura1=15;
+int xc1=200,xc2=400,xc3=600,xc4=700,ycs=450,xbe=750,xbp=100,ybe=50,ybp=400;
+int dano1=10,cura1=10;
 float cdatk1=10,cdheal1=20;
 float cdap=0,cdhp=10,cdesp=0;
 int larcar=250,anccar=175;
@@ -112,7 +112,7 @@ void draw()
   image(acarta,xc1,ycs);
   image(ccarta,xc2,ycs);
   image(espcarta,xc3,ycs);
-  image(stcarta,xc4,ycs);
+  //image(stcarta,xc4,ycs);
   ero.turnoe();
   ero.ataque();
   ero.display();
@@ -158,5 +158,9 @@ void draw()
   text(vidae,850,ybe+18);
   text(vidap,200,ybp+18);
   text(espiritu,xesp+100,yesp+18);
+  textSize(20);
+  text(cdap,xc1+120,ycs+240);
+  text(cdhp,xc2+120,ycs+240);
+  text(cdesp,xc3+120,ycs+240);
   }
 }
