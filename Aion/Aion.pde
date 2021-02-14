@@ -22,6 +22,8 @@ PImage BossSerp7;
 PImage BossSerp8;
 PFont letra;
 boolean press,jugar;
+int xboton=300,xfboton=700,yplay=270,yfplay=370;
+int ysalir=400,yfsalir=500;
 int vidae=100,vidap=50;
 int xc1=200,xc2=400,xc3=600,xc4=700,ycs=450,xbe=750,xbp=100,ybe=50,ybp=400;
 int dano1=10,cura1=10;
@@ -39,6 +41,7 @@ int ser8x=5000;
 
 SoundFile song1;
 
+Boton play,salir;
 Carta atk,heal,spirit,tiamat;
 Barra venemigo,vprota,besp;
 Enemigo ero;
@@ -57,20 +60,12 @@ void setup()
   Heroe2=loadImage("HEROE2.png");
   Heroe3=loadImage("HEROE3.png");
   Heroe4=loadImage("HEROE4.png");
-  BossSerp1=loadImage("SERPIENTEATK1.png");
-  BossSerp2=loadImage("SERPIENTEATK2.png");
   BossSerp3=loadImage("SERPIENTEATK3.png");
-  BossSerp4=loadImage("SERPIENTEATK4.png");
-  BossSerp5=loadImage("SERPIENTEATK5.png");
   BossSerp6=loadImage("SERPIENTEDAÑO.png");
   BossSerp7=loadImage("SERPIENTEFF.png");
   BossSerp8=loadImage("SERPIENTEMUERTA.png");
   letra= createFont("Norse.otf",15);
-  BossSerp1.resize(100,100);
-  BossSerp2.resize(100,100);
   BossSerp3.resize(100,100);
-  BossSerp4.resize(100,100);
-  BossSerp5.resize(100,100);
   BossSerp6.resize(100,100);
   BossSerp7.resize(100,100);
   BossSerp8.resize(100,100);
@@ -87,6 +82,8 @@ void setup()
   venemigo=new Barra(xbe,ybe,20);
   vprota=new Barra(xbp,ybp,20);
   besp=new Barra(xesp,yesp,20);
+  play=new Boton(xboton,yplay,xfboton,yfplay);
+  salir=new Boton(xboton,ysalir,xfboton,yfsalir);
   ero=new Enemigo(dano1,cura1,cdatk1,cdheal1);
   song1=new SoundFile(this,"Argonne - Zachariah Hickman.mp3");
   song1.play();
@@ -95,10 +92,10 @@ void draw()
 {
   background(100);
   textFont(letra);
-   image(Fondo2,fondo2x,0);
+  image(Fondo2,fondo2x,0);
   image(Fondo1,fondox,fondoy);
- 
-  if(mousePressed){
+  play.mousePressed();
+/*  if(mousePressed){
   if(mouseX<700 && mouseX>300 && mouseY>270 && mouseY<370){
     fondox= 5000;
     fondo2x=0;
@@ -107,6 +104,7 @@ void draw()
     espiritu=50;
     vidae=100;
   }}
+  */
   if(jugar==true)
   {
   
