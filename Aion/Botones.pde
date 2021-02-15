@@ -35,13 +35,22 @@ int xi,yi,xf,yf;
   }
   void mousePressedm()
   {
-    if(mousePressed)
+    if(mousePressed && jugar==2)
     {
     if(mouseX>=xi && mouseX<=xf && mouseY>=yi && mouseY<=yf)
     {
     exit();
+    }
+    }
+  }
+  void volvere()
+  {
+     if(mousePressed && jugar==2)
+    {
+    if(mouseX>=xi && mouseX<=xf && mouseY>=yi && mouseY<=yf )
+    {
     jugar=0;
-    
+    fmuertex=5000;
     }
     }
   }
