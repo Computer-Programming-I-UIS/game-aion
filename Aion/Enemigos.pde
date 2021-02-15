@@ -87,7 +87,7 @@ class Enemigo
      vidae=vidae+cura;
      
      theal=cdheal1;
-     ssprite=2;
+     //ssprite=2;
    }
  }
  void display()
