@@ -2,8 +2,7 @@
 //Autores: 2200515-Daniel Jeshua Morelos Villamizar y 2200520-Santiago Enrique Monsalve Durán.
 //Descripción:
 import processing.sound.*;
-PImage Fondo1;
-PImage Fondo2;
+PImage fbase,fjuego,fmuerte;
 PImage acarta;
 PImage ccarta;
 PImage espcarta;
@@ -15,9 +14,11 @@ PImage Heroe4;
 PImage serpnorm,serpatk,serpdano,serprip;
 
 PFont letra;
-boolean press,jugar;
+boolean press;
+int jugar=0;
 int xboton=298,xfboton=702,yplay=270,yfplay=370;
 int ysalir=483,yfsalir=582;
+int xbmuerte=700,xbfmuerte=900,ysmuerte=400,ysfmuerte=500;
 int vidae=100,vidap=50;
 int xc1=200,xc2=400,xc3=600,xc4=700,ycs=450,xbe=750,xbp=100,ybe=50,ybp=400;
 int dano1=10,cura1=10;
@@ -27,14 +28,14 @@ int larcar=250,anccar=175;
 int espiritu=50;
 int xesp=100,yesp=350;
 int ssprite=0;
-int fondox=0;
-int fondoy=0;
+int fondox=0,fondoy=0;
 int fondo2x=5000;
+int fmuertex=5000;
 int serpnormx=800,serpdanox=5000,serpatkx=5000,serpripx=5000;
 
 //SoundFile song1;
 
-Boton play,salir;
+Boton play,salir,smuerte;
 Carta atk,heal,spirit,tiamat;
 Barra venemigo,vprota,besp;
 Enemigo ero;
@@ -47,8 +48,9 @@ void setup()
   ccarta=loadImage("RELOJ.jpg");
   espcarta=loadImage("MEDITACIÓN.jpg");
   stcarta=loadImage("SOUL TIAMAT.jpg");
-  Fondo1=loadImage("FONDO.jpg");
-  Fondo2=loadImage("SELVA.jpg");
+  fbase=loadImage("FONDO.jpg");
+  fjuego=loadImage("SELVA.jpg");
+  fmuerte=loadImage("MUERTE.jpg");
   Heroe1=loadImage("HEROE1.png");
   Heroe2=loadImage("HEROE2.png");
   Heroe3=loadImage("HEROE3.png");
@@ -66,8 +68,9 @@ void setup()
   ccarta.resize(anccar,larcar);
   espcarta.resize(anccar,larcar);
   stcarta.resize(anccar,larcar);
-  Fondo1.resize(1000,700);
-  Fondo2.resize(1000,700);
+  fbase.resize(1000,700);
+  fjuego.resize(1000,700);
+  fmuerte.resize(1000,700);
   atk=new Carta(xc1,ycs,xc1+anccar,ycs+larcar);
   heal=new Carta(xc2,ycs,xc2+anccar,ycs+larcar);
   spirit=new Carta(xc3,ycs,xc3+anccar,ycs+larcar);
@@ -77,6 +80,7 @@ void setup()
   besp=new Barra(xesp,yesp,20);
   play=new Boton(xboton,yplay,xfboton,yfplay);
   salir=new Boton(xboton,ysalir,xfboton,yfsalir);
+  smuerte=new Boton(xbmuerte,ysmuerte,xbfmuerte,ysfmuerte);
   ero=new Enemigo(dano1,cura1,cdatk1,cdheal1);
   //song1=new SoundFile(this,"Argonne - Zachariah Hickman.mp3");
   //song1.play();
@@ -85,12 +89,12 @@ void draw()
 {
   background(100);
   textFont(letra);
-  image(Fondo2,fondo2x,0);
-  image(Fondo1,fondox,fondoy);
+  image(fjuego,fondo2x,0);
+  image(fbase,fondox,fondoy);
   play.mousePressed1();
   salir.mousePressed2();
 
-  if(jugar==true)
+  if(jugar==1)
   {
   ero.sprites();
   
@@ -150,11 +154,22 @@ void draw()
   text(cdap,xc1+130,ycs+240);
   text(cdhp,xc2+130,ycs+240);
   text(cdesp,xc3+130,ycs+240);
-  if(vidap==0 || vidae==0)
+  if(vidap==0)
   {
-    jugar=false;
+    jugar=2;
+    fmuertex=0;
+    
+    image(fmuerte,fmuertex,0);
+    fondox= 5000;
+    fondo2x=5000;
+  }
+  if(vidae==0)
+  {
+    jugar=0;
+    fmuertex=5000;
     fondox= 0;
     fondo2x=5000;
   }
+  
   }
 }
