@@ -22,8 +22,8 @@ PImage BossSerp7;
 PImage BossSerp8;
 PFont letra;
 boolean press,jugar;
-int xboton=300,xfboton=700,yplay=270,yfplay=370;
-int ysalir=400,yfsalir=500;
+int xboton=298,xfboton=702,yplay=270,yfplay=370;
+int ysalir=483,yfsalir=582;
 int vidae=100,vidap=50;
 int xc1=200,xc2=400,xc3=600,xc4=700,ycs=450,xbe=750,xbp=100,ybe=50,ybp=400;
 int dano1=10,cura1=10;
@@ -39,7 +39,7 @@ int ser6x=5000;
 int ser7x=800;
 int ser8x=5000;
 
-SoundFile song1;
+//SoundFile song1;
 
 Boton play,salir;
 Carta atk,heal,spirit,tiamat;
@@ -85,8 +85,8 @@ void setup()
   play=new Boton(xboton,yplay,xfboton,yfplay);
   salir=new Boton(xboton,ysalir,xfboton,yfsalir);
   ero=new Enemigo(dano1,cura1,cdatk1,cdheal1);
-  song1=new SoundFile(this,"Argonne - Zachariah Hickman.mp3");
-  song1.play();
+  //song1=new SoundFile(this,"Argonne - Zachariah Hickman.mp3");
+  //song1.play();
 }
 void draw()
 {
@@ -94,17 +94,9 @@ void draw()
   textFont(letra);
   image(Fondo2,fondo2x,0);
   image(Fondo1,fondox,fondoy);
-  play.mousePressed();
-/*  if(mousePressed){
-  if(mouseX<700 && mouseX>300 && mouseY>270 && mouseY<370){
-    fondox= 5000;
-    fondo2x=0;
-    jugar=true;
-    vidap=100;
-    espiritu=50;
-    vidae=100;
-  }}
-  */
+  play.mousePressed1();
+  salir.mousePressed2();
+
   if(jugar==true)
   {
   
