@@ -39,6 +39,7 @@ class Carta
     {
       vidae=vidae-10;
       espiritu=espiritu-5;
+      ssprite=3;
       press=false;
       if(vidae>0){
       ser6x=800;
