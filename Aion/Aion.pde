@@ -30,9 +30,7 @@ int ssprite=0;
 int fondox=0;
 int fondoy=0;
 int fondo2x=5000;
-int ser6x=5000;
-int ser7x=800;
-int ser8x=5000;
+int serpnormx=800,serpdanox=5000,serpatkx=5000,serpripx=5000;
 
 //SoundFile song1;
 
