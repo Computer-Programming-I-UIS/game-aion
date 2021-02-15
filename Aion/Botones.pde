@@ -35,11 +35,13 @@ int xi,yi,xf,yf;
   }
   void mousePressedm()
   {
-    if(mousePressed && jugar==2)
+    if(mousePressed)
     {
     if(mouseX>=xi && mouseX<=xf && mouseY>=yi && mouseY<=yf)
     {
     exit();
+    jugar=0;
+    
     }
     }
   }
