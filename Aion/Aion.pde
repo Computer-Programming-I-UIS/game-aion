@@ -12,14 +12,8 @@ PImage Heroe1;
 PImage Heroe2;
 PImage Heroe3;
 PImage Heroe4;
-PImage BossSerp1;
-PImage BossSerp2;
-PImage BossSerp3;
-PImage BossSerp4;
-PImage BossSerp5;
-PImage BossSerp6;
-PImage BossSerp7;
-PImage BossSerp8;
+PImage serpnorm,serpatk,serpdano,serprip;
+
 PFont letra;
 boolean press,jugar;
 int xboton=298,xfboton=702,yplay=270,yfplay=370;
@@ -32,6 +26,7 @@ float cdap=0,cdhp=10,cdesp=0;
 int larcar=250,anccar=175;
 int espiritu=50;
 int xesp=100,yesp=350;
+int ssprite=0;
 int fondox=0;
 int fondoy=0;
 int fondo2x=5000;
@@ -60,15 +55,15 @@ void setup()
   Heroe2=loadImage("HEROE2.png");
   Heroe3=loadImage("HEROE3.png");
   Heroe4=loadImage("HEROE4.png");
-  BossSerp3=loadImage("SERPIENTEATK3.png");
-  BossSerp6=loadImage("SERPIENTEDAÑO.png");
-  BossSerp7=loadImage("SERPIENTEFF.png");
-  BossSerp8=loadImage("SERPIENTEMUERTA.png");
+  serpatk=loadImage("SERPIENTEATK3.png");
+  serpdano=loadImage("SERPIENTEDAÑO.png");
+  serpnorm=loadImage("SERPIENTEFF.png");
+  serprip=loadImage("SERPIENTEMUERTA.png");
   letra= createFont("Norse.otf",15);
-  BossSerp3.resize(100,100);
-  BossSerp6.resize(100,100);
-  BossSerp7.resize(100,100);
-  BossSerp8.resize(100,100);
+  serpatk.resize(100,100);
+  serpdano.resize(100,100);
+  serpnorm.resize(100,100);
+  serprip.resize(100,100);
   acarta.resize(anccar,larcar);
   ccarta.resize(anccar,larcar);
   espcarta.resize(anccar,larcar);
@@ -99,10 +94,10 @@ void draw()
 
   if(jugar==true)
   {
+  ero.sprites();
   
-  image(BossSerp8,ser8x,100); 
-  image(BossSerp7,ser7x,100);
-  image(BossSerp6,ser6x,100);
+  
+  
   image(acarta,xc1,ycs);
   image(ccarta,xc2,ycs);
   image(espcarta,xc3,ycs);
@@ -129,6 +124,7 @@ void draw()
   if(vidap<=0)
   {
     vidap=0;
+    ssprite=4;
   }
   if(vidae>=100)
   {
