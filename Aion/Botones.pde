@@ -8,8 +8,10 @@ int xi,yi,xf,yf;
     xf=tempxf;
     yf=tempyf;
   }
-  void mousePressed()
+  void mousePressed1()
   {
+    if(mousePressed && jugar==false)
+    {
     if(mouseX>=xi && mouseX<=xf && mouseY>=yi && mouseY<=yf)
     {
     fondox= 5000;
@@ -18,6 +20,17 @@ int xi,yi,xf,yf;
     vidap=100;
     espiritu=50;
     vidae=100;
+    }
+    }
+  }
+  void mousePressed2()
+  {
+    if(mousePressed && jugar==false)
+    {
+    if(mouseX>=xi && mouseX<=xf && mouseY>=yi && mouseY<=yf)
+    {
+    exit();
+    }
     }
   }
   
