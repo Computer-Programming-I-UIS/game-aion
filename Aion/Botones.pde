@@ -10,13 +10,13 @@ int xi,yi,xf,yf;
   }
   void mousePressed1()
   {
-    if(mousePressed && jugar==false)
+    if(mousePressed && jugar==0)
     {
     if(mouseX>=xi && mouseX<=xf && mouseY>=yi && mouseY<=yf)
     {
     fondox= 5000;
     fondo2x=0;
-    jugar=true;
+    jugar=1;
     vidap=100;
     espiritu=50;
     vidae=100;
@@ -25,7 +25,7 @@ int xi,yi,xf,yf;
   }
   void mousePressed2()
   {
-    if(mousePressed && jugar==false)
+    if(mousePressed && jugar==0)
     {
     if(mouseX>=xi && mouseX<=xf && mouseY>=yi && mouseY<=yf)
     {
@@ -33,5 +33,14 @@ int xi,yi,xf,yf;
     }
     }
   }
-  
+  void mousePressedm()
+  {
+    if(mousePressed && jugar==2)
+    {
+    if(mouseX>=xi && mouseX<=xf && mouseY>=yi && mouseY<=yf)
+    {
+    exit();
+    }
+    }
+  }
 }
