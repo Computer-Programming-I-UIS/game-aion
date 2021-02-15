@@ -13,29 +13,41 @@ class Enemigo
   {
     switch (ssprite)
     {
-    case 0://normal
+    case 0:
     {
-      image(serpnorm,ser7x,100);
       delay(0);
+      image(serpnorm,serpnormx,100);
     }
+    break;
     case 1://cuando pega
     {
-      image(serpatk,ser7x,100);
+      serpnormx=5000;
+      serpatkx=800;
+      image(serpatk,serpatkx,100);
+      ssprite=0;
+      if(ssprite==0)
+      {
+      serpatkx=5000;
+      serpnormx=800;
+      }
     }
+    break;
     case 3: //Cuando le pegan
     {
-      ser7x=5000;
-      ser6x=800;
-      image(serpdano,ser6x,100);
-      delay(50);
-      ser6x=5000;
-      ser7x=800;
+      serpnormx=5000;
+      serpdanox=800;
+      image(serpdano,serpdanox,100);
       ssprite=0;
-      
+      if(ssprite==0)
+      {
+      serpdanox=5000;
+      serpnormx=800;
+      }
     }
+    break;
     case 4: //Cuando muere
     {
-      image(serprip,ser8x,100); 
+      image(serprip,serpripx,100); 
     }
     break;
     }
