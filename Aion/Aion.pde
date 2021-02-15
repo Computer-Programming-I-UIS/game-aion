@@ -18,7 +18,8 @@ boolean press;
 int jugar;
 int xboton=298,xfboton=702,yplay=270,yfplay=370;
 int ysalir=483,yfsalir=582;
-int xbmuerte=784,xbfmuerte=880,ysmuerte=570,ysfmuerte=613;
+int xsmuerte=784,xsfmuerte=880,ysmuerte=570,ysfmuerte=613;
+int volverx=677,volverxf=986,volvery=485,volveryf=529;
 int vidae=100,vidap=50;
 int xc1=200,xc2=400,xc3=600,xc4=700,ycs=450,xbe=750,xbp=100,ybe=50,ybp=400;
 int dano1=100,cura1=10;
@@ -35,7 +36,7 @@ int serpnormx=800,serpdanox=5000,serpatkx=5000,serpripx=5000;
 
 //SoundFile song1;
 
-Boton play,salir,smuerte;
+Boton play,salir,smuerte,volver;
 Carta atk,heal,spirit,tiamat;
 Barra venemigo,vprota,besp;
 Enemigo ero;
@@ -80,7 +81,8 @@ void setup()
   besp=new Barra(xesp,yesp,20);
   play=new Boton(xboton,yplay,xfboton,yfplay);
   salir=new Boton(xboton,ysalir,xfboton,yfsalir);
-  smuerte=new Boton(xbmuerte,ysmuerte,xbfmuerte,ysfmuerte);
+  smuerte=new Boton(xsmuerte,ysmuerte,xsfmuerte,ysfmuerte);
+  volver=new Boton(volverx,volvery,volverxf,volveryf);
   ero=new Enemigo(dano1,cura1,cdatk1,cdheal1);
   //song1=new SoundFile(this,"Argonne - Zachariah Hickman.mp3");
   //song1.play();
@@ -90,11 +92,17 @@ void draw()
   background(100);
   textFont(letra);
   image(fjuego,fondo2x,0);
-  image(fbase,fondox,fondoy);
   image(fmuerte,fmuertex,0);
+  image(fbase,fondox,fondoy);
+  if(jugar==0)
+  {
+  fondox=0;
+  fondo2x=5000;
+  fmuertex=5000;
+  
   play.mousePressed1();
   salir.mousePressed2();
-  
+  }
   if(jugar==1)
   {
   ero.sprites();
@@ -170,7 +178,8 @@ void draw()
   if(jugar==2)
   {
     fmuertex=0;
-    smuerte.mousePressedm();    
+    smuerte.mousePressedm();
+    volver.volvere();
     fondox= 5000;
     fondo2x=5000;
   }
