@@ -15,13 +15,13 @@ PImage serpnorm,serpatk,serpdano,serprip;
 
 PFont letra;
 boolean press;
-int jugar=0;
+int jugar;
 int xboton=298,xfboton=702,yplay=270,yfplay=370;
 int ysalir=483,yfsalir=582;
-int xbmuerte=700,xbfmuerte=900,ysmuerte=400,ysfmuerte=500;
+int xbmuerte=784,xbfmuerte=880,ysmuerte=570,ysfmuerte=613;
 int vidae=100,vidap=50;
 int xc1=200,xc2=400,xc3=600,xc4=700,ycs=450,xbe=750,xbp=100,ybe=50,ybp=400;
-int dano1=10,cura1=10;
+int dano1=100,cura1=10;
 float cdatk1=10,cdheal1=25;
 float cdap=0,cdhp=10,cdesp=0;
 int larcar=250,anccar=175;
@@ -91,13 +91,13 @@ void draw()
   textFont(letra);
   image(fjuego,fondo2x,0);
   image(fbase,fondox,fondoy);
+  image(fmuerte,fmuertex,0);
   play.mousePressed1();
   salir.mousePressed2();
-
+  
   if(jugar==1)
   {
   ero.sprites();
-  
   
   
   image(acarta,xc1,ycs);
@@ -119,6 +119,7 @@ void draw()
   besp.displayesp();
   vprota.displayp();
   venemigo.displaye();
+  
   if(vidap>=100)
   {
     vidap=100;
@@ -157,11 +158,6 @@ void draw()
   if(vidap==0)
   {
     jugar=2;
-    fmuertex=0;
-    
-    image(fmuerte,fmuertex,0);
-    fondox= 5000;
-    fondo2x=5000;
   }
   if(vidae==0)
   {
@@ -170,6 +166,12 @@ void draw()
     fondox= 0;
     fondo2x=5000;
   }
-  
+  }
+  if(jugar==2)
+  {
+    fmuertex=0;
+    smuerte.mousePressedm();    
+    fondox= 5000;
+    fondo2x=5000;
   }
 }
