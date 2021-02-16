@@ -64,6 +64,7 @@ class Carta
       
       vidap=vidap+20;
       espiritu=espiritu-20;
+      psprite=2;
       press=false;
       cdhp=20;
     }
@@ -81,6 +82,7 @@ class Carta
     if(press==true && vidap<=100 && vidap>=0 && espiritu<100 && cdesp==0)
     {
       espiritu=espiritu+15;
+      psprite=3;
       press=false;
       cdesp=10;
     }
