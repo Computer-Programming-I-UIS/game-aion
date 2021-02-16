@@ -7,14 +7,11 @@ PImage acarta;
 PImage ccarta;
 PImage espcarta;
 PImage stcarta;
-PImage Heroe1;
-PImage Heroe2;
-PImage Heroe3;
-PImage Heroe4;
+PImage heroe1,heroedano,heroemana,heroeheal;
 PImage serpnorm,serpatk,serpdano,serprip;
-
 PFont letra;
 boolean press;
+int psprite=0,protax1=100,pdanox=5000,pmanax=5000,phealx=5000,protay=300;
 int jugar;
 int xboton=298,xfboton=702,yplay=270,yfplay=370;
 int ysalir=483,yfsalir=582;
@@ -22,7 +19,7 @@ int xsmuerte=784,xsfmuerte=880,ysmuerte=570,ysfmuerte=613;
 int volverx=677,volverxf=986,volvery=485,volveryf=529;
 int vidae=100,vidap=50;
 int xc1=200,xc2=400,xc3=600,xc4=700,ycs=450,xbe=750,xbp=100,ybe=50,ybp=400;
-int dano1=100,cura1=10;
+int dano1=10,cura1=10;
 float cdatk1=10,cdheal1=25;
 float cdap=0,cdhp=10,cdesp=0;
 int larcar=250,anccar=175;
@@ -35,7 +32,7 @@ int fmuertex=5000;
 int serpnormx=800,serpdanox=5000,serpatkx=5000,serpripx=5000;
 
 //SoundFile song1;
-
+Heroe prota;
 Boton play,salir,smuerte,volver;
 Carta atk,heal,spirit,tiamat;
 Barra venemigo,vprota,besp;
@@ -52,15 +49,19 @@ void setup()
   fbase=loadImage("FONDO.jpg");
   fjuego=loadImage("SELVA.jpg");
   fmuerte=loadImage("MUERTE.jpg");
-  Heroe1=loadImage("HEROE1.png");
-  Heroe2=loadImage("HEROE2.png");
-  Heroe3=loadImage("HEROE3.png");
-  Heroe4=loadImage("HEROE4.png");
+  heroe1=loadImage("HEROE1.png");
+  heroedano=loadImage("HEROE2.png");
+  heroemana=loadImage("HEROE3.png");
+  heroeheal=loadImage("HEROE4.png");
   serpatk=loadImage("SERPIENTEATK3.png");
   serpdano=loadImage("SERPIENTEDAÑO.png");
   serpnorm=loadImage("SERPIENTEFF.png");
   serprip=loadImage("SERPIENTEMUERTA.png");
   letra= createFont("Norse.otf",15);
+  heroe1.resize(100,100);
+  heroedano.resize(100,100);
+  heroeheal.resize(100,100);
+  heroemana.resize(100,100);
   serpatk.resize(100,100);
   serpdano.resize(100,100);
   serpnorm.resize(100,100);
@@ -72,6 +73,7 @@ void setup()
   fbase.resize(1000,700);
   fjuego.resize(1000,700);
   fmuerte.resize(1000,700);
+  prota=new Heroe( );
   atk=new Carta(xc1,ycs,xc1+anccar,ycs+larcar);
   heal=new Carta(xc2,ycs,xc2+anccar,ycs+larcar);
   spirit=new Carta(xc3,ycs,xc3+anccar,ycs+larcar);
@@ -105,8 +107,8 @@ void draw()
   }
   if(jugar==1)
   {
+  prota.sprites();
   ero.sprites();
-  
   
   image(acarta,xc1,ycs);
   image(ccarta,xc2,ycs);
