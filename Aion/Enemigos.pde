@@ -16,38 +16,38 @@ class Enemigo
     case 0:
     {
       delay(0);
-      image(serpnorm,serpnormx,100);
+      image(serpnorm,serpnormx,serpy);
     }
     break;
     case 1://cuando pega
     {
       serpnormx=5000;
-      serpatkx=800;
-      image(serpatk,serpatkx,100);
+      serpatkx=700;
+      image(serpatk,serpatkx,serpy);
       ssprite=0;
       if(ssprite==0)
       {
       serpatkx=5000;
-      serpnormx=800;
+      serpnormx=700;
       }
     }
     break;
     case 3: //Cuando le pegan
     {
       serpnormx=5000;
-      serpdanox=800;
-      image(serpdano,serpdanox,100);
+      serpdanox=700;
+      image(serpdano,serpdanox,serpy);
       ssprite=0;
       if(ssprite==0)
       {
       serpdanox=5000;
-      serpnormx=800;
+      serpnormx=700;
       }
     }
     break;
     case 4: //Cuando muere
     {
-      image(serprip,serpripx,100); 
+      image(serprip,serpripx,serpy); 
     }
     break;
     }
@@ -93,8 +93,9 @@ class Enemigo
  }
  void display()
  {
-   textSize(24);
-   text(tatk,800,100);
-   text(theal,900,100);
+   fill(#FFFFFF);
+   textSize(30);
+   text(tatk,600,80);
+   text(theal,800,80);
  }
 }
