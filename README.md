@@ -8,8 +8,8 @@
 - Cuando ya tengas la última versión y el clon instalado es necesario que instales la biblioteca Sound en el Processing de la siguiente forma:
 - Abres Processing, le das click en Scketch, importar biblioteca, añadir Biblioteca y buscas Sound en la barra de busqueda.
 
-![N|Solid](https://i.postimg.cc/Vk25hTbJ/Screenshot-1.jpg)
-![N|Solid](https://i.postimg.cc/wjykCC3J/SOUL-TIAMAT.jpg)
+![N|Solid](https://i.postimg.cc/bvQYBvh5/Screenshot-1.jpg)
+![N|Solid](https://i.postimg.cc/HnLpn4yG/Screenshot-2.jpg)
 
 # Descripción
 - Nuestro proyecto es un juego basado en algunos juegos de cartas tales como YuGiOh, en el que nuestro protagonista recorre el mundo en busca de cumplir la misión que le impuso su padre, aunque él no lo sabe aún. Nuestro protagonista tendrá que enfrentarse a distintos monstruos y bestias que han escapado de su jaula en el infierno para tomar venganza de la humanidad.
