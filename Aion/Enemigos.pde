@@ -78,6 +78,7 @@ class Enemigo
      vidap=vidap-dano;
      tatk=cdatk1;
      ssprite=1;
+     psprite=1;
    }
  }
  void cura()
