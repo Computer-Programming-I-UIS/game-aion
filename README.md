@@ -1,4 +1,5 @@
 # GAME AIÓN - PROYECTO FINAL.
+![N|Solid](https://i.postimg.cc/G349xdfk/imagen-2021-02-16-172938.png)
 # Integrantes:
 - Santiago Enrique Monsalve Durán - 2200520
 - Daniel Jeshua Morelos Villamizar - 2200515
