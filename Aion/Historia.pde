@@ -63,9 +63,19 @@ class Storie
   }
   if(hist==7)
   {
+    fondox=5000;
     his6x=5000;
+    fondo2x=0;
     tutox=0;
-    
+    fill(0);
+    textSize(24);
+    text("Vida de tu heroe",300,200);
+    text("Vida de tu enemigo",600,100);
+    text("Tu espiritu(El cual gastaras para usar tus cartas)",400,450);
+    text("El temporizador de las acciones de tu enemigo",800,200);
+    text("Tus cartas",100,600);
+    text("Temporizador de tus cartas(Cuando llegue a 0 podras usarlas)",100,670);
+    text("Descripcion de tus cartas",800,620);
     if(keyPressed && key=='7')
     { 
         jugar=1;
