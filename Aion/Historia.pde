@@ -65,17 +65,19 @@ class Storie
   {
     fondox=5000;
     his6x=5000;
-    fondo2x=0;
     tutox=0;
     fill(0);
+    textFont(letra2);
     textSize(24);
-    text("Vida de tu heroe",300,200);
-    text("Vida de tu enemigo",600,100);
-    text("Tu espiritu(El cual gastaras para usar tus cartas)",400,450);
-    text("El temporizador de las acciones de tu enemigo",800,200);
-    text("Tus cartas",100,600);
-    text("Temporizador de tus cartas(Cuando llegue a 0 podras usarlas)",100,670);
-    text("Descripcion de tus cartas",800,620);
+    
+    text("Vida de tu heroe",370,210);
+    text("Vida de tu enemigo",600,210);
+    text("Tu espiritu(El cual gastaras para usar tus cartas)",795,416);
+    text("Coldown de las acciones de tu enemigo",835,200);
+    text("Tus cartas",60,490);
+    text("Coldown de tus cartas",100,690);
+    text("Descripcion" ,940,520);
+    text("de tus cartas",940,540);
     if(keyPressed && key=='7')
     { 
         jugar=1;
