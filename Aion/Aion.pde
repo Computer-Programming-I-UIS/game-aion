@@ -224,6 +224,7 @@ void draw()
   }
   if(jugar==2)
   {
+    tutox=5000;
     fmuertex=0;
     smuerte.mousePressedm();
     volver.volvere();
