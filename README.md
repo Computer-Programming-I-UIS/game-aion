@@ -32,5 +32,6 @@
 - <a href="https://www.pikpng.com/pngvi/whxboo_dragon-sprite-png-clipart/" target="_blank">Dragon Sprite Png Clipart @pikpng.com</a> . Por el sprite de Dragón usado en la historia.
 - Dreadfox. Por su imágen que nos sirvió en la carta de Meditación.
 - Illustration <a href="https://www.dreamstime.com/animated-assassin-character-sprites-creating-fantasy-rpg-adventure-video-games-image116937230">116937230</a> © <a href="https://www.dreamstime.com/pzuh88_info" itemprop="author">Pzuh88</a> - <a href="https://www.dreamstime.com/">Dreamstime.com</a>. Por sus Sprites de Aión y del Héroe.
+- Argonne. Por su tema Zachariah Hickman que usamos en el menú.
 - Camilo Rojas. Por introducirnos en Processing y ayudarnos en la creación de nuestro juego.
 
