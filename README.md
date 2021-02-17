@@ -15,6 +15,7 @@
 - Nuestro proyecto es un juego basado en algunos juegos de cartas tales como YuGiOh, en el que nuestro protagonista recorre el mundo en busca de cumplir la misión que le impuso su padre, aunque él no lo sabe aún. Nuestro protagonista tendrá que enfrentarse a distintos monstruos y bestias que han escapado de su jaula en el infierno para tomar venganza de la humanidad.
 # Jugabilidad
 - Al iniciar el juego hay un menú sencillo de entender con dos botones, uno de jugar y el otro de salir.
+
 ![N|Solid](https://i.postimg.cc/wTGvrvtq/FONDO.jpg)
 
 - Después de darle jugar se iniciará la historia y tedrás que darle enter para seguir leyendo y llegar al primer desafio.
