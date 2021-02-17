@@ -139,7 +139,7 @@ void draw()
   }
   if(jugar==1)
   {
-  his6x=5000;
+  tutox=5000;
   fondox=5000;
   fondo2x=0;
   prota.sprites();
