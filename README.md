@@ -14,6 +14,9 @@
 # Descripción
 - Nuestro proyecto es un juego basado en algunos juegos de cartas tales como YuGiOh, en el que nuestro protagonista recorre el mundo en busca de cumplir la misión que le impuso su padre, aunque él no lo sabe aún. Nuestro protagonista tendrá que enfrentarse a distintos monstruos y bestias que han escapado de su jaula en el infierno para tomar venganza de la humanidad.
 # Jugabilidad
+- Al iniciar el juego hay un menú sencillo de entender con dos botones, uno de jugar y el otro de salir.
+
+
 - Nuestro juego es fácil de entender ya que tiene un tutorial introductorio en el primer nivel, y al avanzar más  más dificil será pero también tendrá mayores recompensas como cartas legendarias con habilidades especiales. Como por ejemplo:
 
 ![N|Solid](https://i.postimg.cc/wjykCC3J/SOUL-TIAMAT.jpg)
@@ -32,5 +35,6 @@
 - <a href="https://www.pikpng.com/pngvi/whxboo_dragon-sprite-png-clipart/" target="_blank">Dragon Sprite Png Clipart @pikpng.com</a> . Por el sprite de Dragón usado en la historia.
 - Dreadfox. Por su imágen que nos sirvió en la carta de Meditación.
 - Illustration <a href="https://www.dreamstime.com/animated-assassin-character-sprites-creating-fantasy-rpg-adventure-video-games-image116937230">116937230</a> © <a href="https://www.dreamstime.com/pzuh88_info" itemprop="author">Pzuh88</a> - <a href="https://www.dreamstime.com/">Dreamstime.com</a>. Por sus Sprites de Aión y del Héroe.
+- Argonne. Por su tema Zachariah Hickman que usamos en el menú.
 - Camilo Rojas. Por introducirnos en Processing y ayudarnos en la creación de nuestro juego.
 
