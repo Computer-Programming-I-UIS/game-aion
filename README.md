@@ -6,7 +6,8 @@
 # Pre-Requisitos
 - Para poder disfrutar nuestro juego es necesario que tengas la última versión de Processing y hagas un clon del repositorio en tu dispositivo.
 - Cuando ya tengas la última versión y el clon instalado es necesario que instales la biblioteca Sound en el Processing de la siguiente forma:
-- Abres Processing, le das click en Scketch, importar biblioteca, añadir Biblioteca, buscas Sound en la barra de busqueda y la instalas.
+- Abres Processing, le das click en Scketch, importar biblioteca, añadir Biblioteca, buscas Sound en la barra de busqueda y la instalas.7
+- El juego tiene una clasificación E +10, es decir, para cualquiera que tenga más de 10 años puede jugarlo.
 
 ![N|Solid](https://i.postimg.cc/Vk25hTbJ/Screenshot-1.jpg)
 ![N|Solid](https://i.postimg.cc/Qt8DYkSB/Screenshot-2.jpg)
