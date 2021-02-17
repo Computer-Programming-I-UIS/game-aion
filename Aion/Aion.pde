@@ -9,6 +9,7 @@ PImage espcarta;
 PImage stcarta;
 PImage heroe1,heroedano,heroemana,heroeheal;
 PImage serpnorm,serpatk,serpdano,serprip;
+PImage his1,his2,his3,his4,his5,his6;
 PFont letra;
 boolean press;
 int psprite=0,protax1=150,pdanox=5000,pmanax=5000,phealx=5000,protay=160;
@@ -34,6 +35,8 @@ int fmuertex=5000;
 int serpy=160;
 int serpnormx=700,serpdanox=5000,serpatkx=5000,serpripx=5000;
 int tampjx=160,tampjy=180;
+int his1x=5000,his2x=5000,his3x=5000,his4x=5000,his5x=5000,his6x=5000;
+int keypress=0;
 //SoundFile song1;
 Heroe prota;
 Boton play,salir,smuerte,volver;
@@ -60,6 +63,12 @@ void setup()
   serpdano=loadImage("SERPIENTEDAÑO.png");
   serpnorm=loadImage("SERPIENTEFF.png");
   serprip=loadImage("SERPIENTEMUERTA.png");
+  his1=loadImage("HISTORIA1.png");
+  his2=loadImage("HISTORIA2.png");
+  his3=loadImage("HISTORIA3.png");
+  his4=loadImage("HISTORIA4.png");
+  his5=loadImage("HISTORIA5.png");
+  his6=loadImage("HISTORIA6.png");
   letra= createFont("Norse.otf",15);
   heroe1.resize(tampjx,tampjy);
   heroedano.resize(tampjx,tampjy);
@@ -76,6 +85,12 @@ void setup()
   fbase.resize(1000,700);
   fjuego.resize(1000,700);
   fmuerte.resize(1000,700);
+  his1.resize(1000,700);
+  his2.resize(1000,700);
+  his3.resize(1000,700);
+  his4.resize(1000,700);
+  his5.resize(1000,700);
+  his6.resize(1000,700);
   prota=new Heroe( );
   atk=new Carta(xc1,ycs,xc1+anccar,ycs+larcar);
   heal=new Carta(xc2,ycs,xc2+anccar,ycs+larcar);
@@ -99,8 +114,12 @@ void draw()
   image(fjuego,fondo2x,0);
   image(fmuerte,fmuertex,0);
   image(fbase,fondox,fondoy);
+  image(his1,his1x,0);
+  image(his2,his2x,0);
+  image(his3,his3x,0);
   if(jugar==0)
   {
+  his1x=5000;
   fondox=0;
   fondo2x=5000;
   fmuertex=5000;
@@ -108,8 +127,81 @@ void draw()
   play.mousePressed1();
   salir.mousePressed2();
   }
+  if(jugar==-1)
+  {
+    fondox=5000;
+    his1x=0;
+    
+    
+    if(keyPressed)
+    { 
+      keypress=1;
+      if(keypress==1)
+      {
+      jugar=-2;
+      keypress=0;
+      }
+    }
+  }
+  if(jugar==-2)
+  {
+    his1x=5000;
+    his2x=0;
+    if(keyPressed && keypress==0)
+    { 
+      keypress=1;
+      if(keypress==1)
+      {
+      jugar=-3;
+      keypress=0;
+      }
+    }
+  }
+  if(jugar==-3)
+  {
+    his2x=5000;
+    his3x=0;
+    
+    if(keyPressed)
+    { 
+      
+        jugar=-4;
+    }
+  }
+  if(jugar==-4)
+  {
+    his3x=5000;
+    his4x=0;
+    image(his4,his4x,0);
+    if(keyPressed)
+    { 
+        jugar=-5;
+    }
+  }
+  if(jugar==-5)
+  {
+    his4x=5000;
+    his5x=0;
+    image(his5,his5x,0);
+    if(keyPressed)
+    { 
+        jugar=-6;
+    }
+  }
+  if(jugar==-6)
+  {
+    his5x=5000;
+    his6x=0;
+    image(his6,his6x,0);
+    if(keyPressed)
+    { 
+        jugar=1;
+    }
+  }
   if(jugar==1)
   {
+  his6x=5000;
+  fondo2x=0;
   prota.sprites();
   ero.sprites();
   
