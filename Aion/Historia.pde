@@ -66,7 +66,7 @@ class Storie
     fondox=5000;
     his6x=5000;
     tutox=0;
-    fill(0);
+    fill(255,0,0);
     textFont(letra2);
     textSize(24);
     
