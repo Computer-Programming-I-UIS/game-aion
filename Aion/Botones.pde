@@ -16,7 +16,7 @@ int xi,yi,xf,yf;
     {
     fondox= 5000;
     fondo2x=5000;
-    jugar=-1;
+    hist=1;
     vidap=100;
     espiritu=50;
     vidae=100;
