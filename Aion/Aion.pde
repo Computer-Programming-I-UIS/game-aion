@@ -1,3 +1,5 @@
+import processing.sound.*;
+
 //Aión
 //Autores: 2200515-Daniel Jeshua Morelos Villamizar y 2200520-Santiago Enrique Monsalve Durán.
 //Descripción:
@@ -114,6 +116,7 @@ void setup()
   intro=new Storie();
   song1=new SoundFile(this,"Argonne - Zachariah Hickman.mp3");
   song1.play();
+  
 }
 void draw()
 {
@@ -221,6 +224,7 @@ void draw()
   }
   if(jugar==2)
   {
+    tutox=5000;
     fmuertex=0;
     smuerte.mousePressedm();
     volver.volvere();
