@@ -11,7 +11,7 @@ PImage heroe1,heroedano,heroemana,heroeheal;
 PImage serpnorm,serpatk,serpdano,serprip;
 PImage his1,his2,his3,his4,his5,his6;
 PImage tutorial;
-PFont letra;
+PFont letra,letra2;
 boolean press;
 int psprite=0,protax1=150,pdanox=5000,pmanax=5000,phealx=5000,protay=160;
 int jugar;
@@ -74,7 +74,9 @@ void setup()
   his5=loadImage("HISTORIA5.png");
   his6=loadImage("HISTORIA6.png");
   tutorial=loadImage("FLECHAS.png");
-  letra= createFont("Norse.otf",15);
+  letra= createFont("Norse.otf",20);
+  letra2=createFont("Norsebold.otf",20);
+  tutorial.resize(1000,700);
   heroe1.resize(tampjx,tampjy);
   heroedano.resize(tampjx,tampjy);
   heroeheal.resize(tampjx,tampjy);
@@ -126,6 +128,7 @@ void draw()
   image(his4,his4x,0);
   image(his5,his5x,0);
   image(his6,his6x,0);
+  image(tutorial,tutox,0);
   if(jugar==0)
   {
   his1x=5000;
