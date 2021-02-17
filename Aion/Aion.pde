@@ -40,7 +40,7 @@ int serpnormx=700,serpdanox=5000,serpatkx=5000,serpripx=5000;
 int tampjx=160,tampjy=180;
 int his1x=5000,his2x=5000,his3x=5000,his4x=5000,his5x=5000,his6x=5000;
 int hist=0;
-int tutox=4000;
+int tutox=5000;
 
 SoundFile song1;
 Heroe prota;
@@ -138,7 +138,7 @@ void draw()
   fondox=0;
   fondo2x=5000;
   fmuertex=5000;
-  
+  tutox=5000;
   play.mousePressed1();
   salir.mousePressed2();
   intro.contar();
@@ -220,6 +220,7 @@ void draw()
     fmuertex=5000;
     fondox= 0;
     fondo2x=5000;
+    tutox=5000;
   }
   }
   if(jugar==2)
