@@ -17,6 +17,7 @@
 - Al iniciar el juego hay un menú sencillo de entender con dos botones, uno de jugar y el otro de salir.
 ![N|Solid](https://i.postimg.cc/wTGvrvtq/FONDO.jpg)
 
+- Después de darle jugar se iniciará la historia y tedrás que darle enter para seguir leyendo y llegar al primer desafio.
 - Nuestro juego es fácil de entender ya que tiene un tutorial introductorio en el primer nivel, y al avanzar más  más dificil será pero también tendrá mayores recompensas como cartas legendarias con habilidades especiales. Como por ejemplo:
 
 ![N|Solid](https://i.postimg.cc/wjykCC3J/SOUL-TIAMAT.jpg)
