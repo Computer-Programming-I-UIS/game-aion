@@ -15,8 +15,8 @@ int xi,yi,xf,yf;
     if(mouseX>=xi && mouseX<=xf && mouseY>=yi && mouseY<=yf)
     {
     fondox= 5000;
-    fondo2x=0;
-    jugar=1;
+    fondo2x=5000;
+    jugar=-1;
     vidap=100;
     espiritu=50;
     vidae=100;
