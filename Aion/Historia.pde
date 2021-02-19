@@ -81,6 +81,8 @@ class Storie
     if(keyPressed && key=='7')
     { 
         jugar=1;
+        tutox=5000;
+        hist=0;
     }
   }
   }

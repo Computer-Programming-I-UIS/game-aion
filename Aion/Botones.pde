@@ -16,6 +16,7 @@ int xi,yi,xf,yf;
     {
     fondox= 5000;
     fondo2x=5000;
+    tutox=5000;
     hist=1;
     vidap=100;
     espiritu=50;
@@ -50,7 +51,9 @@ int xi,yi,xf,yf;
     if(mouseX>=xi && mouseX<=xf && mouseY>=yi && mouseY<=yf )
     {
     jugar=0;
+    tutox=5000;
     fmuertex=5000;
+    fondox=0;
     }
     }
   }
