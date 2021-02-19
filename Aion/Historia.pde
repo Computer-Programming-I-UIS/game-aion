@@ -82,6 +82,7 @@ class Storie
     { 
         jugar=1;
         tutox=5000;
+        hist=0;
     }
   }
   }
