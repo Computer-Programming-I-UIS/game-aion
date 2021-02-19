@@ -15,8 +15,8 @@ PFont letra,letra2;
 boolean press;
 int psprite=0,protax1=150,pdanox=5000,pmanax=5000,phealx=5000,protay=160;
 int jugar,victorias;
-int xboton=298,xfboton=702,yplay=270,yfplay=370;
-int ysalir=483,yfsalir=582;
+int xboton=300,xfboton=708,yplay=182,yfplay=281;
+int ysalir=571,yfsalir=672;
 int xsmuerte=784,xsfmuerte=880,ysmuerte=570,ysfmuerte=613;
 int volverx=677,volverxf=986,volvery=485,volveryf=529;
 int vidae=100,vidap=100;
@@ -40,7 +40,7 @@ int his1x=5000,his2x=5000,his3x=5000,his4x=5000,his5x=5000,his6x=5000;
 int hist=0;
 int tutox=5000;
 
-SoundFile song1;
+//SoundFile song1;
 Heroe prota;
 Boton play,salir,smuerte,volver;
 Carta atk,heal,spirit,tiamat;
@@ -112,8 +112,8 @@ void setup()
   volver=new Boton(volverx,volvery,volverxf,volveryf);
   ero=new Enemigo(dano1,cura1,cdatk1,cdheal1);
   intro=new Storie();
-  song1=new SoundFile(this,"Argonne - Zachariah Hickman.mp3");
-  song1.play();
+  //song1=new SoundFile(this,"Argonne - Zachariah Hickman.mp3");
+  //song1.play();
   
 }
 void draw()
@@ -143,7 +143,7 @@ void draw()
   }
   if(jugar==1)
   {
-  song1.stop();
+  //song1.stop();
   tutox=5000;
   fondox=5000;
   fondo2x=0;
