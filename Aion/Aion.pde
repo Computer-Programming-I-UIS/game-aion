@@ -16,7 +16,8 @@ boolean press;
 int psprite=0,protax1=150,pdanox=5000,pmanax=5000,phealx=5000,protay=160;
 int jugar,victorias;
 int xboton=300,xfboton=708,yplay=182,yfplay=281;
-int ysalir=571,yfsalir=672;
+int ybtut=305,yfbtut=404;//Coordenadas en y del boton del tutorial
+int ysalir=571,yfsalir=670;
 int xsmuerte=784,xsfmuerte=880,ysmuerte=570,ysfmuerte=613;
 int volverx=677,volverxf=986,volvery=485,volveryf=529;
 int vidae=100,vidap=100;
@@ -42,7 +43,7 @@ int tutox=5000;
 
 //SoundFile song1;
 Heroe prota;
-Boton play,salir,smuerte,volver;
+Boton play,salir,smuerte,volver,botuto;
 Carta atk,heal,spirit,tiamat;
 Barra venemigo,vprota,besp;
 Enemigo ero;
@@ -107,11 +108,13 @@ void setup()
   vprota=new Barra(xbp,ybp,altobar);
   besp=new Barra(xesp,yesp,altobar);
   play=new Boton(xboton,yplay,xfboton,yfplay);
+  botuto=new Boton(xboton,ybtut,xfboton,yfbtut);
   salir=new Boton(xboton,ysalir,xfboton,yfsalir);
   smuerte=new Boton(xsmuerte,ysmuerte,xsfmuerte,ysfmuerte);
   volver=new Boton(volverx,volvery,volverxf,volveryf);
   ero=new Enemigo(dano1,cura1,cdatk1,cdheal1);
   intro=new Storie();
+  
   //song1=new SoundFile(this,"Argonne - Zachariah Hickman.mp3");
   //song1.play();
   
@@ -138,6 +141,7 @@ void draw()
   fmuertex=5000;
   tutox=5000;
   play.mousePressed1();
+  botuto.mousePressedt();
   salir.mousePressed2();
   intro.contar();
   }
