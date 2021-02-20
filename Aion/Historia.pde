@@ -58,32 +58,9 @@ class Storie
     
     if(keyPressed && key=='6')
     { 
-        hist=7;
-    }
-  }
-  if(hist==7)
-  {
-    fondox=5000;
-    his6x=5000;
-    tutox=0;
-    fill(255,0,0);
-    textFont(letra2);
-    textSize(24);
-    
-    text("Vida de tu heroe",370,210);
-    text("Vida de tu enemigo",600,210);
-    text("Tu espiritu(El cual gastaras para usar tus cartas)",795,416);
-    text("Coldown de las acciones de tu enemigo",835,200);
-    text("Tus cartas",60,490);
-    text("Coldown de tus cartas",100,690);
-    text("Descripcion" ,940,520);
-    text("de tus cartas",940,540);
-    if(keyPressed && key=='7')
-    { 
         jugar=1;
-        tutox=5000;
         hist=0;
     }
   }
-  }
+}
 }
