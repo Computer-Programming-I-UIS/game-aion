@@ -10,7 +10,7 @@ PImage stcarta;
 PImage heroe1,heroedano,heroemana,heroeheal;
 PImage serpnorm,serpatk,serpdano,serprip;
 PImage his1,his2,his3,his4,his5,his6;
-PImage tutorial;
+PImage tutorial,creditos1,creditos2;
 PFont letra,letra2;
 boolean press;
 int psprite=0,protax1=150,pdanox=5000,pmanax=5000,phealx=5000,protay=160;
@@ -34,12 +34,14 @@ int xesp=70,yesp=390;
 int ssprite=0;
 int fondox=0,fondoy=0;
 int fondo2x=5000;
+int cred1x=5000,cred2x=5000;//Coordenadas en x de los creditos
 int fmuertex=5000;
 int serpy=160;
 int serpnormx=700,serpdanox=5000,serpatkx=5000,serpripx=5000;
 int tampjx=160,tampjy=180;
 int his1x=5000,his2x=5000,his3x=5000,his4x=5000,his5x=5000,his6x=5000;
 int hist=0;
+int credsk=0;//Variable para pasar los creditos
 int tutox=5000;
 
 //SoundFile song1;
@@ -76,9 +78,13 @@ void setup()
   his5=loadImage("HISTORIA5.png");
   his6=loadImage("HISTORIA6.png");
   tutorial=loadImage("FLECHAS.png");
+  creditos1=loadImage("CREDITOS1.jpeg");
+  creditos2=loadImage("CREDITOS2.jpeg");
   letra= createFont("Norse.otf",20);
   letra2=createFont("Norsebold.otf",20);
   tutorial.resize(1000,700);
+  creditos1.resize(1000,700);
+  creditos2.resize(1000,700);
   heroe1.resize(tampjx,tampjy);
   heroedano.resize(tampjx,tampjy);
   heroeheal.resize(tampjx,tampjy);
@@ -135,6 +141,8 @@ void draw()
   image(his5,his5x,0);
   image(his6,his6x,0);
   image(tutorial,tutox,0);
+  image(creditos1,cred1x,0);
+  image(creditos2,cred2x,0);
   if(jugar==0)
   {
   his1x=5000;
@@ -144,6 +152,7 @@ void draw()
   tutox=5000;
   play.mousePressed1();
   botuto.botontut();
+  credits.creditos();
   salir.mousePressed2();
   intro.contar();
   }
@@ -238,5 +247,29 @@ void draw()
     fondox= 5000;
     fondo2x=5000;
     hist=0;
+  }
+  if(jugar==9)
+  {
+  if(credsk==1)
+  {
+    fondox=5000;
+    fondo2x=5000;
+    cred1x=0;
+    if(keyPressed && key=='1')
+    {
+      credsk=2;
+    }
+  }
+  if(credsk==2)
+  {
+    fondox=5000;
+    fondo2x=5000;
+    cred2x=0;
+    if(keyPressed && key=='2')
+    {
+      credsk=0;
+      jugar=0;
+    }
+  }
   }
 }
