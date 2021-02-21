@@ -63,9 +63,8 @@ int xi,yi,xf,yf;
     {
       if(mouseX>=xi && mouseX<=xf && mouseY>=yi && mouseY<=yf)
     {
-    fondox= 5000;
-    fondo2x=5000;
-    
+    credsk=1;
+    jugar=9;
     }
     }
   }
