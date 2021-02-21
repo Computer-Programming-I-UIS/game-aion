@@ -78,8 +78,8 @@ void setup()
   his5=loadImage("HISTORIA5.png");
   his6=loadImage("HISTORIA6.png");
   tutorial=loadImage("FLECHAS.png");
-  creditos1=loadImage("CREDITOS1.jpeg");
-  creditos2=loadImage("CREDITOS2.jpeg");
+  creditos1=loadImage("CREDITOS1.jpg");
+  creditos2=loadImage("CREDITOS2.jpg");
   letra= createFont("Norse.otf",20);
   letra2=createFont("Norsebold.otf",20);
   tutorial.resize(1000,700);
@@ -150,6 +150,7 @@ void draw()
   fondo2x=5000;
   fmuertex=5000;
   tutox=5000;
+  cred2x=5000;
   play.mousePressed1();
   botuto.botontut();
   credits.creditos();
