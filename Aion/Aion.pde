@@ -150,6 +150,7 @@ void draw()
   fondo2x=5000;
   fmuertex=5000;
   tutox=5000;
+  cred1x=5000;
   cred2x=5000;
   play.mousePressed1();
   botuto.botontut();
@@ -266,6 +267,7 @@ void draw()
     fondox=5000;
     fondo2x=5000;
     cred2x=0;
+    cred1x=5000;
     if(keyPressed && key=='2')
     {
       credsk=0;
