@@ -17,7 +17,7 @@ int psprite=0,protax1=150,pdanox=5000,pmanax=5000,phealx=5000,protay=160;
 int jugar,victorias;
 int xboton=300,xfboton=708,yplay=182,yfplay=281;
 int ybtut=305,yfbtut=404;//Coordenadas en y del boton del tutorial
-int ycredits=420,yfcredits=520;//Coordenadas en y del boton de los creditos
+int ycredits=433,yfcredits=533;//Coordenadas en y del boton de los creditos
 int ysalir=571,yfsalir=670;
 int xsmuerte=784,xsfmuerte=880,ysmuerte=570,ysfmuerte=613;
 int volverx=677,volverxf=986,volvery=485,volveryf=529;
