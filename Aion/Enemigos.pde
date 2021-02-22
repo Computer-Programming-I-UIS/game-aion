@@ -1,13 +1,13 @@
 class Enemigo
 {
   int dano,cura;
-  float tatk,theal;
-  Enemigo(int td,int tc,float tcda,float tcdh)
+  float tatk,tspe;
+  Enemigo(int td,int tc,float tcda,float tcds)
   {
     dano=td;
     cura=tc;
     tatk=tcda;
-    theal=tcdh;
+    tspe=tcds;
   }
   void sprites()
   {
@@ -62,16 +62,16 @@ class Enemigo
     { 
      tatk=0;
     }
-    if(theal>0 && vidae<100)
+    if(tspe>0 && vidae<100)
     {
-    theal=theal-0.1;
+    tspe=tspe-0.1;
     }
-    else if(theal<=0)
+    else if(tspe<=0)
     { 
-     theal=0;
+     tspe=0;
     }
  }
- void ataque()
+ void ataque() //Acciones del primer enemigo
  {
    if(tatk==0 && vidap>0)
    {
@@ -83,11 +83,11 @@ class Enemigo
  }
  void cura()
  {
-   if(theal==0 && vidae<100 && vidae>0)
+   if(tspe==0 && vidae<100 && vidae>0)
    {
      vidae=vidae+cura;
      
-     theal=cdheal1;
+     tspe=cdheal1;
      //ssprite=2;
    }
  }
@@ -96,6 +96,24 @@ class Enemigo
    fill(#FFFFFF);
    textSize(30);
    text(tatk,600,80);
-   text(theal,800,80);
+   text(tspe,800,80);
+ }
+ void ataque2()//acciones del segundo enemigo
+ {
+   if(tatk==0 && vidap>0)
+   {
+     vidap=vidap-dano;
+     tatk=cdatk2;
+     psprite=1;
+   }
+ }
+ void steal()
+ {
+   if(tspe==0 && vidae<100 && vidae>0)
+   {
+     espiritu=espiritu-absorb;
+     tspe=cdabs;
+     //ssprite=2;
+   }
  }
 }
