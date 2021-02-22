@@ -25,8 +25,9 @@ int vidae=100,vidap=100;
 int xc1=200,xc2=400,xc3=600,xc4=700,ycs=450;
 int xbe=520,xbp=70,ybe=15,ybp=15;
 int altobar=35;
-int dano1=10,cura1=10;//Daño y cura enemigo 1
-float cdatk1=10,cdheal1=25;//cd del enemigo1
+int dano1=10,cura1=10,dano2=30,absorb=7;//Daño y cura enemigos
+float cdatk1=10,cdheal1=25,cdatk2=40,cdabs=5;//cd de los enemigos
+
 float cdap=0,cdhp=10,cdesp=0;//cd cartas
 int larcar=250,anccar=175;//tamaño de las cartas
 int espiritu=50;//espiritu inicial
@@ -49,7 +50,7 @@ Heroe prota;
 Boton play,salir,smuerte,volver,botuto,credits;
 Carta atk,heal,spirit,tiamat;
 Barra venemigo,vprota,besp;
-Enemigo ero;
+Enemigo ero,undo;
 Storie intro;
 void setup()
 {
@@ -121,6 +122,7 @@ void setup()
   smuerte=new Boton(xsmuerte,ysmuerte,xsfmuerte,ysfmuerte);
   volver=new Boton(volverx,volvery,volverxf,volveryf);
   ero=new Enemigo(dano1,cura1,cdatk1,cdheal1);
+  undo=new Enemigo(dano2,absorb,cdatk2,cdabs);
   intro=new Storie();
   
   //song1=new SoundFile(this,"Argonne - Zachariah Hickman.mp3");
@@ -160,21 +162,34 @@ void draw()
   }
   if(jugar==1)
   {
+   if(lvl==1)
+  {
+    fondo2x=0;
+    ero.sprites();
+    ero.turnoe();
+    ero.ataque();
+    ero.display();
+    ero.cura();
+  }
+  if(lvl==2)
+  {
+    fondo2x=0;
+    undo.ataque2();
+    undo.turnoe();
+    undo.display();
+    undo.steal();
+  }
   //song1.stop();
   his6x=5000;
   fondox=5000;
-  fondo2x=0;
+  
   prota.sprites();
-  ero.sprites();
   
   image(acarta,xc1,ycs);
   image(ccarta,xc2,ycs);
   image(espcarta,xc3,ycs);
   //image(stcarta,xc4,ycs);
-  ero.turnoe();
-  ero.ataque();
-  ero.display();
-  ero.cura();
+  
   atk.mousePressed(); 
   atk.accion();
   heal.mousePressed();
@@ -186,7 +201,6 @@ void draw()
   besp.displayesp();
   vprota.displayp();
   venemigo.displaye();
-  
   if(vidap>=100)
   {
     vidap=100;
@@ -233,11 +247,18 @@ void draw()
   if(vidae==0)
   {
     hist=0;
-    jugar=0;
+    //jugar=0;
     fmuertex=5000;
     fondox= 0;
     fondo2x=5000;
     tutox=5000;
+    if(lvl<=2)
+    {
+    lvl=lvl+1;
+    vidae=100;
+    vidap=100;
+    espiritu=50;
+    }
   }
   }
   if(jugar==2)
