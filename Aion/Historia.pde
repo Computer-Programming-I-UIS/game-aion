@@ -60,6 +60,7 @@ class Storie
     { 
         jugar=1;
         hist=0;
+        his6x=5000;
     }
   }
 }
