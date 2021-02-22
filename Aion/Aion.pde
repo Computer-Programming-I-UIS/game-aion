@@ -14,7 +14,7 @@ PImage tutorial,creditos1,creditos2;
 PFont letra,letra2;
 boolean press;
 int psprite=0,protax1=150,pdanox=5000,pmanax=5000,phealx=5000,protay=160;
-int jugar,victorias;
+int jugar,victory=0,lvl=0;//variables de jugar, vces q ha ganado y nivel
 int xboton=300,xfboton=708,yplay=182,yfplay=281;
 int ybtut=305,yfbtut=404;//Coordenadas en y del boton del tutorial
 int ycredits=433,yfcredits=533;//Coordenadas en y del boton de los creditos
@@ -25,12 +25,12 @@ int vidae=100,vidap=100;
 int xc1=200,xc2=400,xc3=600,xc4=700,ycs=450;
 int xbe=520,xbp=70,ybe=15,ybp=15;
 int altobar=35;
-int dano1=10,cura1=10;
-float cdatk1=10,cdheal1=25;
-float cdap=0,cdhp=10,cdesp=0;
-int larcar=250,anccar=175;
-int espiritu=50;
-int xesp=70,yesp=390;
+int dano1=10,cura1=10;//Daño y cura enemigo 1
+float cdatk1=10,cdheal1=25;//cd del enemigo1
+float cdap=0,cdhp=10,cdesp=0;//cd cartas
+int larcar=250,anccar=175;//tamaño de las cartas
+int espiritu=50;//espiritu inicial
+int xesp=70,yesp=390;//coordenadas de la barra del espiritu
 int ssprite=0;
 int fondox=0,fondoy=0;
 int fondo2x=5000;
@@ -161,7 +161,7 @@ void draw()
   if(jugar==1)
   {
   //song1.stop();
-  tutox=5000;
+  his6x=5000;
   fondox=5000;
   fondo2x=0;
   prota.sprites();
