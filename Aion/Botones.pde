@@ -24,9 +24,9 @@ int xi,yi,xf,yf;
     }
     }
   }
-  void mousePressed2()
+  void mousesalir()
   {
-    if(mousePressed && jugar==0)
+    if(mousePressed && jugar==0 && hist==0)
     {
     if(mouseX>=xi && mouseX<=xf && mouseY>=yi && mouseY<=yf)
     {
