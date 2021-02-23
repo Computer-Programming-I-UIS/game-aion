@@ -18,51 +18,51 @@ class Enemigo
       delay(0);
       if(lvl==1)
       {
-      image(serpnorm,serpnormx,serpy);
+      image(serpnorm,snormx,serpy);
       }
       if(lvl==2)
       {
-        image(mantn,serpnormx,serpy);
+        image(mantn,snormx,serpy);
       }
     }
     break;
     case 1://cuando pega
     {
-      serpnormx=5000;
-      serpatkx=700;
+      snormx=5000;
+      satkx=700;
       if(lvl==1)
       {
-      image(serpatk,serpatkx,serpy);
+      image(serpatk,satkx,serpy);
       }
       if(lvl==2)
       {
-        image(mantatk,serpatkx,serpy);
+        image(mantatk,satkx,serpy);
       }
       ssprite=0;
       if(ssprite==0)
       {
-      serpatkx=5000;
-      serpnormx=700;
+      satkx=5000;
+      snormx=700;
       }
     }
     break;
     case 3: //Cuando le pegan
     {
-      serpnormx=5000;
-      serpdanox=700;
+      snormx=5000;
+      sdanox=700;
       if(lvl==1)
       {
-      image(serpdano,serpdanox,serpy);
+      image(serpdano,sdanox,serpy);
       }
       if(lvl==2)
       {
-        image(mantdano,serpdanox,serpy);
+        image(mantdano,sdanox,serpy);
       }
       ssprite=0;
       if(ssprite==0)
       {
-      serpdanox=5000;
-      serpnormx=700;
+      sdanox=5000;
+      snormx=700;
       }
     }
     break;
@@ -70,7 +70,7 @@ class Enemigo
     {
       if(lvl==1)
       {
-      image(serprip,serpripx,serpy); 
+      image(serprip,sripx,serpy); 
       }
     }
     break;
