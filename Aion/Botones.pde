@@ -34,13 +34,13 @@ int xi,yi,xf,yf;
     }
     }
   }
-  void botontut()
+  void botontut()//Funcion pal boton del tutorial
   {
-    if(mousePressed && jugar==0)
+    if(mousePressed && jugar==0 && hist==0)
     {
     if(mouseX>=xi && mouseX<=xf && mouseY>=yi && mouseY<=yf)
     {
-    fondox= 5000;
+    fondox=5000;
     fondo2x=5000;
     tutox=0;
     fill(255,0,0);
@@ -59,7 +59,7 @@ int xi,yi,xf,yf;
   }  
   void creditos()
   {
-    if(mousePressed && jugar==0)
+    if(mousePressed && jugar==0 && hist==0)
     {
       if(mouseX>=xi && mouseX<=xf && mouseY>=yi && mouseY<=yf)
     {
