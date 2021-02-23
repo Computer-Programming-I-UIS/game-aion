@@ -7,7 +7,7 @@ PImage acarta;
 PImage ccarta;
 PImage espcarta;
 PImage stcarta;
-PImage heroe1,heroedano,heroemana,heroeheal;
+PImage heroe1,heroedano,heroemana,heroeheal;//sprites del heroe
 PImage serpnorm,serpatk,serpdano,serprip;//Sprites de la serpiente
 PImage mantn,mantatk,mantdano;//sprites de la mandragora
 PImage his1,his2,his3,his4,his5,his6;
@@ -39,7 +39,7 @@ int fondo2x=5000,fdesx=5000;//Coordenadass en x de los fondos
 int cred1x=5000,cred2x=5000;//Coordenadas en x de los creditos
 int fmuertex=5000;
 int serpy=160;
-int serpnormx=700,serpdanox=5000,serpatkx=5000,serpripx=5000;
+int snormx=700,sdanox=5000,satkx=5000,sripx=5000;
 int tampjx=160,tampjy=180;
 int his1x=5000,his2x=5000,his3x=5000,his4x=5000,his5x=5000,his6x=5000;
 int hist=0;
@@ -317,4 +317,5 @@ void draw()
     }
   }
   }
+  delay(10);
 }
