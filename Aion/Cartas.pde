@@ -37,7 +37,7 @@ class Carta
     
     if(press==true && vidae>0 && vidae<=100 && espiritu>=5 && cdap==0)
     {
-      vidae=vidae-10;
+      vidae=vidae-50;
       espiritu=espiritu-5;
       ssprite=3;
       press=false;
