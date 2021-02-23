@@ -2,7 +2,7 @@
 //Autores: 2200515-Daniel Jeshua Morelos Villamizar y 2200520-Santiago Enrique Monsalve Durán.
 //Descripción:
 import processing.sound.*;
-PImage fbase,fjuego,fmuerte;
+PImage fbase,fbosque,fmuerte,fdesierto;//Fondos del juego
 PImage acarta;
 PImage ccarta;
 PImage espcarta;
@@ -35,7 +35,7 @@ int espiritu=50;//espiritu inicial
 int xesp=70,yesp=390;//coordenadas de la barra del espiritu
 int ssprite=0;
 int fondox=0,fondoy=0;
-int fondo2x=5000;
+int fondo2x=5000,fdesx=5000;//Coordenadass en x de los fondos
 int cred1x=5000,cred2x=5000;//Coordenadas en x de los creditos
 int fmuertex=5000;
 int serpy=160;
@@ -63,7 +63,8 @@ void setup()
   espcarta=loadImage("MEDITACIÓN.jpg");
   stcarta=loadImage("SOUL TIAMAT.jpg");
   fbase=loadImage("FONDO.jpg");
-  fjuego=loadImage("SELVA.jpg");
+  fbosque=loadImage("SELVA.jpg");
+  fdesierto=loadImage("DESIERTO.jpg");
   fmuerte=loadImage("MUERTE.jpg");
   heroe1=loadImage("HEROE1.png");
   heroedano=loadImage("HEROE2.png");
@@ -98,22 +99,23 @@ void setup()
   serpdano.resize(tampjx,tampjy);
   serpnorm.resize(tampjx,tampjy);
   serprip.resize(tampjx,tampjy);
-  mantn.resize(tampjx+50,tampjy-50);//Ajuste al tamaño del segundo boss
+  mantn.resize(tampjx,tampjy);//Ajuste al tamaño del segundo boss
   mantatk.resize(tampjx+50,tampjy-50);
   mantdano.resize(tampjx+50,tampjy-50);//Ajuste al tamaño del segundo boss
   acarta.resize(anccar,larcar);
   ccarta.resize(anccar,larcar);
   espcarta.resize(anccar,larcar);
   stcarta.resize(anccar,larcar);
-  fbase.resize(1000,700);
-  fjuego.resize(1000,700);
-  fmuerte.resize(1000,700);
-  his1.resize(1000,700);
+  fbase.resize(1000,700);//Ajuste fondos
+  fbosque.resize(1000,700);
+  fdesierto.resize(1000,700);
+  fmuerte.resize(1000,700);//Ajuste fondos
+  his1.resize(1000,700);//Ajuste slides de la hisrtoria
   his2.resize(1000,700);
   his3.resize(1000,700);
   his4.resize(1000,700);
   his5.resize(1000,700);
-  his6.resize(1000,700);
+  his6.resize(1000,700);//Ajuste slides de la hisrtoria
   prota=new Heroe( );
   atk=new Carta(xc1,ycs,xc1+anccar,ycs+larcar);
   heal=new Carta(xc2,ycs,xc2+anccar,ycs+larcar);
@@ -140,7 +142,8 @@ void draw()
 {
   background(100);
   textFont(letra);
-  image(fjuego,fondo2x,0);
+  image(fbosque,fondo2x,0);
+  image(fdesierto,fdesx,0);
   image(fmuerte,fmuertex,0);
   image(fbase,fondox,fondoy);
   image(his1,his1x,0);
@@ -157,6 +160,7 @@ void draw()
   his1x=5000;
   fondox=0;
   fondo2x=5000;
+  fdesx=5000;
   fmuertex=5000;
   tutox=5000;
   cred1x=5000;
@@ -172,6 +176,7 @@ void draw()
    if(lvl==1)
   {
     fondo2x=0;
+    fdesx=5000;
     ero.sprites();
     ero.turnoe();
     ero.ataque();
@@ -180,7 +185,8 @@ void draw()
   }
   if(lvl==2)
   {
-    fondo2x=0;
+    fdesx=0;
+    fondo2x=5000;
     undo.ataque2();
     undo.turnoe();
     undo.sprites();
@@ -257,6 +263,7 @@ void draw()
     fmuertex=5000;
     fondox= 0;
     fondo2x=5000;
+    fdesx=5000;
     tutox=5000;
     if(lvl>=victory)
     {
