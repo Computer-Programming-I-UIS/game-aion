@@ -16,14 +16,28 @@ class Enemigo
     case 0:
     {
       delay(0);
+      if(lvl==1)
+      {
       image(serpnorm,serpnormx,serpy);
+      }
+      if(lvl==2)
+      {
+        image(mantn,serpnormx,serpy);
+      }
     }
     break;
     case 1://cuando pega
     {
       serpnormx=5000;
       serpatkx=700;
+      if(lvl==1)
+      {
       image(serpatk,serpatkx,serpy);
+      }
+      if(lvl==2)
+      {
+        image(mantatk,serpatkx,serpy);
+      }
       ssprite=0;
       if(ssprite==0)
       {
@@ -36,7 +50,14 @@ class Enemigo
     {
       serpnormx=5000;
       serpdanox=700;
+      if(lvl==1)
+      {
       image(serpdano,serpdanox,serpy);
+      }
+      if(lvl==2)
+      {
+        image(mantdano,serpdanox,serpy);
+      }
       ssprite=0;
       if(ssprite==0)
       {
@@ -47,7 +68,10 @@ class Enemigo
     break;
     case 4: //Cuando muere
     {
+      if(lvl==1)
+      {
       image(serprip,serpripx,serpy); 
+      }
     }
     break;
     }
