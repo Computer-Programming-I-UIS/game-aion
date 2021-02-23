@@ -8,7 +8,8 @@ PImage ccarta;
 PImage espcarta;
 PImage stcarta;
 PImage heroe1,heroedano,heroemana,heroeheal;
-PImage serpnorm,serpatk,serpdano,serprip;
+PImage serpnorm,serpatk,serpdano,serprip;//Sprites de la serpiente
+PImage mantn,mantatk,mantdano;//sprites de la mandragora
 PImage his1,his2,his3,his4,his5,his6;
 PImage tutorial,creditos1,creditos2;
 PFont letra,letra2;
@@ -26,7 +27,7 @@ int xc1=200,xc2=400,xc3=600,xc4=700,ycs=450;
 int xbe=520,xbp=70,ybe=15,ybp=15;
 int altobar=35;
 int dano1=10,cura1=10,dano2=30,absorb=7;//Daño y cura enemigos
-float cdatk1=10,cdheal1=25,cdatk2=40,cdabs=5;//cd de los enemigos
+float cdatk1=10,cdheal1=25,cdatk2=30,cdabs=5;//cd de los enemigos
 
 float cdap=0,cdhp=10,cdesp=0;//cd cartas
 int larcar=250,anccar=175;//tamaño de las cartas
@@ -68,10 +69,13 @@ void setup()
   heroedano=loadImage("HEROE2.png");
   heroemana=loadImage("HEROE3.png");
   heroeheal=loadImage("HEROE4.png");
-  serpatk=loadImage("SERPIENTEATK3.png");
+  serpatk=loadImage("SERPIENTEATK3.png");//Cargar sprites del primer enemigo
   serpdano=loadImage("SERPIENTEDAÑO.png");
   serpnorm=loadImage("SERPIENTEFF.png");
-  serprip=loadImage("SERPIENTEMUERTA.png");
+  serprip=loadImage("SERPIENTEMUERTA.png");//Cargar sprites del primer enemigo
+  mantn=loadImage("GRIFO1.png");//Cargar sprites del segundo enemigo
+  mantatk=loadImage("GRIFO2.png");
+  mantdano=loadImage("GRIFO3.png");//Cargar sprites del segundo enemigo
   his1=loadImage("HISTORIA1.png");
   his2=loadImage("HISTORIA2.png");
   his3=loadImage("HISTORIA3.png");
@@ -94,6 +98,9 @@ void setup()
   serpdano.resize(tampjx,tampjy);
   serpnorm.resize(tampjx,tampjy);
   serprip.resize(tampjx,tampjy);
+  mantn.resize(tampjx+50,tampjy-50);//Ajuste al tamaño del segundo boss
+  mantatk.resize(tampjx+50,tampjy-50);
+  mantdano.resize(tampjx+50,tampjy-50);//Ajuste al tamaño del segundo boss
   acarta.resize(anccar,larcar);
   ccarta.resize(anccar,larcar);
   espcarta.resize(anccar,larcar);
@@ -176,6 +183,7 @@ void draw()
     fondo2x=0;
     undo.ataque2();
     undo.turnoe();
+    undo.sprites();
     undo.display();
     undo.steal();
   }
@@ -218,7 +226,6 @@ void draw()
   {
     vidae=0;
   }
-  
   if(espiritu>=100)
   {
     espiritu=100;
@@ -247,17 +254,24 @@ void draw()
   if(vidae==0)
   {
     hist=0;
-    //jugar=0;
     fmuertex=5000;
     fondox= 0;
     fondo2x=5000;
     tutox=5000;
-    if(lvl<=2)
+    if(lvl>=victory)
+    {
+    victory=victory+1;
+    }
+    if(lvl<3)
     {
     lvl=lvl+1;
     vidae=100;
     vidap=100;
     espiritu=50;
+    }
+    if(lvl==3)
+    {
+      jugar=0;
     }
   }
   }
