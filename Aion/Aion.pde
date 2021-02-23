@@ -173,7 +173,7 @@ void draw()
   }
   if(jugar==1)
   {
-   if(lvl==1)
+   if(lvl==1)//Si es el nivel 1
   {
     fondo2x=0;
     fdesx=5000;
@@ -183,7 +183,7 @@ void draw()
     ero.display();
     ero.cura();
   }
-  if(lvl==2)
+  if(lvl==2)//Si es el nivel 2
   {
     fdesx=0;
     fondo2x=5000;
@@ -204,14 +204,14 @@ void draw()
   image(espcarta,xc3,ycs);
   //image(stcarta,xc4,ycs);
   
-  atk.mousePressed(); 
+  atk.mousePressed(); //Funciones de las Cartas
   atk.accion();
   heal.mousePressed();
   heal.curar();
   spirit.mousePressed();
   spirit.recharge();
   //tiamat.mousePressed();
-  //tiamat.soult();
+  //tiamat.soult(); //Funciones de las Cartas
   besp.displayesp();
   vprota.displayp();
   venemigo.displaye();
