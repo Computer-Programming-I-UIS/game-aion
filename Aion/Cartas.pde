@@ -42,8 +42,8 @@ class Carta
       ssprite=3;
       press=false;
       if(vidae>0){
-      serpnormx=800;
-      serpripx=5000;
+      snormx=800;
+      sripx=5000;
       cdap=5;
     }
     }
