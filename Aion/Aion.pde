@@ -168,7 +168,7 @@ void draw()
   play.mousePressed1();
   botuto.botontut();
   credits.creditos();
-  salir.mousePressed2();
+  salir.mousesalir();
   intro.contar();
   }
   if(jugar==1)
