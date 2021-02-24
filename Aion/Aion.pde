@@ -27,8 +27,8 @@ int vidae=100,vidap=100;
 int xc1=200,xc2=400,xc3=600,xc4=700,ycs=450;
 int xbe=520,xbp=70,ybe=15,ybp=15;
 int altobar=35;
-int dano1=10,cura1=10,dano2=30,absorb=7;//Daño y cura enemigos
-float cdatk1=10,cdheal1=25,cdatk2=30,cdabs=5;//cd de los enemigos
+int dano1=10,cura1=10,dano2=30,absorb=7,dano3=1,buff=dano3*2;//Daño y cura enemigos
+float cdatk1=10,cdheal1=25,cdatk2=30,cdabs=5,cdatk3=5,cdbuff=5;//cd de los enemigos
 
 float cdap=0,cdhp=10,cdesp=0;//cd cartas
 int larcar=250,anccar=175;//tamaño de las cartas
@@ -206,6 +206,8 @@ void draw()
     fdesx=0;
     fondo2x=5000;
     spyro.turnoe();
+    spyro.ataque3();
+    spyro.buff();
     spyro.sprites();
     spyro.display();
   }
