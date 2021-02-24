@@ -51,7 +51,7 @@ class Carta
     }
     if(press==true && vidae>0 && vidae<=100 && espiritu>=5 && cdap==0)
     {
-      vidae=vidae-50;
+      vidae=vidae-protatk;
       espiritu=espiritu-5;
       ssprite=3;
       press=false;
@@ -118,7 +118,7 @@ class Carta
     if(press==true && vidap<100 && vidap>=0 && espiritu>=50 && victory>=2 && special==2)
     {
      press=false;
-     if(victory>=2)
+     if(victory>2)
      {
      special=3;
      }
@@ -129,11 +129,13 @@ class Carta
     }
     if(press==true && vidap<100 && vidap>=0 && espiritu>=50 && victory>=1 && special==1)
     {
+     protatk=protatk+10;
      press=false;
-     if(victory>=1)
+     if(victory>1)
      {
      special=2;
      }
+     
     }
 
     }
@@ -142,14 +144,27 @@ class Carta
      if(victory==0)
      {
      fill(0,150);
-     rect(650,ycs,650+anccar,ycs+larcar);
+     rect(xcspe,ycs,anccar,larcar);
 
      }
       if(victory>=1 && special==1)
      {
-     xcserp=650;
-
+     xcserp=xcspe;
+     xcgrifo=5000;
+     xcdrake=5000;
      }
+      if(victory>=2 && special==2)
+     {
+     xcgrifo=xcspe;
+     xcserp=5000;
+     xcdrake=5000;
+     }
+     if(victory>=3 && special==3)
+      {
+      xcdrake=xcspe;
+      xcgrifo=5000;
+      xcdrake=5000;
+      }
   }
 
 }
