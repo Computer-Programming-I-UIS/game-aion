@@ -228,33 +228,30 @@ void draw()
   heal.curar();
   spirit.mousePressed();
   spirit.recharge();
-  atk.deck();
-  heal.deck();
-  spirit.deck();
+  
   if (victory==1)
-    {x
-      xc1=200-20;
-      xc2=400-20;
-      xc3=600-20;
+    {
+      xc1=200-40;
+      xc2=400-40;
+      xc3=600-40;
     }
     if (victory==2)
     {
-      xc1=180-20;
-      xc2=380-20;
-      xc3=560-20;
+      xc1=160-40;
+      xc2=360-40;
+      xc3=560-40;
     }
     if (victory==3)
     {
-      xc1=160-20;
-      xc2=380-20;
-      xc3=560-20;
+      xc1=120-40;
+      xc2=320-40;
+      xc3=520-40;
     }
   if(victory==3)
   {
   xcdrake=700;
   tiamat.mousePressed();
   tiamat.soult(); //Funciones de las Cartas
-  tiamat.deck();
   }
   besp.displayesp();
   vprota.displayp();
