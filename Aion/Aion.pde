@@ -24,7 +24,7 @@ int ysalir=571,yfsalir=670;
 int xsmuerte=784,xsfmuerte=880,ysmuerte=570,ysfmuerte=613;
 int volverx=677,volverxf=986,volvery=485,volveryf=529;
 int vidae=100,vidap=100;
-int xc1=200,xc2=400,xc3=600,xc4=700,ycs=450;
+int xc1=200,xc2=400,xc3=600,xcdrake=5000,ycs=450;
 int xbe=520,xbp=70,ybe=15,ybp=15;
 int altobar=35;
 int dano1=10,cura1=10,dano2=30,absorb=7,dano3=1,buff=0;//Daño y cura enemigos
@@ -124,10 +124,10 @@ void setup()
   his5.resize(1000,700);
   his6.resize(1000,700);//Ajuste slides de la hisrtoria
   prota=new Heroe( );
-  atk=new Carta(xc1,ycs,xc1+anccar,ycs+larcar);
+  atk=new Carta(xc1,ycs,xc1+anccar,ycs+larcar);//cartas
   heal=new Carta(xc2,ycs,xc2+anccar,ycs+larcar);
   spirit=new Carta(xc3,ycs,xc3+anccar,ycs+larcar);
-  tiamat=new Carta(xc4,ycs,xc4+anccar,ycs+larcar);
+  tiamat=new Carta(xcdrake,ycs,xcdrake+anccar,ycs+larcar);//cartas
   venemigo=new Barra(xbe,ybe,altobar);
   vprota=new Barra(xbp,ybp,altobar);
   besp=new Barra(xesp,yesp,altobar);
@@ -220,7 +220,7 @@ void draw()
   image(acarta,xc1,ycs);
   image(ccarta,xc2,ycs);
   image(espcarta,xc3,ycs);
-  image(stcarta,xc4,ycs);
+  image(stcarta,xcdrake,ycs);
   
   atk.mousePressed(); //Funciones de las Cartas
   atk.accion();
@@ -228,10 +228,33 @@ void draw()
   heal.curar();
   spirit.mousePressed();
   spirit.recharge();
+  atk.deck();
+  heal.deck();
+  spirit.deck();
+  if (victory==1)
+    {x
+      xc1=200-20;
+      xc2=400-20;
+      xc3=600-20;
+    }
+    if (victory==2)
+    {
+      xc1=180-20;
+      xc2=380-20;
+      xc3=560-20;
+    }
+    if (victory==3)
+    {
+      xc1=160-20;
+      xc2=380-20;
+      xc3=560-20;
+    }
   if(victory==3)
   {
+  xcdrake=700;
   tiamat.mousePressed();
   tiamat.soult(); //Funciones de las Cartas
+  tiamat.deck();
   }
   besp.displayesp();
   vprota.displayp();
