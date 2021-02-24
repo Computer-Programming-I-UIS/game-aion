@@ -52,7 +52,7 @@ Heroe prota;
 Boton play,salir,smuerte,volver,botuto,credits;
 Carta atk,heal,spirit,tiamat;
 Barra venemigo,vprota,besp;
-Enemigo ero,undo;
+Enemigo ero,undo,spyro;
 Storie intro;
 void setup()
 {
@@ -200,6 +200,14 @@ void draw()
     undo.display();
     undo.steal();
   }
+  if(lvl==3)
+  {
+    fdesx=0;
+    fondo2x=5000;
+    spyro.turnoe();
+    spyro.sprites();
+    spyro.display();
+  }
   //song1.stop();
   his6x=5000;
   fondox=5000;
@@ -276,14 +284,14 @@ void draw()
     {
     victory=victory+1;
     }
-    if(lvl<3)
+    if(lvl<=3)
     {
     lvl=lvl+1;
     vidae=100;
     vidap=100;
     espiritu=50;
     }
-    if(lvl==3)
+    if(lvl==4)
     {
       jugar=0;
     }
