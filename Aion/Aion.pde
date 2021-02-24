@@ -9,7 +9,8 @@ PImage espcarta;
 PImage stcarta;
 PImage heroe1,heroedano,heroemana,heroeheal;//sprites del heroe
 PImage serpnorm,serpatk,serpdano,serprip;//Sprites de la serpiente
-PImage mantn,mantatk,mantdano;//sprites de la mandragora
+PImage mantn,mantatk,mantdano;//sprites del grifo
+PImage spyron,spyroatk,spyrodano;//sprites del dragon
 PImage his1,his2,his3,his4,his5,his6;
 PImage tutorial,creditos1,creditos2;
 PFont letra,letra2;
@@ -77,6 +78,9 @@ void setup()
   mantn=loadImage("GRIFO1.png");//Cargar sprites del segundo enemigo
   mantatk=loadImage("GRIFO2.png");
   mantdano=loadImage("GRIFO3.png");//Cargar sprites del segundo enemigo
+  spyron=loadImage("DRAGON2.png");//Cargar imagenes del tercer enemigo
+  spyroatk=loadImage("DRAGON3.png");
+  spyrodano=loadImage("DRAGON1.png");//Cargar imagenes del tercer enemigo
   his1=loadImage("HISTORIA1.png");
   his2=loadImage("HISTORIA2.png");
   his3=loadImage("HISTORIA3.png");
@@ -100,8 +104,11 @@ void setup()
   serpnorm.resize(tampjx,tampjy);
   serprip.resize(tampjx,tampjy);
   mantn.resize(tampjx,tampjy);//Ajuste al tamaño del segundo boss
-  mantatk.resize(tampjx+50,tampjy-50);
-  mantdano.resize(tampjx+50,tampjy-50);//Ajuste al tamaño del segundo boss
+  mantatk.resize(tampjx,tampjy);
+  mantdano.resize(tampjx,tampjy);//Ajuste al tamaño del segundo boss
+  spyron.resize(tampjx,tampjy);//Ajuste al tamaño del tercer boss
+  spyroatk.resize(tampjx,tampjy);
+  spyrodano.resize(tampjx,tampjy);//Ajuste al tamaño del tercer boss
   acarta.resize(anccar,larcar);
   ccarta.resize(anccar,larcar);
   espcarta.resize(anccar,larcar);
