@@ -139,6 +139,7 @@ void setup()
   volver=new Boton(volverx,volvery,volverxf,volveryf);
   ero=new Enemigo(dano1,cura1,cdatk1,cdheal1);
   undo=new Enemigo(dano2,absorb,cdatk2,cdabs);
+  spyro=new Enemigo(dano3,buff,cdatk3,cdbuff);
   intro=new Storie();
   
   //song1=new SoundFile(this,"Argonne - Zachariah Hickman.mp3");
