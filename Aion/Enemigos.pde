@@ -24,6 +24,10 @@ class Enemigo
       {
         image(mantn,snormx,serpy);
       }
+      if(lvl==3)
+      {
+        image(spyron,snormx,serpy);
+      }
     }
     break;
     case 1://cuando pega
@@ -37,6 +41,10 @@ class Enemigo
       if(lvl==2)
       {
         image(mantatk,satkx,serpy);
+      }
+      if(lvl==3)
+      {
+        image(spyron,snormx,serpy);
       }
       ssprite=0;
       if(ssprite==0)
@@ -58,6 +66,10 @@ class Enemigo
       {
         image(mantdano,sdanox,serpy);
       }
+      if(lvl==3)
+      {
+        image(spyron,snormx,serpy);
+      }
       ssprite=0;
       if(ssprite==0)
       {
@@ -66,14 +78,14 @@ class Enemigo
       }
     }
     break;
-    case 4: //Cuando muere
+    /*case 4: //Cuando muere
     {
       if(lvl==1)
       {
       image(serprip,sripx,serpy); 
       }
     }
-    break;
+    break;*/
     }
   }
   void turnoe()
