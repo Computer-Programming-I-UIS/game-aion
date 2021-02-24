@@ -140,6 +140,7 @@ class Enemigo
    {
      vidap=vidap-dano;
      tatk=cdatk2;
+     ssprite=1;
      psprite=1;
    }
  }
@@ -147,8 +148,27 @@ class Enemigo
  {
    if(tspe==0 && vidae<100 && vidae>0)
    {
-     espiritu=espiritu-absorb;
+     espiritu=espiritu-cura;
      tspe=cdabs;
+     //ssprite=2;
+   }
+ }
+ void ataque3()//ata1ue del tercer enemigo
+ {
+   if(tatk==0 && vidap>0)
+   {
+     vidap=vidap-dano;
+     tatk=cdatk3;
+     ssprite=1;
+     psprite=1;
+   }
+ }
+ void buff()
+ {
+   if(tspe==0 && vidae<100 && vidae>0)
+   {
+     dano=dano+cura;
+     tspe=cdbuff;
      //ssprite=2;
    }
  }
