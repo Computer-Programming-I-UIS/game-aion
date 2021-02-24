@@ -88,14 +88,32 @@ class Carta
     }
     
   }
-  /*void soult()
+  void deck()
   {
-    if(press==true && vidap<100 && vidap>=0 && espiritu>=50)
+    if (victory==1)
+    {
+      xi=xi-20;
+      xf=xf-20;
+    }
+    if (victory==2)
+    {
+      xi=xi-20;
+      xf=xf-20;
+    }
+    if (victory==3)
+    {
+      xi=xi-20;
+      xf=xf-20;
+    }
+  }
+  void soult()
+  {
+    if(press==true && vidap<100 && vidap>=0 && espiritu>=50 && victory==3)
     {
      vidap=100;
      espiritu=espiritu-50;
      press=false;
     }
-  }*/
+  }
   
 }
