@@ -88,6 +88,7 @@ int xi,yi,xf,yf;
     tutox=5000;
     fmuertex=5000;
     fondox=0;
+    lvl=0;
     }
     }
   }
