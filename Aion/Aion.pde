@@ -24,13 +24,13 @@ int ysalir=571,yfsalir=670;
 int xsmuerte=784,xsfmuerte=880,ysmuerte=570,ysfmuerte=613;
 int volverx=677,volverxf=986,volvery=485,volveryf=529;
 int vidae=100,vidap=100;
-int xc1=150,xc2=350,xc3=550,xcdrake=5000,xcspe=650,ycs=450;//coordenadas de las cartas
+int xc1=115,xc2=315,xc3=515,xcserp=5000,xcgrifo=5000,xcdrake=5000,xcspe=715,ycs=450;//coordenadas de las cartas
 int larcar=250,anccar=175;//tamaño de las cartas
 int xbe=520,xbp=70,ybe=15,ybp=15;
 int altobar=35;
 int dano1=10,cura1=10,dano2=30,absorb=7,dano3=1,buff=0;//Daño y cura enemigos
 float cdatk1=10,cdheal1=25,cdatk2=30,cdabs=5,cdatk3=5,cdbuff=10;//cd de los enemigos
-
+int protatk=50;//ataque del heroe
 float cdap=0,cdhp=10,cdesp=0;//cd cartas
 
 int espiritu=50;//espiritu inicial
@@ -221,6 +221,8 @@ void draw()
   image(acarta,xc1,ycs);
   image(ccarta,xc2,ycs);
   image(espcarta,xc3,ycs);
+  image(acarta,xcserp,ycs);
+  image(ccarta,xcgrifo,ycs);
   image(stcarta,xcdrake,ycs);
   
   atk.mousePressed(); //Funciones de las Cartas
@@ -230,13 +232,8 @@ void draw()
   spirit.mousePressed();
   spirit.recharge();
   tiamat.soult(); //Funciones de las Cartas
-  
-  if(victory==3)
-  {
-  xcdrake=700;
   tiamat.mousePressed();
-  
-  }
+  tiamat.dspecial();
   besp.displayesp();
   vprota.displayp();
   venemigo.displaye();
@@ -342,5 +339,5 @@ void draw()
     }
   }
   }
-  delay(10);
+  delay(50);
 }
