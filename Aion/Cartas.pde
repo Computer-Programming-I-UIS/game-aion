@@ -104,12 +104,52 @@ class Carta
   }
   void soult()
   {
-    if(press==true && vidap<100 && vidap>=0 && espiritu>=50 && victory==3)
+    if(press==true && vidap<100 && vidap>=0 && espiritu>=50 && victory>=3 && special==3)
     {
      vidap=100;
      espiritu=espiritu-50;
      press=false;
+     special=1;
+     if(victory>=3)
+     {
+     special=1;
+     }
     }
+    if(press==true && vidap<100 && vidap>=0 && espiritu>=50 && victory>=2 && special==2)
+    {
+     press=false;
+     if(victory>=2)
+     {
+     special=3;
+     }
+     else
+     {
+      special=1;
+     }
+    }
+    if(press==true && vidap<100 && vidap>=0 && espiritu>=50 && victory>=1 && special==1)
+    {
+     press=false;
+     if(victory>=1)
+     {
+     special=2;
+     }
+    }
+
+    }
+    void dspecial()
+    {
+     if(victory==0)
+     {
+     fill(0,150);
+     rect(650,ycs,650+anccar,ycs+larcar);
+
+     }
+      if(victory>=1 && special==1)
+     {
+     xcserp=650;
+
+     }
   }
 
 }
