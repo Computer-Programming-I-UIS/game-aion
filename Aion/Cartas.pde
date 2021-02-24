@@ -8,6 +8,7 @@ class Carta
     xf=tempxf;
     yf=tempyf;
   }
+  
   void mousePressed()
   {
     if(mousePressed)
@@ -15,7 +16,6 @@ class Carta
     if(mouseX>=xi && mouseX<=xf && mouseY>=yi && mouseY<=yf)
     {
       press=true;
-      
     }
     }
     if(mouseX<xi || mouseX>xf || mouseY<yi || mouseY>yf)
@@ -34,7 +34,21 @@ class Carta
     { 
      cdap=0;
     }
-    
+    if(victory==1)
+    {
+    xi=200-40;
+    xf=200+larcar-40;
+    }
+    if(victory==2)
+    {
+    xi=160-40;
+    xf=160+larcar-40;
+    }
+    if(victory==3)
+    {
+    xi=120-40;
+    xf=120+larcar-40;
+    }
     if(press==true && vidae>0 && vidae<=100 && espiritu>=5 && cdap==0)
     {
       vidae=vidae-50;
@@ -88,24 +102,6 @@ class Carta
     }
     
   }
-  void deck()
-  {
-    if (victory==1)
-    {
-      xi=xi-20;
-      xf=xf-20;
-    }
-    if (victory==2)
-    {
-      xi=xi-20;
-      xf=xf-20;
-    }
-    if (victory==3)
-    {
-      xi=xi-20;
-      xf=xf-20;
-    }
-  }
   void soult()
   {
     if(press==true && vidap<100 && vidap>=0 && espiritu>=50 && victory==3)
@@ -115,5 +111,5 @@ class Carta
      press=false;
     }
   }
-  
+
 }
