@@ -27,7 +27,7 @@ int vidae=100,vidap=100;
 int xc1=200,xc2=400,xc3=600,xc4=700,ycs=450;
 int xbe=520,xbp=70,ybe=15,ybp=15;
 int altobar=35;
-int dano1=10,cura1=10,dano2=30,absorb=7,dano3=1,buff=1;//Daño y cura enemigos
+int dano1=10,cura1=10,dano2=30,absorb=7,dano3=1,buff=0;//Daño y cura enemigos
 float cdatk1=10,cdheal1=25,cdatk2=30,cdabs=5,cdatk3=5,cdbuff=10;//cd de los enemigos
 
 float cdap=0,cdhp=10,cdesp=0;//cd cartas
@@ -220,7 +220,7 @@ void draw()
   image(acarta,xc1,ycs);
   image(ccarta,xc2,ycs);
   image(espcarta,xc3,ycs);
-  //image(stcarta,xc4,ycs);
+  image(stcarta,xc4,ycs);
   
   atk.mousePressed(); //Funciones de las Cartas
   atk.accion();
@@ -228,8 +228,11 @@ void draw()
   heal.curar();
   spirit.mousePressed();
   spirit.recharge();
-  //tiamat.mousePressed();
-  //tiamat.soult(); //Funciones de las Cartas
+  if(victory==3)
+  {
+  tiamat.mousePressed();
+  tiamat.soult(); //Funciones de las Cartas
+  }
   besp.displayesp();
   vprota.displayp();
   venemigo.displaye();
@@ -283,18 +286,18 @@ void draw()
     fondo2x=5000;
     fdesx=5000;
     tutox=5000;
-    if(lvl>=victory)
+    if(lvl>victory)
     {
     victory=victory+1;
     }
-    if(lvl<=3)
+    if(lvl<=4)
     {
     lvl=lvl+1;
     vidae=100;
     vidap=100;
     espiritu=50;
     }
-    if(lvl==4)
+    if(lvl==5)
     {
       jugar=0;
     }
