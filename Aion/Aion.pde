@@ -24,14 +24,15 @@ int ysalir=571,yfsalir=670;
 int xsmuerte=784,xsfmuerte=880,ysmuerte=570,ysfmuerte=613;
 int volverx=677,volverxf=986,volvery=485,volveryf=529;
 int vidae=100,vidap=100;
-int xc1=200,xc2=400,xc3=600,xcdrake=5000,ycs=450;
+int xc1=150,xc2=350,xc3=550,xcdrake=5000,xcspe=650,ycs=450;//coordenadas de las cartas
+int larcar=250,anccar=175;//tamaño de las cartas
 int xbe=520,xbp=70,ybe=15,ybp=15;
 int altobar=35;
 int dano1=10,cura1=10,dano2=30,absorb=7,dano3=1,buff=0;//Daño y cura enemigos
 float cdatk1=10,cdheal1=25,cdatk2=30,cdabs=5,cdatk3=5,cdbuff=10;//cd de los enemigos
 
 float cdap=0,cdhp=10,cdesp=0;//cd cartas
-int larcar=250,anccar=175;//tamaño de las cartas
+
 int espiritu=50;//espiritu inicial
 int xesp=70,yesp=390;//coordenadas de la barra del espiritu
 int ssprite=0;
@@ -46,7 +47,7 @@ int his1x=5000,his2x=5000,his3x=5000,his4x=5000,his5x=5000,his6x=5000;
 int hist=0;
 int credsk=0;//Variable para pasar los creditos
 int tutox=5000;
-
+int special=1;//variable de la carta especial q toca
 //SoundFile song1;
 Heroe prota;
 Boton play,salir,smuerte,volver,botuto,credits;
@@ -228,30 +229,13 @@ void draw()
   heal.curar();
   spirit.mousePressed();
   spirit.recharge();
+  tiamat.soult(); //Funciones de las Cartas
   
-  if (victory==1)
-    {
-      xc1=200-40;
-      xc2=400-40;
-      xc3=600-40;
-    }
-    if (victory==2)
-    {
-      xc1=160-40;
-      xc2=360-40;
-      xc3=560-40;
-    }
-    if (victory==3)
-    {
-      xc1=120-40;
-      xc2=320-40;
-      xc3=520-40;
-    }
   if(victory==3)
   {
   xcdrake=700;
   tiamat.mousePressed();
-  tiamat.soult(); //Funciones de las Cartas
+  
   }
   besp.displayesp();
   vprota.displayp();
