@@ -6,9 +6,10 @@ PImage fbase,fbosque,fmuerte,fdesierto;//Fondos del juego
 PImage acarta;
 PImage ccarta;
 PImage espcarta;
+PImage serpcarta,grifocarta;//imagenes de cartas
 PImage stcarta;
 PImage heroe1,heroedano,heroemana,heroeheal;//sprites del heroe
-PImage serpnorm,serpatk,serpdano,serprip;//Sprites de la serpiente
+PImage serpnorm,serpatk,serpdano;//Sprites de la serpiente
 PImage mantn,mantatk,mantdano;//sprites del grifo
 PImage spyron,spyroatk,spyrodano;//sprites del dragon
 PImage his1,his2,his3,his4,his5,his6;
@@ -60,10 +61,12 @@ void setup()
   size(1000,700);
   
   textAlign(CENTER);
-  acarta=loadImage("ESPADA DEL TIEMPO.jpg");
+  acarta=loadImage("ESPADA DEL TIEMPO.jpg");//Cargar imagenes de las cartas
   ccarta=loadImage("RELOJ.jpg");
   espcarta=loadImage("MEDITACIÓN.jpg");
-  stcarta=loadImage("SOUL TIAMAT.jpg");
+  serpcarta=loadImage("KOSMOS.jpg");
+  grifocarta=loadImage("HYPERION.jpg");
+  stcarta=loadImage("SOUL TIAMAT.jpg");//Cargar imagenes de las cartas
   fbase=loadImage("FONDO.jpg");
   fbosque=loadImage("SELVA.jpg");
   fdesierto=loadImage("DESIERTO.jpg");
@@ -74,8 +77,7 @@ void setup()
   heroeheal=loadImage("HEROE4.png");
   serpatk=loadImage("SERPIENTEATK3.png");//Cargar sprites del primer enemigo
   serpdano=loadImage("SERPIENTEDAÑO.png");
-  serpnorm=loadImage("SERPIENTEFF.png");
-  serprip=loadImage("SERPIENTEMUERTA.png");//Cargar sprites del primer enemigo
+  serpnorm=loadImage("SERPIENTEFF.png");//Cargar sprites del primer enemigo
   mantn=loadImage("GRIFO1.png");//Cargar sprites del segundo enemigo
   mantatk=loadImage("GRIFO2.png");
   mantdano=loadImage("GRIFO3.png");//Cargar sprites del segundo enemigo
@@ -103,7 +105,6 @@ void setup()
   serpatk.resize(tampjx,tampjy);
   serpdano.resize(tampjx,tampjy);
   serpnorm.resize(tampjx,tampjy);
-  serprip.resize(tampjx,tampjy);
   mantn.resize(tampjx,tampjy);//Ajuste al tamaño del segundo boss
   mantatk.resize(tampjx,tampjy);
   mantdano.resize(tampjx,tampjy);//Ajuste al tamaño del segundo boss
@@ -113,6 +114,8 @@ void setup()
   acarta.resize(anccar,larcar);
   ccarta.resize(anccar,larcar);
   espcarta.resize(anccar,larcar);
+  serpcarta.resize(anccar,larcar);
+  grifocarta.resize(anccar,larcar);
   stcarta.resize(anccar,larcar);
   fbase.resize(1000,700);//Ajuste fondos
   fbosque.resize(1000,700);
@@ -221,8 +224,8 @@ void draw()
   image(acarta,xc1,ycs);
   image(ccarta,xc2,ycs);
   image(espcarta,xc3,ycs);
-  image(ccarta,xcserp,ycs);
-  image(acarta,xcgrifo,ycs);
+  image(serpcarta,xcserp,ycs);
+  image(grifocarta,xcgrifo,ycs);
   image(stcarta,xcdrake,ycs);
   
   atk.mousePressed(); //Funciones de las Cartas
