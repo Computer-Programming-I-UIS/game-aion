@@ -318,6 +318,14 @@ void draw()
     dano3=1;
     buff=0;
     caos=3;
+    if(victory==0)
+    {
+      special=0;
+    }
+    if(victory>=1)
+    {
+      special=1;
+    }
   }  
   if(vidae==0)
   {
@@ -325,8 +333,13 @@ void draw()
     fmuertex=5000;
     fondox= 0;
     fondo2x=5000;
+    flavax=5000;
+    fskyx=5000;
     fdesx=5000;
     tutox=5000;
+    dano3=1;
+    buff=0;
+    caos=3;
     
     if(lvl>victory)
     {
