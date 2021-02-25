@@ -27,8 +27,9 @@ Recortar imagenes para que no sean centro de atención..........
 
 ![N|Solid](https://i.postimg.cc/wjykCC3J/SOUL-TIAMAT.jpg)
 ![N|Solid](https://i.postimg.cc/SKNGL3SN/MEDITACI-N.jpg)
-![N|Solid](https://i.postimg.cc/wjykCC3J/SOUL-TIAMAT.jpg)
-
+![N|Solid](https://i.postimg.cc/Nj0ydcHV/RELOJ.jpg)
+![N|Solid](https://i.postimg.cc/Y039xnqM/HYPERION.jpg)
+![N|Solid](https://i.postimg.cc/GhXt855j/ESPADA-DEL-TIEMPO.jpg)
 
 - Cada carta tendrá un temporizador de enfriamiento por lo cuál tendrás que ser estratégico y no malgastar tus cartas. 
 - En el juego tendrás 2 barras, una de vida y otra de espíritu, ten en cuenta que tu vida no puede quedar en 0 ya que perderas, por eso tendrás cartas iniciales de curación, el espíritu es usado para poder tirar las cartas ya que cada carta tiene su costo de espíritu y si este es menor del que necesita la carta no podrás usarla.
