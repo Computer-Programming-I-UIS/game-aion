@@ -2,7 +2,7 @@
 //Autores: 2200515-Daniel Jeshua Morelos Villamizar y 2200520-Santiago Enrique Monsalve Durán.
 //Descripción:
 import processing.sound.*;
-PImage fbase,fbosque,fmuerte,fdesierto;//Fondos del juego
+PImage fbase,fbosque,fmuerte,fdesierto,fcielo,flava;//Fondos del juego
 PImage acarta;
 PImage ccarta;
 PImage espcarta;
@@ -12,6 +12,7 @@ PImage heroe1,heroedano,heroemana,heroeheal;//sprites del heroe
 PImage serpnorm,serpatk,serpdano;//Sprites de la serpiente
 PImage mantn,mantatk,mantdano;//sprites del grifo
 PImage spyron,spyroatk,spyrodano;//sprites del dragon
+PImage dogen,dogeatk,dogedano;//sprites del cerbero
 PImage his1,his2,his3,his4,his5,his6;
 PImage tutorial,creditos1,creditos2;
 PFont letra,letra2;
@@ -22,23 +23,23 @@ int xboton=300,xfboton=708,yplay=182,yfplay=281;
 int ybtut=305,yfbtut=404;//Coordenadas en y del boton del tutorial
 int ycredits=433,yfcredits=533;//Coordenadas en y del boton de los creditos
 int ysalir=571,yfsalir=670;
-int xsmuerte=784,xsfmuerte=880,ysmuerte=570,ysfmuerte=613;
+int xsmuerte=784,xsfmuerte=880,ysmuerte=570,ysfmuerte=613;//coordenadas boton de salir al perder
 int volverx=677,volverxf=986,volvery=485,volveryf=529;
 int vidae=100,vidap=100;
 int xc1=115,xc2=315,xc3=515,xcserp=5000,xcgrifo=5000,xcdrake=5000,xcspe=715,ycs=450;//coordenadas de las cartas
 int larcar=250,anccar=175;//tamaño de las cartas
 int xbe=520,xbp=70,ybe=15,ybp=15;
 int altobar=35;
-int dano1=10,cura1=10,dano2=30,absorb=7,dano3=1,buff=0;//Daño y cura enemigos
-float cdatk1=10,cdheal1=25,cdatk2=30,cdabs=5,cdatk3=5,cdbuff=10;//cd de los enemigos
-int protatk=50;//ataque del heroe
+int dano1=10,cura1=10,dano2=30,absorb=7,dano3=1,buff=0,dano4=20,caos=3;//Daño y cura enemigos
+float cdatk1=10,cdheal1=25,cdatk2=30,cdabs=5,cdatk3=5,cdbuff=10,cdatk4=15,cdcaos=3;//cd de los enemigos
+int protatk=30;//ataque del heroe
 float cdap=0,cdhp=0,cdesp=0,cdspe=30;//cd cartas
 
 int espiritu=50;//espiritu inicial
 int xesp=70,yesp=390;//coordenadas de la barra del espiritu
 int ssprite=0;
 int fondox=0,fondoy=0;
-int fondo2x=5000,fdesx=5000;//Coordenadass en x de los fondos
+int fondo2x=5000,fdesx=5000,fskyx=5000,flavax=5000;//Coordenadass en x de los fondos
 int cred1x=5000,cred2x=5000;//Coordenadas en x de los creditos
 int fmuertex=5000;
 int serpy=160;
@@ -48,13 +49,13 @@ int his1x=5000,his2x=5000,his3x=5000,his4x=5000,his5x=5000,his6x=5000;
 int hist=0;
 int credsk=0;//Variable para pasar los creditos
 int tutox=5000;
-int special=1;//variable de la carta especial q toca
+int special;//variable de la carta especial q toca
 //SoundFile song1;
 Heroe prota;
 Boton play,salir,smuerte,volver,botuto,credits;
 Carta atk,heal,spirit,tiamat;
 Barra venemigo,vprota,besp;
-Enemigo ero,undo,spyro;
+Enemigo ero,undo,spyro,doge;
 Storie intro;
 void setup()
 {
@@ -70,6 +71,8 @@ void setup()
   fbase=loadImage("FONDO.jpg");
   fbosque=loadImage("SELVA.jpg");
   fdesierto=loadImage("DESIERTO.jpg");
+  fcielo=loadImage("FONDO3.jpg");
+  flava=loadImage("FONDO4.jpg");
   fmuerte=loadImage("MUERTE.jpg");
   heroe1=loadImage("HEROE1.png");
   heroedano=loadImage("HEROE2.png");
@@ -108,9 +111,9 @@ void setup()
   mantn.resize(tampjx,tampjy);//Ajuste al tamaño del segundo boss
   mantatk.resize(tampjx,tampjy);
   mantdano.resize(tampjx,tampjy);//Ajuste al tamaño del segundo boss
-  spyron.resize(tampjx+30,tampjy+30);//Ajuste al tamaño del tercer boss
-  spyroatk.resize(tampjx+30,tampjy+30);
-  spyrodano.resize(tampjx+30,tampjy+30);//Ajuste al tamaño del tercer boss
+  spyron.resize(tampjx+50,tampjy+50);//Ajuste al tamaño del tercer boss
+  spyroatk.resize(tampjx+50,tampjy+50);
+  spyrodano.resize(tampjx+50,tampjy+50);//Ajuste al tamaño del tercer boss
   acarta.resize(anccar,larcar);
   ccarta.resize(anccar,larcar);
   espcarta.resize(anccar,larcar);
@@ -120,6 +123,8 @@ void setup()
   fbase.resize(1000,700);//Ajuste fondos
   fbosque.resize(1000,700);
   fdesierto.resize(1000,700);
+  fcielo.resize(1000,700);
+  flava.resize(1000,700);
   fmuerte.resize(1000,700);//Ajuste fondos
   his1.resize(1000,700);//Ajuste slides de la hisrtoria
   his2.resize(1000,700);
@@ -144,6 +149,7 @@ void setup()
   ero=new Enemigo(dano1,cura1,cdatk1,cdheal1);
   undo=new Enemigo(dano2,absorb,cdatk2,cdabs);
   spyro=new Enemigo(dano3,buff,cdatk3,cdbuff);
+  doge=new Enemigo(dano4,caos,cdatk4,cdcaos);
   intro=new Storie();
   
   //song1=new SoundFile(this,"Argonne - Zachariah Hickman.mp3");
@@ -156,6 +162,8 @@ void draw()
   textFont(letra);
   image(fbosque,fondo2x,0);
   image(fdesierto,fdesx,0);
+  image(fcielo,fskyx,0);
+  image(flava,flavax,0);
   image(fmuerte,fmuertex,0);
   image(fbase,fondox,fondoy);
   image(his1,his1x,0);
@@ -189,6 +197,7 @@ void draw()
   {
     fondo2x=0;
     fdesx=5000;
+    flavax=5000;
     ero.sprites();
     ero.turnoe();
     ero.ataque();
@@ -207,13 +216,25 @@ void draw()
   }
   if(lvl==3)
   {
-    fdesx=0;
+    fskyx=0;
+    fdesx=5000;
     fondo2x=5000;
     spyro.turnoe();
     spyro.ataque3();
     spyro.buff();
     spyro.sprites();
     spyro.display();
+  }
+  if(lvl==4)
+  {
+    flavax=0;
+    fskyx=5000;
+    fdesx=5000;
+    fondo2x=5000;
+    doge.turnoe();
+    
+    doge.sprites();
+    doge.display();
   }
   //song1.stop();
   his6x=5000;
@@ -234,12 +255,13 @@ void draw()
   heal.curar();
   spirit.mousePressed();
   spirit.recharge();
-  tiamat.soult(); //Funciones de las Cartas
   tiamat.mousePressed();
+  tiamat.soult(); //Funciones de las Cartas
   tiamat.dspecial();
   besp.displayesp();
   vprota.displayp();
   venemigo.displaye();
+  
   if(vidap>=100)
   {
     vidap=100;
