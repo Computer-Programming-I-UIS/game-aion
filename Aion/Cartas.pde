@@ -98,6 +98,10 @@ class Carta
     { 
      cdspe=0;
     }
+    if(victory==1)
+    {
+    special=1;
+    }
     if(press==true && victory>=1 && special==1 && cdspe==0 && vidap<=100 && vidap>=0 && espiritu>=50)
     {
      vidae=vidae-20;
