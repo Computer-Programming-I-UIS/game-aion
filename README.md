@@ -8,13 +8,14 @@
 - Cuando ya tengas la última versión y el clon instalado es necesario que instales la biblioteca Sound en el Processing de la siguiente forma:
 - Abres Processing, le das click en Scketch, importar biblioteca, añadir Biblioteca, buscas Sound en la barra de busqueda y la instalas.7
 - El juego tiene una clasificación E +10, es decir, para cualquiera que tenga más de 10 años puede jugarlo.
-- 
-# Tráiler
 
 ![N|Solid](https://i.postimg.cc/Vk25hTbJ/Screenshot-1.jpg)
 ![N|Solid](https://i.postimg.cc/Qt8DYkSB/Screenshot-2.jpg)
 
-![N|Solid](https://vimeo.com/user134516862/review/516926450/d62c483673)
+# Tráiler
+
+![N|Solid](https://i.postimg.cc/W1PV4627/trailer-ofi.gif)
+
 # Descripción
 - El juego está basado en algunos juegos de cartas tales como YuGiOh, en el que nuestro protagonista recorre el mundo en busca de cumplir la misión que le impuso su padre, aunque él no lo sabe aún. Nuestro protagonista tendrá que enfrentarse a distintos monstruos y bestias que han escapado de su jaula en el infierno para tomar venganza de la humanidad.
 # Jugabilidad
