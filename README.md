@@ -16,15 +16,19 @@ Recortar imagenes para que no sean centro de atención..........
 # Descripción
 - El juego está basado en algunos juegos de cartas tales como YuGiOh, en el que nuestro protagonista recorre el mundo en busca de cumplir la misión que le impuso su padre, aunque él no lo sabe aún. Nuestro protagonista tendrá que enfrentarse a distintos monstruos y bestias que han escapado de su jaula en el infierno para tomar venganza de la humanidad.
 # Jugabilidad
-- Al iniciar el juego hay un menú sencillo de entender con dos botones, uno de jugar y el otro de salir.
+- Al iniciar el juego hay un menú sencillo de entender con cuatro botones, uno de jugar, uno para el tutorial, otro para los créditos y por último el de salir.
+- Nuestro juego cuenta con 4 jefes, que entre más se avance te darán recomensas al derrotarlos para enfrentar al jefe final.
 
-![N|Solid](https://i.postimg.cc/wTGvrvtq/FONDO.jpg)
-Cambiar imagen por la actualizada.....
-- Después de darle jugar se iniciará la historia y tedrás que darle enter para seguir leyendo y llegar al primer desafio.
-- Nuestro juego es fácil de entender ya que tiene un tutorial introductorio en el primer nivel, y al avanzar más  más dificil será pero también tendrá mayores recompensas como cartas legendarias con habilidades especiales. Como por ejemplo:
+![N|Solid](https://i.postimg.cc/SKq6S52f/FONDO.jpg)
 
-Poner más cartas......
+- Después de darle jugar se iniciará la historia y tedrás que presionar un número del 1 al 9 dependiendo en que parte de la historia para seguir leyendo y llegar al primer desafio.
+- Nuestro juego es fácil de entender ya que al tener un tutorial introductorio en la interfaz inicial podrás aprender fácilmente como usar las cartes, al avanzar más en la historia más difícil será pasar, por eso tendrás que ser esratégico en cuando usar cada carta para sobrevivir y llegar al final de nuestra historia
+
+
 ![N|Solid](https://i.postimg.cc/wjykCC3J/SOUL-TIAMAT.jpg)
+![N|Solid](https://i.postimg.cc/SKNGL3SN/MEDITACI-N.jpg)
+![N|Solid](https://i.postimg.cc/wjykCC3J/SOUL-TIAMAT.jpg)
+
 
 - Cada carta tendrá un temporizador de enfriamiento por lo cuál tendrás que ser estratégico y no malgastar tus cartas. 
 - En el juego tendrás 2 barras, una de vida y otra de espíritu, ten en cuenta que tu vida no puede quedar en 0 ya que perderas, por eso tendrás cartas iniciales de curación, el espíritu es usado para poder tirar las cartas ya que cada carta tiene su costo de espíritu y si este es menor del que necesita la carta no podrás usarla.
