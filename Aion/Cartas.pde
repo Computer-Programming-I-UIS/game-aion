@@ -100,8 +100,8 @@ class Carta
     }
     if(press==true && victory>=1 && special==1 && cdspe==0 && vidap<=100 && vidap>=0 && espiritu>=50)
     {
-     vidap=100;
-     espiritu=espiritu-50;
+     vidae=vidae-20;
+     espiritu=espiritu-20;
      press=false;
      special=1;
      cdspe=30;
@@ -129,8 +129,8 @@ class Carta
     }
     if(press==true && vidap<100 && victory>=3 && cdspe==0 && special==3 && vidap>=0 && espiritu>=20 )
     {
-     protatk=protatk+10;
-     espiritu=espiritu-20;
+     vidap=100;
+     espiritu=espiritu-50;
      cdspe=30;
      press=false;
      if(victory>=3)
