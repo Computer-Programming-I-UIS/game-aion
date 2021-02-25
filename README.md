@@ -24,7 +24,7 @@
 - Después de darle jugar se iniciará la historia y tedrás que presionar un número del 1 al 9 dependiendo en que parte de la historia para seguir leyendo y llegar al primer desafio.
 - Nuestro juego es fácil de entender ya que al tener un tutorial introductorio en la interfaz inicial podrás aprender fácilmente como usar las cartes, al avanzar más en la historia más difícil será pasar, por eso tendrás que ser esratégico en cuando usar cada carta para sobrevivir y llegar al final de nuestra historia.
 
-![N|Solid](https://i.postimg.cc/fknKxbL6/imagen-2021-02-25-183446.png)
+![N|Solid](https://i.postimg.cc/XJthz4qg/Screenshot-3.jpg)
 
 - El juego cuenta con un estilo de pelea innovador, ya que para ganar tendrás que usar cartas en vez de usar quizá el teclado y por ende tienes que ser muy inteligente para pasar de desafío. Algunas de las cartas que podrás ver en el juego son:
 
