@@ -1,5 +1,5 @@
 # GAME AIÓN - PROYECTO FINAL.
-![N|Solid](https://i.postimg.cc/G349xdfk/imagen-2021-02-16-172938.png)
+![N|Solid](https://i.postimg.cc/q7MrdJLc/Sin-t-tulo-2.jpg)
 # Desarrolladores:
 - Santiago Enrique Monsalve Durán - 2200520 - Desarrollador Parte Gráfica
 - Daniel Jeshua Morelos Villamizar - 2200515 - Desarrollador Parte código
