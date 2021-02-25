@@ -31,7 +31,7 @@ int altobar=35;
 int dano1=10,cura1=10,dano2=30,absorb=7,dano3=1,buff=0;//Daño y cura enemigos
 float cdatk1=10,cdheal1=25,cdatk2=30,cdabs=5,cdatk3=5,cdbuff=10;//cd de los enemigos
 int protatk=50;//ataque del heroe
-float cdap=0,cdhp=10,cdesp=0;//cd cartas
+float cdap=0,cdhp=0,cdesp=0,cdspe=30;//cd cartas
 
 int espiritu=50;//espiritu inicial
 int xesp=70,yesp=390;//coordenadas de la barra del espiritu
@@ -107,9 +107,9 @@ void setup()
   mantn.resize(tampjx,tampjy);//Ajuste al tamaño del segundo boss
   mantatk.resize(tampjx,tampjy);
   mantdano.resize(tampjx,tampjy);//Ajuste al tamaño del segundo boss
-  spyron.resize(tampjx,tampjy);//Ajuste al tamaño del tercer boss
-  spyroatk.resize(tampjx,tampjy);
-  spyrodano.resize(tampjx,tampjy);//Ajuste al tamaño del tercer boss
+  spyron.resize(tampjx+30,tampjy+30);//Ajuste al tamaño del tercer boss
+  spyroatk.resize(tampjx+30,tampjy+30);
+  spyrodano.resize(tampjx+30,tampjy+30);//Ajuste al tamaño del tercer boss
   acarta.resize(anccar,larcar);
   ccarta.resize(anccar,larcar);
   espcarta.resize(anccar,larcar);
@@ -128,7 +128,7 @@ void setup()
   atk=new Carta(xc1,ycs,xc1+anccar,ycs+larcar);//cartas
   heal=new Carta(xc2,ycs,xc2+anccar,ycs+larcar);
   spirit=new Carta(xc3,ycs,xc3+anccar,ycs+larcar);
-  tiamat=new Carta(xcdrake,ycs,xcdrake+anccar,ycs+larcar);//cartas
+  tiamat=new Carta(xcspe,ycs,xcspe+anccar,ycs+larcar);//cartas
   venemigo=new Barra(xbe,ybe,altobar);
   vprota=new Barra(xbp,ybp,altobar);
   besp=new Barra(xesp,yesp,altobar);
@@ -221,8 +221,8 @@ void draw()
   image(acarta,xc1,ycs);
   image(ccarta,xc2,ycs);
   image(espcarta,xc3,ycs);
-  image(acarta,xcserp,ycs);
-  image(ccarta,xcgrifo,ycs);
+  image(ccarta,xcserp,ycs);
+  image(acarta,xcgrifo,ycs);
   image(stcarta,xcdrake,ycs);
   
   atk.mousePressed(); //Funciones de las Cartas
@@ -275,6 +275,8 @@ void draw()
   text(cdhp,xc2+130,ycs+240);
   fill(#050CAD);
   text(cdesp,xc3+130,ycs+240);
+  fill(0);
+  text(cdspe,xcspe+130,ycs+240);
   if(vidap==0)
   {
     jugar=2;
