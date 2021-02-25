@@ -1,11 +1,11 @@
 class Enemigo
 {
-  int dano,cura;
+  int dano,cial;
   float tatk,tspe;
   Enemigo(int td,int tc,float tcda,float tcds)
   {
     dano=td;
-    cura=tc;
+    cial=tc;
     tatk=tcda;
     tspe=tcds;
   }
@@ -28,6 +28,10 @@ class Enemigo
       {
         image(spyron,snormx,serpy);
       }
+      if(lvl==4)
+      {
+        image(dogen,snormx,serpy);
+      }
     }
     break;
     case 1://cuando pega
@@ -44,7 +48,11 @@ class Enemigo
       }
       if(lvl==3)
       {
-        image(spyron,snormx,serpy);
+        image(spyroatk,satkx,serpy);
+      }
+      if(lvl==4)
+      {
+        image(dogeatk,satkx,serpy);
       }
       ssprite=0;
       if(ssprite==0)
@@ -68,7 +76,11 @@ class Enemigo
       }
       if(lvl==3)
       {
-        image(spyron,snormx,serpy);
+        image(spyrodano,sdanox,serpy);
+      }
+      if(lvl==4)
+      {
+        image(dogedano,sdanox,serpy);
       }
       ssprite=0;
       if(ssprite==0)
@@ -121,7 +133,7 @@ class Enemigo
  {
    if(tspe==0 && vidae<100 && vidae>0)
    {
-     vidae=vidae+cura;
+     vidae=vidae+cial;
      
      tspe=cdheal1;
      //ssprite=2;
@@ -148,7 +160,7 @@ class Enemigo
  {
    if(tspe==0 && vidae<100 && vidae>0)
    {
-     espiritu=espiritu-cura;
+     espiritu=espiritu-cial;
      tspe=cdabs;
      //ssprite=2;
    }
@@ -171,6 +183,27 @@ class Enemigo
      buff=dano+buff;
      tspe=cdbuff;
      //ssprite=2;
+   }
+ }
+ void ataque4()//ata1ue del tercer enemigo
+ {
+   if(tatk==0 && vidap>0)
+   {
+     vidap=vidap-dano;
+     tatk=cdatk4;
+     ssprite=1;
+     psprite=1;
+   }
+ }
+ void caos()
+ {
+   if(tspe==0 && vidae<100 && vidae>0)
+   {
+     espiritu=espiritu-caos;
+     vidap=vidap-caos;
+     vidae=vidae+caos;
+     caos=caos+1;
+     tspe=cdcaos;
    }
  }
 }
