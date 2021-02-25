@@ -31,7 +31,7 @@ int larcar=250,anccar=175;//tamaño de las cartas
 int xbe=520,xbp=70,ybe=15,ybp=15;
 int altobar=35;
 int dano1=10,cura1=10,dano2=30,absorb=7,dano3=1,buff=0,dano4=20,caos=3;//Daño y cura enemigos
-float cdatk1=10,cdheal1=25,cdatk2=30,cdabs=5,cdatk3=5,cdbuff=10,cdatk4=15,cdcaos=3;//cd de los enemigos
+float cdatk1=10,cdheal1=25,cdatk2=30,cdabs=5,cdatk3=5,cdbuff=5,cdatk4=15,cdcaos=3;//cd de los enemigos
 int protatk=30;//ataque del heroe
 float cdap=0,cdhp=0,cdesp=0,cdspe=30;//cd cartas
 
@@ -87,6 +87,9 @@ void setup()
   spyron=loadImage("DRAGON2.png");//Cargar imagenes del tercer enemigo
   spyroatk=loadImage("DRAGON3.png");
   spyrodano=loadImage("DRAGON1.png");//Cargar imagenes del tercer enemigo
+  dogen=loadImage("CERBERO1.png");
+  dogeatk=loadImage("CERBERO3.png");
+  dogedano=loadImage("CERBERO2.png");
   his1=loadImage("HISTORIA1.png");
   his2=loadImage("HISTORIA2.png");
   his3=loadImage("HISTORIA3.png");
@@ -114,6 +117,9 @@ void setup()
   spyron.resize(tampjx+50,tampjy+50);//Ajuste al tamaño del tercer boss
   spyroatk.resize(tampjx+50,tampjy+50);
   spyrodano.resize(tampjx+50,tampjy+50);//Ajuste al tamaño del tercer boss
+  dogen.resize(tampjx,tampjy);
+  dogeatk.resize(tampjx,tampjy);
+  dogedano.resize(tampjx,tampjy);
   acarta.resize(anccar,larcar);
   ccarta.resize(anccar,larcar);
   espcarta.resize(anccar,larcar);
@@ -196,6 +202,7 @@ void draw()
    if(lvl==1)//Si es el nivel 1
   {
     fondo2x=0;
+    fskyx=5000;
     fdesx=5000;
     flavax=5000;
     ero.sprites();
@@ -207,7 +214,9 @@ void draw()
   if(lvl==2)//Si es el nivel 2
   {
     fdesx=0;
+    fskyx=5000;
     fondo2x=5000;
+    flavax=5000;
     undo.ataque2();
     undo.turnoe();
     undo.sprites();
@@ -232,7 +241,8 @@ void draw()
     fdesx=5000;
     fondo2x=5000;
     doge.turnoe();
-    
+    doge.ataque4();
+    doge.caos();
     doge.sprites();
     doge.display();
   }
@@ -305,7 +315,10 @@ void draw()
   if(vidap==0)
   {
     jugar=2;
-  }
+    dano3=1;
+    buff=0;
+    caos=3;
+  }  
   if(vidae==0)
   {
     hist=0;
@@ -314,6 +327,7 @@ void draw()
     fondo2x=5000;
     fdesx=5000;
     tutox=5000;
+    
     if(lvl>victory)
     {
     victory=victory+1;
