@@ -34,21 +34,7 @@ class Carta
     { 
      cdap=0;
     }
-    if(victory==1)
-    {
-    xi=200-40;
-    xf=200+larcar-40;
-    }
-    if(victory==2)
-    {
-    xi=160-40;
-    xf=160+larcar-40;
-    }
-    if(victory==3)
-    {
-    xi=120-40;
-    xf=120+larcar-40;
-    }
+    
     if(press==true && vidae>0 && vidae<=100 && espiritu>=5 && cdap==0)
     {
       vidae=vidae-protatk;
@@ -104,19 +90,33 @@ class Carta
   }
   void soult()
   {
-    if(press==true && vidap<100 && vidap>=0 && espiritu>=50 && victory>=3 && special==3)
+    if(cdspe>0 && vidap>0)
+    {
+    cdspe=cdspe-0.1;
+    }
+    else if(cdspe<=0)
+    { 
+     cdspe=0;
+    }
+    if(press==true && victory>=1 && special==1 && cdspe==0 && vidap<=100 && vidap>=0 && espiritu>=50)
     {
      vidap=100;
      espiritu=espiritu-50;
      press=false;
      special=1;
-     if(victory>=3)
+     cdspe=30;
+     if(victory>1)
      {
-     special=1;
+     special=2;
      }
     }
-    if(press==true && vidap<100 && vidap>=0 && espiritu>=50 && victory>=2 && special==2)
+    if(press==true && victory>=2 && special==2 && cdspe==0 && vidap<100 && vidap>=0 && espiritu>=50 )
     {
+     espiritu=100;
+     cdap=0;
+     cdhp=0;
+     cdesp=0;
+     cdspe=30;
      press=false;
      if(victory>2)
      {
@@ -127,17 +127,17 @@ class Carta
       special=1;
      }
     }
-    if(press==true && vidap<100 && vidap>=0 && espiritu>=50 && victory>=1 && special==1)
+    if(press==true && vidap<100 && victory>=3 && cdspe==0 && special==3 && vidap>=0 && espiritu>=20 )
     {
      protatk=protatk+10;
+     espiritu=espiritu-20;
+     cdspe=30;
      press=false;
-     if(victory>1)
+     if(victory>=3)
      {
-     special=2;
+     special=1;
      }
-     
     }
-
     }
     void dspecial()
     {
@@ -165,6 +165,5 @@ class Carta
       xcgrifo=5000;
       xcdrake=5000;
       }
+    }
   }
-
-}
