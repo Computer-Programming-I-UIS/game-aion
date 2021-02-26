@@ -316,8 +316,6 @@ void draw()
   {
     jugar=2;
     dano3=1;
-    buff=0;
-    caos=3;
     if(victory==0)
     {
       special=0;
@@ -338,7 +336,6 @@ void draw()
     fdesx=5000;
     tutox=5000;
     dano3=1;
-    caos=3;
     
     if(lvl>victory)
     {
@@ -393,5 +390,5 @@ void draw()
     }
   }
   }
-  delay(50);
+ 
 }
