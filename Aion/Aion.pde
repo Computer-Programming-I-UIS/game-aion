@@ -44,21 +44,21 @@ int cred1x=5000,cred2x=5000;//Coordenadas en x de los creditos
 int fmuertex=5000;//coordenadas del fondo de derrota
 int serpy=160;//coordenada en y de los sprites enemigos
 int snormx=700,sdanox=5000,satkx=5000,sripx=5000;//coordenadas en x de los sprites enemigos
-int tampjx=160,tampjy=180;
-int his1x=5000,his2x=5000,his3x=5000,his4x=5000,his5x=5000,his6x=5000;
+int tampjx=160,tampjy=180;//tamaño base de los enemigos
+int his1x=5000,his2x=5000,his3x=5000,his4x=5000,his5x=5000,his6x=5000;//coordenadas en x de los sprites de la historia
 int his7x=5000,his8x=5000,his9x=5000,his10x=5000,his11x=5000,his12x=5000,his13x=5000;
-int his14x=5000,his15x=5000,his16x=5000,his17x=5000,his18x=5000;
-int hist=0;
+int his14x=5000,his15x=5000,his16x=5000,his17x=5000,his18x=5000;//coordenadas en x de los sprites de la historia
+int hist=0;//variable para seguir la historia
 int credsk=0;//Variable para pasar los creditos
-int tutox=5000;
+int tutox=5000;//coordenada en x del tutorial
 int special;//variable de la carta especial q toca
-SoundFile song1;
-Heroe prota;
-Boton play,salir,smuerte,volver,botuto,credits;
-Carta atk,heal,spirit,tiamat;
-Barra venemigo,vprota,besp;
-Enemigo ero,undo,spyro,doge;
-Storie intro,post1,post2,post3,fin;
+SoundFile song1;//Cancion 1
+Heroe prota;//Clase para el heroe
+Boton play,salir,smuerte,volver,botuto,credits;//Clase para los botones
+Carta atk,heal,spirit,tiamat;//Clase para las cartas
+Barra venemigo,vprota,besp;//Clase para las barras de vida y espiritu
+Enemigo ero,undo,spyro,doge;//Clase para los enemigos
+Storie intro,post1,post2,post3,fin;//Clase para la historia
 void setup()
 {
   size(1000,700);
