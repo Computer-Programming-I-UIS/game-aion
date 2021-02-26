@@ -13,7 +13,7 @@
 ![N|Solid](https://i.postimg.cc/Qt8DYkSB/Screenshot-2.jpg)
 
 # Tráiler
-[![N|Solid](https://i.postimg.cc/Bb8nDxwn/imagen-2021-02-25-194309.png)](https://www.youtube.com/watch?v=Nw7KZGj2Zxc)
+[![N|Solid](https://i.postimg.cc/JzCzDH3R/Sin-t-tulo-1.png)](https://www.youtube.com/watch?v=Nw7KZGj2Zxc)
 
 
 
