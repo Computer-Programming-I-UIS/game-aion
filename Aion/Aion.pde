@@ -13,7 +13,8 @@ PImage serpnorm,serpatk,serpdano;//Sprites de la serpiente
 PImage mantn,mantatk,mantdano;//sprites del grifo
 PImage spyron,spyroatk,spyrodano;//sprites del dragon
 PImage dogen,dogeatk,dogedano;//sprites del cerbero
-PImage his1,his2,his3,his4,his5,his6;
+PImage his1,his2,his3,his4,his5,his6,his7,his8,his9;//sprites de la historia
+PImage his10,his11,his12,his13,his14,his15,his16,his17,his18;//sprites de la historia
 PImage tutorial,creditos1,creditos2;
 PFont letra,letra2;
 boolean press;
@@ -46,6 +47,8 @@ int serpy=160;
 int snormx=700,sdanox=5000,satkx=5000,sripx=5000;
 int tampjx=160,tampjy=180;
 int his1x=5000,his2x=5000,his3x=5000,his4x=5000,his5x=5000,his6x=5000;
+int his7x=5000,his8x=5000,his9x=5000,his10x=5000,his11x=5000,his12x=5000,his13x=5000;
+int his14x=5000,his15x=5000,his16x=5000,his17x=5000,his18x=5000;
 int hist=0;
 int credsk=0;//Variable para pasar los creditos
 int tutox=5000;
@@ -56,7 +59,7 @@ Boton play,salir,smuerte,volver,botuto,credits;
 Carta atk,heal,spirit,tiamat;
 Barra venemigo,vprota,besp;
 Enemigo ero,undo,spyro,doge;
-Storie intro;
+Storie intro,post1,post2,post3,fin;
 void setup()
 {
   size(1000,700);
@@ -96,6 +99,18 @@ void setup()
   his4=loadImage("HISTORIA4.png");
   his5=loadImage("HISTORIA5.png");
   his6=loadImage("HISTORIA6.png");
+  his7=loadImage("HISTORIA7.png");
+  his8=loadImage("HISTORIA8.png");
+  his9=loadImage("HISTORIA9.png");
+  his10=loadImage("HISTORIA10.png");
+  his11=loadImage("HISTORIA11.png");
+  his12=loadImage("HISTORIA12.png");
+  his13=loadImage("HISTORIA13.png");
+  his14=loadImage("HISTORIA14.png");
+  his15=loadImage("HISTORIA15.png");
+  his16=loadImage("HISTORIA16.png");
+  his17=loadImage("HISTORIA17.png");
+  his18=loadImage("HISTORIA18.png");
   tutorial=loadImage("FLECHAS.png");
   creditos1=loadImage("CREDITOS1.jpg");
   creditos2=loadImage("CREDITOS2.jpg");
@@ -137,7 +152,19 @@ void setup()
   his3.resize(1000,700);
   his4.resize(1000,700);
   his5.resize(1000,700);
-  his6.resize(1000,700);//Ajuste slides de la hisrtoria
+  his6.resize(1000,700);
+  his7.resize(1000,700);
+  his8.resize(1000,700);
+  his9.resize(1000,700);
+  his10.resize(1000,700);
+  his11.resize(1000,700);
+  his12.resize(1000,700);
+  his13.resize(1000,700);
+  his14.resize(1000,700);
+  his15.resize(1000,700);
+  his16.resize(1000,700);
+  his17.resize(1000,700);
+  his18.resize(1000,700);//Ajuste slides de la hisrtoria
   prota=new Heroe( );
   atk=new Carta(xc1,ycs,xc1+anccar,ycs+larcar);//cartas
   heal=new Carta(xc2,ycs,xc2+anccar,ycs+larcar);
@@ -157,6 +184,10 @@ void setup()
   spyro=new Enemigo(dano3,buff,cdatk3,cdbuff);
   doge=new Enemigo(dano4,caos,cdatk4,cdcaos);
   intro=new Storie();
+  post1=new Storie();
+  post2=new Storie();
+  post3=new Storie();
+  fin=new Storie();
   
   //song1=new SoundFile(this,"Argonne - Zachariah Hickman.mp3");
   //song1.play();
@@ -178,12 +209,25 @@ void draw()
   image(his4,his4x,0);
   image(his5,his5x,0);
   image(his6,his6x,0);
+  image(his7,his7x,0);
+  image(his8,his8x,0);
+  image(his9,his9x,0);
+  image(his10,his10x,0);
+  image(his11,his11x,0);
+  image(his12,his12x,0);
+  image(his13,his13x,0);
+  image(his14,his14x,0);
+  image(his15,his15x,0);
+  image(his16,his16x,0);
+  image(his17,his17x,0);
+  image(his18,his18x,0);
   image(tutorial,tutox,0);
   image(creditos1,cred1x,0);
   image(creditos2,cred2x,0);
   if(jugar==0)
   {
   his1x=5000;
+  his18x=5000;
   fondox=0;
   fondo2x=5000;
   fdesx=5000;
@@ -248,6 +292,10 @@ void draw()
   }
   //song1.stop();
   his6x=5000;
+  his7x=5000;
+  his11x=5000;
+  his17x=5000;
+  his18x=5000;
   fondox=5000;
   
   prota.sprites();
@@ -349,6 +397,26 @@ void draw()
     vidap=100;
     espiritu=50;
     }
+    if(lvl==1)
+    {
+      hist=7;
+      jugar=5;
+    }
+    if(lvl==2)
+    {
+      hist=9;
+      jugar=5;
+    }
+    if(lvl==3)
+    {
+      hist=12;
+      jugar=5;
+    }
+    if(lvl==4)
+    {
+      hist=18;
+      jugar=5;
+    }
     if(lvl==5)
     {
       jugar=0;
@@ -365,6 +433,13 @@ void draw()
     fondox= 5000;
     fondo2x=5000;
     hist=0;
+  }
+  if(jugar==5)
+  {
+    post1.contar2();
+    post2.contar3();
+    post3.contar4();
+    fin.contar5();
   }
   if(jugar==9)
   {
