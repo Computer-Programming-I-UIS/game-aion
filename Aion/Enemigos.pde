@@ -90,14 +90,6 @@ class Enemigo
       }
     }
     break;
-    /*case 4: //Cuando muere
-    {
-      if(lvl==1)
-      {
-      image(serprip,sripx,serpy); 
-      }
-    }
-    break;*/
     }
   }
   void turnoe()
@@ -110,7 +102,7 @@ class Enemigo
     { 
      tatk=0;
     }
-    if(tspe>0 && vidae<100)
+    if(tspe>0 && vidae<=100)
     {
     tspe=tspe-0.1;
     }
@@ -158,7 +150,7 @@ class Enemigo
  }
  void steal()
  {
-   if(tspe==0 && vidae<100 && vidae>0)
+   if(tspe==0 && vidae<=100 && vidae>0)
    {
      espiritu=espiritu-cial;
      tspe=cdabs;
@@ -177,7 +169,7 @@ class Enemigo
  }
  void buff()
  {
-   if(tspe==0 && vidae<100 && vidae>0)
+   if(tspe==0 && vidae<=100 && vidae>0)
    {
      dano=dano+buff;
      tspe=cdbuff;
@@ -196,7 +188,7 @@ class Enemigo
  }
  void caos()
  {
-   if(tspe==0 && vidae<100 && vidae>0)
+   if(tspe==0 && vidae<=100 && vidae>0)
    {
      espiritu=espiritu-caos;
      vidap=vidap-caos;
