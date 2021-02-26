@@ -172,6 +172,10 @@ class Enemigo
    if(tspe==0 && vidae<=100 && vidae>0)
    {
      dano=dano+buff;
+     if(vidae==0)
+     {
+       dano=1;
+     }
      tspe=cdbuff;
      //ssprite=2;
    }
