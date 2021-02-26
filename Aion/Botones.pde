@@ -90,6 +90,7 @@ int xi,yi,xf,yf;
     fmuertex=5000;
     fondox=0;
     lvl=1;
+    ssprite=0;
     song1.play();
     }
     }
