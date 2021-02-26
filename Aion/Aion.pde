@@ -392,7 +392,6 @@ void draw()
     }
     if(lvl<=4)
     {
-    lvl=lvl+1;
     vidae=100;
     vidap=100;
     espiritu=50;
@@ -404,7 +403,7 @@ void draw()
     }
     if(lvl==2)
     {
-      hist=9;
+      hist=8;
       jugar=5;
     }
     if(lvl==3)
