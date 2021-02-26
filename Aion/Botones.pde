@@ -21,6 +21,7 @@ int xi,yi,xf,yf;
     vidap=100;
     espiritu=50;
     vidae=100;
+    dano3=1;
     }
     }
   }
@@ -89,6 +90,7 @@ int xi,yi,xf,yf;
     fmuertex=5000;
     fondox=0;
     lvl=1;
+    dano3=1;
     }
     }
   }
