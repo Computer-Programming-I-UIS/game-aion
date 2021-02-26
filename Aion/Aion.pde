@@ -53,7 +53,7 @@ int hist=0;
 int credsk=0;//Variable para pasar los creditos
 int tutox=5000;
 int special;//variable de la carta especial q toca
-SoundFile song1;
+//SoundFile song1;
 Heroe prota;
 Boton play,salir,smuerte,volver,botuto,credits;
 Carta atk,heal,spirit,tiamat;
@@ -126,15 +126,15 @@ void setup()
   serpatk.resize(tampjx,tampjy);
   serpdano.resize(tampjx,tampjy);
   serpnorm.resize(tampjx,tampjy);
-  mantn.resize(tampjx,tampjy);//Ajuste al tamaño del segundo boss
-  mantatk.resize(tampjx,tampjy);
-  mantdano.resize(tampjx,tampjy);//Ajuste al tamaño del segundo boss
-  spyron.resize(tampjx+50,tampjy+50);//Ajuste al tamaño del tercer boss
-  spyroatk.resize(tampjx+50,tampjy+50);
-  spyrodano.resize(tampjx+50,tampjy+50);//Ajuste al tamaño del tercer boss
+  mantn.resize(tampjx+10,tampjy+10);//Ajuste al tamaño del segundo boss
+  mantatk.resize(tampjx+10,tampjy+10);
+  mantdano.resize(tampjx+10,tampjy+10);//Ajuste al tamaño del segundo boss
+  spyron.resize(tampjx+60,tampjy+60);//Ajuste al tamaño del tercer boss
+  spyroatk.resize(tampjx+60,tampjy+60);
+  spyrodano.resize(tampjx+60,tampjy+60);//Ajuste al tamaño del tercer boss
   dogen.resize(tampjx+30,tampjy);
-  dogeatk.resize(tampjx+30,tampjy);
-  dogedano.resize(tampjx+30,tampjy);
+  dogeatk.resize(tampjx+50,tampjy);
+  dogedano.resize(tampjx+50,tampjy);
   acarta.resize(anccar,larcar);
   ccarta.resize(anccar,larcar);
   espcarta.resize(anccar,larcar);
@@ -189,8 +189,8 @@ void setup()
   post3=new Storie();
   fin=new Storie();
   
-  song1=new SoundFile(this,"Argonne - Zachariah Hickman.mp3");
-  song1.play();
+  //song1=new SoundFile(this,"Argonne - Zachariah Hickman.mp3");
+  //song1.play();
   
 }
 void draw()
