@@ -75,7 +75,7 @@ class Storie
     
     if(keyPressed && key=='1')
     {   
-      lvl=2;
+      lvl=lvl+1;
       jugar=1;
     }
     }
@@ -118,7 +118,7 @@ class Storie
     
     if(keyPressed && key=='4')
     {   
-      lvl=3;
+      lvl=lvl+1;
       jugar=1;
     }
     }
@@ -181,7 +181,7 @@ class Storie
     
     if(keyPressed && key=='6')
     {   
-      lvl=4;
+      lvl=lvl+1;
       jugar=1;
     }
     }
