@@ -53,7 +53,7 @@ int hist=0;
 int credsk=0;//Variable para pasar los creditos
 int tutox=5000;
 int special;//variable de la carta especial q toca
-//SoundFile song1;
+SoundFile song1;
 Heroe prota;
 Boton play,salir,smuerte,volver,botuto,credits;
 Carta atk,heal,spirit,tiamat;
@@ -189,8 +189,8 @@ void setup()
   post3=new Storie();
   fin=new Storie();
   
-  //song1=new SoundFile(this,"Argonne - Zachariah Hickman.mp3");
-  //song1.play();
+  song1=new SoundFile(this,"Argonne - Zachariah Hickman.mp3");
+  song1.play();
   
 }
 void draw()
@@ -365,6 +365,7 @@ void draw()
     dano3=1;
     jugar=2;
     lvl=1;
+    song1.stop();
     if(victory==0)
     {
       special=0;
