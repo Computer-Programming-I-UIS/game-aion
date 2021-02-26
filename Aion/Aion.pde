@@ -31,8 +31,8 @@ int xc1=115,xc2=315,xc3=515,xcserp=5000,xcgrifo=5000,xcdrake=5000,xcspe=715,ycs=
 int larcar=250,anccar=175;//tamaño de las cartas
 int xbe=520,xbp=70,ybe=15,ybp=15;
 int altobar=35;
-int dano1=10,cura1=10,dano2=30,absorb=7,dano3=1,buff=3,dano4=15,caos=3;//Daño y cura enemigos
-float cdatk1=10,cdheal1=25,cdatk2=30,cdabs=5,cdatk3=5,cdbuff=7,cdatk4=15,cdcaos=3;//cd de los enemigos
+int dano1=10,cura1=10,dano2=30,absorb=7,dano3=4,buff=2,dano4=15,caos=3;//Daño y cura enemigos
+float cdatk1=10,cdheal1=25,cdatk2=30,cdabs=5,cdatk3=6,cdbuff=7,cdatk4=15,cdcaos=3;//cd de los enemigos
 int protatk=10;//ataque del heroe
 float cdap=0,cdhp=0,cdesp=0,cdspe=20;//cd cartas
 
