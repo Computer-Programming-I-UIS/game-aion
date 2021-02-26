@@ -22,15 +22,15 @@ class Enemigo
       }
       if(lvl==2)
       {
-        image(mantn,snormx,serpy);
+        image(mantn,snormx-60,serpy-10);
       }
       if(lvl==3)
       {
-        image(spyron,snormx,serpy);
+        image(spyron,snormx-70,serpy-90);
       }
       if(lvl==4)
       {
-        image(dogen,snormx,serpy);
+        image(dogen,snormx-50,serpy-20);
       }
     }
     break;
@@ -44,15 +44,15 @@ class Enemigo
       }
       if(lvl==2)
       {
-        image(mantatk,satkx,serpy);
+        image(mantatk,satkx-60,serpy-10);
       }
       if(lvl==3)
       {
-        image(spyroatk,satkx,serpy);
+        image(spyroatk,satkx-70,serpy-90);
       }
       if(lvl==4)
       {
-        image(dogeatk,satkx,serpy);
+        image(dogeatk,satkx-50,serpy-20);
       }
       ssprite=0;
       if(ssprite==0)
@@ -72,15 +72,15 @@ class Enemigo
       }
       if(lvl==2)
       {
-        image(mantdano,sdanox,serpy);
+        image(mantdano,sdanox-60,serpy-10);
       }
       if(lvl==3)
       {
-        image(spyrodano,sdanox,serpy);
+        image(spyrodano,sdanox-70,serpy-90);
       }
       if(lvl==4)
       {
-        image(dogedano,sdanox,serpy);
+        image(dogedano,sdanox-50,serpy-20);
       }
       ssprite=0;
       if(ssprite==0)
