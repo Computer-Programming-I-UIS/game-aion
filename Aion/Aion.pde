@@ -33,7 +33,7 @@ int xbe=520,xbp=70,ybe=15,ybp=15;
 int altobar=35;
 int dano1=10,cura1=10,dano2=40,absorb=7,dano3=1,buff=5,dano4=16,caos=3;//Daño y cura enemigos
 float cdatk1=10,cdheal1=25,cdatk2=25,cdabs=5,cdatk3=0.9,cdbuff=5,cdatk4=15,cdcaos=4;//cd de los enemigos
-int protatk=10;//ataque del heroe
+int protatk=100;//ataque del heroe
 float cdap=0,cdhp=0,cdesp=0,cdspe=20;//cd cartas
 
 int espiritu=50;//espiritu inicial
