@@ -28,8 +28,8 @@ int volverx=677,volverxf=986,volvery=485,volveryf=529;//coordenadas del boton de
 int vidae=100,vidap=100;//vidas
 int xc1=115,xc2=315,xc3=515,xcserp=5000,xcgrifo=5000,xcdrake=5000,xcspe=715,ycs=450;//coordenadas de las cartas
 int larcar=250,anccar=175;//tamaño de las cartas
-int xbe=520,xbp=70,ybe=15,ybp=15;//
-int altobar=35;
+int xbe=520,xbp=70,ybe=15,ybp=15;////coordenadas de las barras de vida
+int altobar=35;//alto de las barras
 int dano1=10,cura1=10,dano2=45,absorb=7,dano3=1,buff=5,dano4=16,caos=3;//Daño y cura enemigos
 float cdatk1=10,cdheal1=25,cdatk2=25,cdabs=5,cdatk3=1,cdbuff=5,cdatk4=15,cdcaos=4;//cd de los enemigos
 int protatk=10;//ataque del heroe
@@ -37,13 +37,13 @@ float cdap=0,cdhp=0,cdesp=0,cdspe=20;//cd cartas
 
 int espiritu=50;//espiritu inicial
 int xesp=70,yesp=390;//coordenadas de la barra del espiritu
-int ssprite=0;
-int fondox=0,fondoy=0;
-int fondo2x=5000,fdesx=5000,fskyx=5000,flavax=5000;//Coordenadass en x de los fondos
+int ssprite=0;//variables para  cambiar los sprites de los enemigos
+int fondox=0,fondoy=0;//coordenadas de los fondos
+int fondo2x=5000,fdesx=5000,fskyx=5000,flavax=5000;//Coordenadas en x de los fondos
 int cred1x=5000,cred2x=5000;//Coordenadas en x de los creditos
-int fmuertex=5000;
-int serpy=160;
-int snormx=700,sdanox=5000,satkx=5000,sripx=5000;
+int fmuertex=5000;//coordenadas del fondo de derrota
+int serpy=160;//coordenada en y de los sprites enemigos
+int snormx=700,sdanox=5000,satkx=5000,sripx=5000;//coordenadas en x de los sprites enemigos
 int tampjx=160,tampjy=180;
 int his1x=5000,his2x=5000,his3x=5000,his4x=5000,his5x=5000,his6x=5000;
 int his7x=5000,his8x=5000,his9x=5000,his10x=5000,his11x=5000,his12x=5000,his13x=5000;
