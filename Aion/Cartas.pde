@@ -59,9 +59,8 @@ class Carta
     { 
      cdhp=0;
     }
-    if(press==true && vidap<100 && vidap>=0 && espiritu>=20 && cdhp==0)
+    if(press==true && vidap<100 && vidap>0 && espiritu>=20 && cdhp==0)
     {
-      
       vidap=vidap+20;
       espiritu=espiritu-20;
       psprite=2;
@@ -71,7 +70,7 @@ class Carta
   }
   void recharge()
   {
-    if(cdesp>0 && vidae<100)
+    if(cdesp>0 && vidae<=100)
     {
     cdesp=cdesp-0.1;
     }
@@ -79,7 +78,7 @@ class Carta
     { 
      cdesp=0;
     }
-    if(press==true && vidap<=100 && vidap>=0 && espiritu<100 && cdesp==0)
+    if(press==true && vidap<=100 && vidap>0 && espiritu<100 && cdesp==0)
     {
       espiritu=espiritu+15;
       psprite=3;
@@ -102,10 +101,11 @@ class Carta
     {
     special=1;
     }
-    if(press==true && victory>=1 && special==1 && cdspe==0 && vidap<=100 && vidap>=0 && espiritu>=20)
+    if(press==true && victory>=1 && special==1 && cdspe==0 && vidap<=100 && vidap>0)
     {
+     if(espiritu>=50 || vidap<=50)
+     {
      vidae=vidae-20;
-     espiritu=espiritu-0;
      press=false;
      special=1;
      cdspe=20;
@@ -113,10 +113,11 @@ class Carta
      {
      special=2;
      }
+     }
     }
-    if(press==true && victory>=2 && special==2 && cdspe==0 && vidap<100 && vidap>=0)
+    if(press==true && victory>=2 && special==2 && cdspe==0 && vidap<=100 && vidap>5)
     {
-     vidap=vidap-10;
+     vidap=vidap-5;
      espiritu=100;
      cdap=0;
      cdhp=0;
@@ -132,7 +133,7 @@ class Carta
       special=1;
      }
     }
-    if(press==true && vidap<100 && victory>=3 && cdspe==0 && special==3 && vidap>=0 && espiritu>=40 )
+    if(press==true && vidap<100 && victory>=3 && cdspe==0 && special==3 && vidap>0 && espiritu>=40 )
     {
      vidap=100;
      espiritu=espiritu-40;
