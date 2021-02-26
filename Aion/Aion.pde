@@ -30,10 +30,10 @@ int xc1=115,xc2=315,xc3=515,xcserp=5000,xcgrifo=5000,xcdrake=5000,xcspe=715,ycs=
 int larcar=250,anccar=175;//tamaño de las cartas
 int xbe=520,xbp=70,ybe=15,ybp=15;
 int altobar=35;
-int dano1=10,cura1=10,dano2=30,absorb=7,dano3=1,buff=5,dano4=20,caos=3;//Daño y cura enemigos
+int dano1=10,cura1=10,dano2=30,absorb=7,dano3=1,buff=4,dano4=20,caos=9;//Daño y cura enemigos
 float cdatk1=10,cdheal1=25,cdatk2=30,cdabs=5,cdatk3=5,cdbuff=5,cdatk4=15,cdcaos=3;//cd de los enemigos
 int protatk=30;//ataque del heroe
-float cdap=0,cdhp=0,cdesp=0,cdspe=30;//cd cartas
+float cdap=0,cdhp=0,cdesp=0,cdspe=20;//cd cartas
 
 int espiritu=50;//espiritu inicial
 int xesp=70,yesp=390;//coordenadas de la barra del espiritu
@@ -117,9 +117,9 @@ void setup()
   spyron.resize(tampjx+50,tampjy+50);//Ajuste al tamaño del tercer boss
   spyroatk.resize(tampjx+50,tampjy+50);
   spyrodano.resize(tampjx+50,tampjy+50);//Ajuste al tamaño del tercer boss
-  dogen.resize(tampjx,tampjy);
-  dogeatk.resize(tampjx,tampjy);
-  dogedano.resize(tampjx,tampjy);
+  dogen.resize(tampjx+30,tampjy);
+  dogeatk.resize(tampjx+30,tampjy);
+  dogedano.resize(tampjx+30,tampjy);
   acarta.resize(anccar,larcar);
   ccarta.resize(anccar,larcar);
   espcarta.resize(anccar,larcar);
@@ -354,6 +354,7 @@ void draw()
     if(lvl==5)
     {
       jugar=0;
+      
     }
   }
   }
