@@ -358,8 +358,11 @@ void draw()
   text(cdhp,xc2+130,ycs+240);
   fill(#050CAD);
   text(cdesp,xc3+130,ycs+240);
-  fill(0);
-  text(cdspe,xcspe+130,ycs+240);
+  if(victory>=1)
+  {
+  fill(#F2A514);
+  text(cdspe,xcspe+130,ycs+243);
+  }
   if(vidap==0)
   {
     jugar=2;
@@ -404,6 +407,8 @@ void draw()
     {
       hist=8;
       jugar=5;
+      song1.stop();
+      song1.play();
     }
     if(lvl==3)
     {
