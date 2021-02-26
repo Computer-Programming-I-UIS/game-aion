@@ -15,7 +15,7 @@
 # Tráiler
 
 
-![](https://imgur.com/EfofnmV)
+![](https://imgur.com/a/9yuhxjB)
 
 # Descripción
 - El juego está basado en algunos juegos de cartas tales como YuGiOh, en el que nuestro protagonista recorre el mundo en busca de cumplir la misión que le impuso su padre, aunque él no lo sabe aún. Nuestro protagonista tendrá que enfrentarse a distintos monstruos y bestias que han escapado de su jaula en el infierno para tomar venganza de la humanidad.
