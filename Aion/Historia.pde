@@ -61,7 +61,8 @@ class Storie
         jugar=1;
         hist=0;
         his6x=5000;
-        lvl=lvl+1;
+        lvl=1;
+        dano3=1;
     }
   }
 }
