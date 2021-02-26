@@ -102,25 +102,26 @@ class Carta
     {
     special=1;
     }
-    if(press==true && victory>=1 && special==1 && cdspe==0 && vidap<=100 && vidap>=0 && espiritu>=50)
+    if(press==true && victory>=1 && special==1 && cdspe==0 && vidap<=100 && vidap>=0 && espiritu>=20)
     {
      vidae=vidae-20;
-     espiritu=espiritu-20;
+     espiritu=espiritu-0;
      press=false;
      special=1;
-     cdspe=30;
+     cdspe=20;
      if(victory>1)
      {
      special=2;
      }
     }
-    if(press==true && victory>=2 && special==2 && cdspe==0 && vidap<100 && vidap>=0 && espiritu>=50 )
+    if(press==true && victory>=2 && special==2 && cdspe==0 && vidap<100 && vidap>=0)
     {
+     vidap=vidap-10;
      espiritu=100;
      cdap=0;
      cdhp=0;
      cdesp=0;
-     cdspe=30;
+     cdspe=20;
      press=false;
      if(victory>2)
      {
@@ -131,11 +132,11 @@ class Carta
       special=1;
      }
     }
-    if(press==true && vidap<100 && victory>=3 && cdspe==0 && special==3 && vidap>=0 && espiritu>=20 )
+    if(press==true && vidap<100 && victory>=3 && cdspe==0 && special==3 && vidap>=0 && espiritu>=40 )
     {
      vidap=100;
-     espiritu=espiritu-50;
-     cdspe=30;
+     espiritu=espiritu-40;
+     cdspe=20;
      press=false;
      if(victory>=3)
      {
@@ -167,7 +168,7 @@ class Carta
       {
       xcdrake=xcspe;
       xcgrifo=5000;
-      xcdrake=5000;
+      xcserp=5000;
       }
     }
   }
