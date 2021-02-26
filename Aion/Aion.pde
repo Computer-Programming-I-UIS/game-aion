@@ -70,16 +70,16 @@ void setup()
   serpcarta=loadImage("KOSMOS.jpg");
   grifocarta=loadImage("HYPERION.jpg");
   stcarta=loadImage("SOUL TIAMAT.jpg");//Cargar imagenes de las cartas
-  fbase=loadImage("FONDO.jpg");
+  fbase=loadImage("FONDO.jpg");//Cargar imagenes de los fondos
   fbosque=loadImage("SELVA.jpg");
   fdesierto=loadImage("DESIERTO.jpg");
   fcielo=loadImage("FONDO3.jpg");
   flava=loadImage("FONDO4.jpg");
-  fmuerte=loadImage("MUERTE.jpg");
-  heroe1=loadImage("HEROE1.png");
+  fmuerte=loadImage("MUERTE.jpg");//Cargar imagenes de los fondos
+  heroe1=loadImage("HEROE1.png");//Cargar sprites del heore
   heroedano=loadImage("HEROE2.png");
   heroemana=loadImage("HEROE3.png");
-  heroeheal=loadImage("HEROE4.png");
+  heroeheal=loadImage("HEROE4.png");//Cargar sprites del heore
   serpatk=loadImage("SERPIENTEATK3.png");//Cargar sprites del primer enemigo
   serpdano=loadImage("SERPIENTEDAÑO.png");
   serpnorm=loadImage("SERPIENTEFF.png");//Cargar sprites del primer enemigo
@@ -89,10 +89,10 @@ void setup()
   spyron=loadImage("DRAGON2.png");//Cargar imagenes del tercer enemigo
   spyroatk=loadImage("DRAGON3.png");
   spyrodano=loadImage("DRAGON1.png");//Cargar imagenes del tercer enemigo
-  dogen=loadImage("CERBERO1.png");
+  dogen=loadImage("CERBERO1.png");//Cargar sprites del cuarto enemigo
   dogeatk=loadImage("CERBERO3.png");
-  dogedano=loadImage("CERBERO2.png");
-  his1=loadImage("HISTORIA1.png");
+  dogedano=loadImage("CERBERO2.png");//Cargar sprites del cuarto enemigo
+  his1=loadImage("HISTORIA1.png");//Cargar imagenes de la historia
   his2=loadImage("HISTORIA2.png");
   his3=loadImage("HISTORIA3.png");
   his4=loadImage("HISTORIA4.png");
@@ -109,19 +109,19 @@ void setup()
   his15=loadImage("HISTORIA15.png");
   his16=loadImage("HISTORIA16.png");
   his17=loadImage("HISTORIA17.png");
-  his18=loadImage("HISTORIA18.png");
-  tutorial=loadImage("FLECHAS.png");
-  creditos1=loadImage("CREDITOS1.jpg");
-  creditos2=loadImage("CREDITOS2.jpg");
-  letra= createFont("Norse.otf",20);
-  letra2=createFont("Norsebold.otf",20);
-  tutorial.resize(1000,700);
-  creditos1.resize(1000,700);
-  creditos2.resize(1000,700);
-  heroe1.resize(tampjx,tampjy);
+  his18=loadImage("HISTORIA18.png");//Cargar imagenes de la historia
+  tutorial=loadImage("FLECHAS.png");//cargar imagen del tutorial
+  creditos1=loadImage("CREDITOS1.jpg");//cargar imagenes de los creditos
+  creditos2=loadImage("CREDITOS2.jpg");//cargar imagenes de los creditos
+  letra= createFont("Norse.otf",20);//cargar fuentes
+  letra2=createFont("Norsebold.otf",20);//cargar fuentes
+  tutorial.resize(1000,700);//ajustar el tamaño del tutorial
+  creditos1.resize(1000,700);//ajustar el tamaño de los creditos
+  creditos2.resize(1000,700);//ajustar el tamaño de los creditos
+  heroe1.resize(tampjx,tampjy);//ajustar el tamaño del heroe
   heroedano.resize(tampjx,tampjy);
   heroeheal.resize(tampjx,tampjy);
-  heroemana.resize(tampjx,tampjy);
+  heroemana.resize(tampjx,tampjy);//ajustar el tamaño del heroe
   serpatk.resize(tampjx,tampjy);
   serpdano.resize(tampjx,tampjy);
   serpnorm.resize(tampjx,tampjy);
