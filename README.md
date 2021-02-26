@@ -9,8 +9,8 @@
 - Abres Processing, le das click en Scketch, importar biblioteca, añadir Biblioteca, buscas Sound en la barra de busqueda y la instalas.7
 - El juego tiene una clasificación E +10, es decir, para cualquiera que tenga más de 10 años puede jugarlo.
 
-![N|Solid](https://i.postimg.cc/Vk25hTbJ/Screenshot-1.jpg)
-![N|Solid](https://i.postimg.cc/Qt8DYkSB/Screenshot-2.jpg)
+![N|Solid](https://i.postimg.cc/85jWJ2R8/Screenshot-4.jpg)
+![N|Solid](https://i.postimg.cc/KzwTn0f1/Screenshot-5.jpg)
 
 # Tráiler
 [![N|Solid](https://i.postimg.cc/JzCzDH3R/Sin-t-tulo-1.png)](https://www.youtube.com/watch?v=Nw7KZGj2Zxc)
