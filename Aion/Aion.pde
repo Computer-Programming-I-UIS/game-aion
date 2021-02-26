@@ -122,9 +122,9 @@ void setup()
   heroedano.resize(tampjx,tampjy);
   heroeheal.resize(tampjx,tampjy);
   heroemana.resize(tampjx,tampjy);//ajustar el tamaño del heroe
-  serpatk.resize(tampjx,tampjy);
+  serpatk.resize(tampjx,tampjy);//ajustar el tamaño de la serpiente
   serpdano.resize(tampjx,tampjy);
-  serpnorm.resize(tampjx,tampjy);
+  serpnorm.resize(tampjx,tampjy);//ajustar el tamaño de la serpiente
   mantn.resize(tampjx+90,tampjy+40);//Ajuste al tamaño del segundo boss
   mantatk.resize(tampjx+100,tampjy+40);
   mantdano.resize(tampjx+100,tampjy+40);//Ajuste al tamaño del segundo boss
