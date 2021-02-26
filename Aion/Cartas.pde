@@ -115,9 +115,9 @@ class Carta
      }
      }
     }
-    if(press==true && victory>=2 && special==2 && cdspe==0 && vidap<=100 && vidap>5)
+    if(press==true && victory>=2 && special==2 && cdspe==0 && vidap<=100 && vidap>10)
     {
-     vidap=vidap-5;
+     vidap=vidap-10;
      espiritu=100;
      cdap=0;
      cdhp=0;
