@@ -13,7 +13,7 @@
 ![N|Solid](https://i.postimg.cc/Qt8DYkSB/Screenshot-2.jpg)
 
 # Tráiler
-
+[](https://www.youtube.com/watch?v=Nw7KZGj2Zxc)
 
 ![](https://imgur.com/a/9yuhxjB)
 
