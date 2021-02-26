@@ -180,7 +180,6 @@ class Enemigo
    if(tspe==0 && vidae<100 && vidae>0)
    {
      dano=dano+buff;
-     buff=dano+buff;
      tspe=cdbuff;
      //ssprite=2;
    }
@@ -202,7 +201,6 @@ class Enemigo
      espiritu=espiritu-caos;
      vidap=vidap-caos;
      vidae=vidae+caos;
-     caos=caos+1;
      tspe=cdcaos;
    }
  }
