@@ -171,7 +171,11 @@ class Enemigo
  {
    if(tspe==0 && vidae<=100 && vidae>0)
    {
-     dano=dano+buff;
+     vidap=vidap-buff;
+     if(vidae<=50)
+     {
+       vidae=vidae+(buff/2);
+     }
      if(vidae==0)
      {
        dano=1;
