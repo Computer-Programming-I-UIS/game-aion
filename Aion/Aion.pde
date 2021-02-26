@@ -360,7 +360,7 @@ void draw()
   text(cdesp,xc3+130,ycs+240);
   if(victory>=1)
   {
-  fill(#F2A514);
+  fill(0);
   text(cdspe,xcspe+130,ycs+243);
   }
   if(vidap==0)
