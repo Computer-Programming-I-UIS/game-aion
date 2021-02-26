@@ -1,13 +1,12 @@
 //Aión
 //Autores: 2200515-Daniel Jeshua Morelos Villamizar y 2200520-Santiago Enrique Monsalve Durán.
 //Descripción:
-import processing.sound.*;
+import processing.sound.*;//Libreria para la musica
 PImage fbase,fbosque,fmuerte,fdesierto,fcielo,flava;//Fondos del juego
-PImage acarta;
-PImage ccarta;
-PImage espcarta;
-PImage serpcarta,grifocarta;//imagenes de cartas
-PImage stcarta;
+PImage acarta;//imagen carta de ataque
+PImage ccarta;//imagen carta de curacion
+PImage espcarta;//imagen carta de espiritu
+PImage serpcarta,grifocarta,stcarta;;//imagenes de cartas especiales
 PImage heroe1,heroedano,heroemana,heroeheal;//sprites del heroe
 PImage serpnorm,serpatk,serpdano;//Sprites de la serpiente
 PImage mantn,mantatk,mantdano;//sprites del grifo
@@ -15,21 +14,21 @@ PImage spyron,spyroatk,spyrodano;//sprites del dragon
 PImage dogen,dogeatk,dogedano;//sprites del cerbero
 PImage his1,his2,his3,his4,his5,his6,his7,his8,his9;//sprites de la historia
 PImage his10,his11,his12,his13,his14,his15,his16,his17,his18;//sprites de la historia
-PImage tutorial,creditos1,creditos2;
-PFont letra,letra2;
-boolean press;
-int psprite=0,protax1=150,pdanox=5000,pmanax=5000,phealx=5000,protay=160;
+PImage tutorial,creditos1,creditos2;//variables para poner los creditos y el tutorial
+PFont letra,letra2;//fuentes
+boolean press;//variables para saber si las cartas son oprimidas
+int psprite=0,protax1=150,pdanox=5000,pmanax=5000,phealx=5000,protay=160;//Variables para los sprites del heroe
 int jugar,victory=0,lvl=0;//variables de jugar, vces q ha ganado y nivel
-int xboton=300,xfboton=708,yplay=182,yfplay=281;
+int xboton=300,xfboton=708,yplay=182,yfplay=281;//coordenadas en x de todos los botones y en y del voton de jugar
 int ybtut=305,yfbtut=404;//Coordenadas en y del boton del tutorial
 int ycredits=433,yfcredits=533;//Coordenadas en y del boton de los creditos
-int ysalir=571,yfsalir=670;
+int ysalir=571,yfsalir=670;//coordenadas en y del boton de salir
 int xsmuerte=784,xsfmuerte=880,ysmuerte=570,ysfmuerte=613;//coordenadas boton de salir al perder
-int volverx=677,volverxf=986,volvery=485,volveryf=529;
-int vidae=100,vidap=100;
+int volverx=677,volverxf=986,volvery=485,volveryf=529;//coordenadas del boton de volver a jugar
+int vidae=100,vidap=100;//vidas
 int xc1=115,xc2=315,xc3=515,xcserp=5000,xcgrifo=5000,xcdrake=5000,xcspe=715,ycs=450;//coordenadas de las cartas
 int larcar=250,anccar=175;//tamaño de las cartas
-int xbe=520,xbp=70,ybe=15,ybp=15;
+int xbe=520,xbp=70,ybe=15,ybp=15;//
 int altobar=35;
 int dano1=10,cura1=10,dano2=45,absorb=7,dano3=1,buff=5,dano4=16,caos=3;//Daño y cura enemigos
 float cdatk1=10,cdheal1=25,cdatk2=25,cdabs=5,cdatk3=1,cdbuff=5,cdatk4=15,cdcaos=4;//cd de los enemigos
