@@ -289,7 +289,7 @@ void draw()
     doge.sprites();
     doge.display();
   }
-  //song1.stop();
+  song1.stop();
   his6x=5000;
   his7x=5000;
   his11x=5000;
